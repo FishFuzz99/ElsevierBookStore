@@ -21,10 +21,21 @@ body {
     border-radius: 4px;
 }
 
+.nav{
+    display: inline;
+    width:40%;
+}
 .carousel-inner{
     width:auto;
     height:300px;
     margin:auto;
+}
+nav li{
+    margin:2%;
+}
+
+navbar-links{
+    vertical-align: middle;
 }
 .book{
     height:300px;
@@ -63,3 +74,5 @@ body {
 footer {
     margin: 50px 0;
 }
+
+
