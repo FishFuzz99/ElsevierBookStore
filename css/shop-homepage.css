@@ -25,9 +25,10 @@ body {
     display: inline;
     width:40%;
 }
+
 .carousel-inner{
-    width:auto;
-    height:300px;
+    width:20%;
+    height:auto;
     margin:auto;
 }
 nav li{
