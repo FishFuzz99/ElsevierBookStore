@@ -38,9 +38,7 @@ nav li{
 navbar-links{
     vertical-align: middle;
 }
-.book{
-    height:300px;
-}
+
 .caption {
     overflow: hidden;
     margin:auto;
@@ -52,7 +50,7 @@ navbar-links{
 }
 
 .thumbnail img {
-    width: 100%;
+    width: auto;
     height: 300px;
 }
 
@@ -65,6 +63,7 @@ navbar-links{
 
 .thumbnail {
     padding: 0;
+    max-height: 500px;
 }
 
 .thumbnail .caption-full {
