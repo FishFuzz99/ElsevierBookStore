@@ -1,0 +1,21 @@
+
+.tabs-menu{
+    display: block; 
+    width: 100%;
+    text-align: center;
+}
+
+.pills-menu{
+     text-align: center;
+}
+
+
+.nav-pills > li {
+    float:none;
+    display:inline-block;
+}
+
+.tab-content{
+    padding-top: 25px;
+}
+    

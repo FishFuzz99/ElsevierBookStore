@@ -7,7 +7,9 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="css/shop-homepage.css" rel="stylesheet">   
+    <link href="css/shop-homepage.css" rel="stylesheet">  
+      <!-- Custom CSS -->
+    <link href="css/account.css" rel="stylesheet"> 
    
   </head>
       <body>
@@ -44,9 +46,9 @@
 <!-----------------------PUT ON EVERY PAGE END---------------------------------------------------------------->  
       
   
-     <div class="container">
+     <div class="container tabs-menu">
       <h2>Account</h2>
-      <ul class="nav nav-pills">
+      <ul class="nav nav-pills pills-menu">
         <li class="active"><a data-toggle="tab" href="#home">Home</a></li>
         <li><a data-toggle="tab" href="#menu1">Login Info</a></li>
         <li><a data-toggle="tab" href="#menu2">Payment Info</a></li>
@@ -55,14 +57,13 @@
 
       <div class="tab-content">
         <div id="home" class="tab-pane fade in active">
-          <h3>HOME</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         </div>
         <div id="menu1" class="tab-pane fade">
             <form>
-                <p><input type="email" placeholder="test@google.com" required/></p>
+                <p><input type="email" placeholder="Username or Email" required/></p>
                 <p><input type="password" placeholder="Password" required/></p>
-                <p class="submit"><input type="submit" value="Save"/></p>
+                <button class="btn btn-success login-button" type="submit" value="Login">Submit</button>
             </form>
         </div>
         <div id="menu2" class="tab-pane fade">
