@@ -1,4 +1,6 @@
-
+.pay{
+    list-style: none;
+}
 .tabs-menu{
     display: block; 
     width: 100%;
