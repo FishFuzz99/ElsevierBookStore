@@ -12,7 +12,9 @@ body {
     width: 100%;
 }
 
-
+.navbar{
+    background-color:whitesmoke;
+}
 
 .carousel-holder {
     margin-bottom: 30px;
@@ -25,7 +27,11 @@ body {
 
 .nav{
     display: inline;
-    width:40%;
+    width:80%;
+}
+
+.navbar-brand{
+    color:black;
 }
 
 .carousel-inner{
@@ -33,13 +39,13 @@ body {
     height:auto;
     margin:auto;
 }
-nav li{
-    margin:2%;
+
+
+.navbar-collapse{
+    text-align: center;
 }
 
-.navbar-link{
-    vertical-align: middle;
-}
+
 
 
 .caption {
@@ -57,7 +63,7 @@ nav li{
     white-space: nowrap;
     text-align: center;
 }
-
+ 
 .thumbnail img {
     width: auto;
     height: 300px;
