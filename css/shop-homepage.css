@@ -51,7 +51,6 @@ body {
 .caption {
     overflow: hidden;
     margin:auto;
-    max-height:300px;
     text-align: center;
     
 }
