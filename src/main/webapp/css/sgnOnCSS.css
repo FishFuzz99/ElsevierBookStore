@@ -20,7 +20,7 @@
 }
 
 .forgot-login {
-	margin 20px 0;
+	margin: 20px 0;
 	font-size: 11px;
 	color: blue;
 	text-align: center;
@@ -97,7 +97,7 @@
 }
 .login p.remember input {
 	position: relative;
-	bottom 1px;
+	bottom: 1px;
 	margin-right: 4px;
 	vertical-align: middle;
 }

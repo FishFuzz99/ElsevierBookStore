@@ -1,0 +1,190 @@
+<html>
+<head>
+    <title>Checkout</title>
+
+        <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/Checkout.css" rel="stylesheet"> 
+    <!-- Custom CSS -->
+    <link href="css/shop-homepage.css" rel="stylesheet">
+</head>
+<body>
+    <!-----------------------PUT ON EVERY PAGE START---------------------------------------------------------------->
+    <!-- Navigation -->
+        <nav class="navbar navbar navbar-fixed-top" role="navigation">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                     <a class="navbar-brand " href="index.html">Cover to Cover</a>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li >
+                            <a href="account.jsp">Account</a>
+                        </li>
+                        <li >
+                             <a href="cart.html">Cart</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container -->
+        </nav>
+<!-----------------------PUT ON EVERY PAGE END---------------------------------------------------------------->
+    <form action="#" method="get">
+        <div class="billing">
+         <fieldset>
+            <legend>Billing Information</legend>
+            <ul class="bill">
+                <li>
+                    <label for="firstName1">First Name:</label>
+                    <input type="text" id="firstName1" name="firstName1" autofocus>
+                </li>
+                
+                <li>
+                    <label for="surname1">Last Name:</label>
+                    <input type="text" id="surname1" name="surname1">
+                </li>	
+                
+                
+                <li>
+                    <label for="StBillAddress">Street Address:</label>
+                    <input type="text" id="StBillAddress" name="StBillAddress">
+                </li>
+                
+                <li>
+                    <label for="StBillAddress2"></label>
+                    <input type="text" id="StBillAddress2" name="StBillAddress2">
+                </li>
+                
+                <li>
+                    <label for="CityBillAddress">City/Town:</label>
+                    <input type="text" id="CityBillAddress" name="CityBillAddress">
+                </li>
+                
+                <li>
+                    <label for="StateBillAddress">State:</label>
+                    <input type="text" id="StateBillAddress" name="StateBillAddress">
+                </li>
+                
+                <li>
+                    <label for="email1">Email:</label>
+                    <input type="email1" id="email1" name="email1" placeholder="you@domain.com" required>
+                </li>
+                <li>
+                    <label for="phone1">Phone Number:</label>
+                    <input type="tel1" id="phone1" name="phone1" placeholder="(555)555-5555" required>
+                </li>
+            </ul>
+        </fieldset>
+        </div>
+        <div class="shipping">
+        <fieldset>
+            <legend>Shipping Information</legend>
+            <ul class="ship">
+                <li>
+                    <form action="">
+                        <input type="checkbox" name="vehicle" value="Bike">Shipping information is same as billing<br>
+                    </form>
+                </li>
+                <li>
+                    <label for="firstName">First Name:</label>
+                    <input type="text" id="firstName" name="firstName" autofocus>
+                </li>
+                
+                <li>
+                    <label for="surname">Last Name:</label>
+                    <input type="text" id="surname" name="surname">
+                </li>	
+                
+                
+                <li>
+                    <label for="StShipAddress">Street Address:</label>
+                    <input type="text" id="StShipAddress" name="StShipAddress">
+                </li>
+                
+                 <li>
+                    <label for="StShipAddress2"></label>
+                    <input type="text" id="StShipAddress2" name="StShipAddress2">
+                </li>
+                
+                <li>
+                    <label for="CityShipAddress">City/Town:</label>
+                    <input type="text" id="CityShipAddress" name="CityShipAddress">
+                </li>
+                
+                <li>
+                    <label for="StateShipAddress">State:</label>
+                    <input type="text" id="StateShipAddress" name="StateShipAddress">
+                </li>
+                
+                <li>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="you@domain.com" required>
+                </li>
+                <li>
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" placeholder="(555)555-5555" required>
+                </li>
+            </ul>
+        </fieldset>
+        </div>
+        <div class="pay">
+        <fieldset>
+            <legend>Payment</legend>
+            <ul class="payment">
+				<li>
+					<label for="card">Credit Card Type:</label>
+		            <select name="card" id="card">
+		                <option value="QAJAVSC">Visa</option>
+		                <option value="QAWEBUI">Mastercard</option>
+		                <option value="QAWEBCSS">American Express</option>
+		                <option value="QAJQUERY">Discover</option>
+		            </select>
+				</li>
+                <li>
+                    <label for="Number">Credit Card Number:</label>
+                    <input type="text" id="number" name="number">
+                </li>
+                <li>
+                    <label for="expdate">Expiration Date:</label>
+                    <input type="text" id="expdate" name="expdate">
+                </li>	
+			</ul>	
+        </fieldset>
+        </div>
+        <div class="click">
+        <fieldset>
+            <legend>Place Order</legend>
+            <button class="btn btn-info">Place Order</button>
+        </fieldset>
+        </div>
+    </form>
+    <!-----------------------PUT ON EVERY PAGE START---------------------------------------------------------------->
+    <div class="container">
+
+        <hr>
+
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy;</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <!-- /.container -->
+<!-----------------------PUT ON EVERY PAGE END---------------------------------------------------------------->
+</body>
+</html>
