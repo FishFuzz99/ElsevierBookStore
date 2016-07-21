@@ -28,7 +28,6 @@ body {
 .nav{
     display: inline;
     width:80%;
-    
 }
 
 .navbar-brand{
@@ -54,6 +53,7 @@ body {
     margin:auto;
     max-height:300px;
     text-align: center;
+    
 }
 
 .filters{
