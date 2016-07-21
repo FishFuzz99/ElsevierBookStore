@@ -1,34 +1,7 @@
 <html>
 <head>
     <title>Checkout</title>
-    <style>
-        .Payment{
-            list-style: none;
-        }
-        .info {
-            padding-left: 30px;
-            
-        }
-        .bill{
-            list-style: none;
-        }
-        .ship{
-            list-style:none;
-        }
-        
-        form ul li {
-            margin: 5px 0;
-        }
-        .pay{
-            padding-left:30px;
-        }
-        label {
-            display: inline-block;
-            width: 150px;
-            text-align: right;
-        }
-        
-    </style>
+
         <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
@@ -67,7 +40,8 @@
             <!-- /.container -->
         </nav>
 <!-----------------------PUT ON EVERY PAGE END---------------------------------------------------------------->
-    <form class="info" action="#" method="get">
+    <form action="#" method="get">
+        <div class="billing">
          <fieldset>
             <legend>Billing Information</legend>
             <ul class="bill">
@@ -112,7 +86,8 @@
                 </li>
             </ul>
         </fieldset>
-        
+        </div>
+        <div class="shipping">
         <fieldset>
             <legend>Shipping Information</legend>
             <ul class="ship">
@@ -162,9 +137,11 @@
                 </li>
             </ul>
         </fieldset>
-        <fieldset class="pay">
+        </div>
+        <div class="pay">
+        <fieldset>
             <legend>Payment</legend>
-            <ul class="Payment">
+            <ul class="payment">
 				<li>
 					<label for="card">Credit Card Type:</label>
 		            <select name="card" id="card">
@@ -184,10 +161,13 @@
                 </li>	
 			</ul>	
         </fieldset>
+        </div>
+        <div class="click">
         <fieldset>
             <legend>Place Order</legend>
             <button class="btn btn-info">Place Order</button>
         </fieldset>
+        </div>
     </form>
     <!-----------------------PUT ON EVERY PAGE START---------------------------------------------------------------->
     <div class="container">

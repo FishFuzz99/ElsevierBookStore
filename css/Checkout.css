@@ -1,28 +1,33 @@
  
-        .Payment{
-            list-style: none;
+.payment{
+    list-style: none;
         }
-        .info {
-            padding-left: 30px;
+.billing {
+    padding-left: 30px;
             
         }
-        .bill{
-            list-style: none;
+.shipping {
+    padding-left: 30px;
+            
         }
-        .ship{
-            list-style:none;
+.bill{
+    list-style: none;
         }
-        
-        form ul li {
-            margin: 5px 0;
-        }
-        .pay{
-            padding-left:30px;
-        }
-        label {
-            display: inline-block;
-            width: 150px;
-            text-align: right;
+.ship{
+    list-style:none;
         }
         
+form ul li {
+    margin: 5px 0;
+        }
+.pay{
+    padding-left:30px;
+        }
+label {
+    display: inline-block;
+    width: 150px;
+    text-align: right;
+        }
+.click{
+    padding-left:30px;}
  

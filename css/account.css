@@ -1,5 +1,6 @@
 .pay{
     list-style: none;
+    display:inline-block;
 }
 .tabs-menu{
     display: block; 
@@ -20,4 +21,3 @@
 .tab-content{
     padding-top: 25px;
 }
-    
