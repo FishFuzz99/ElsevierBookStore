@@ -22,4 +22,8 @@
 .tab-content{
     padding-top: 25px;
 }
-
+.ship{
+     list-style: none;
+    display:inline-block;
+    text-align: right;
+}
