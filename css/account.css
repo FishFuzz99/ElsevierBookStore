@@ -1,6 +1,7 @@
 .pay{
     list-style: none;
     display:inline-block;
+    text-align: right;
 }
 .tabs-menu{
     display: block; 
