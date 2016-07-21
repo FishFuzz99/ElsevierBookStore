@@ -13,7 +13,6 @@
      text-align: center;
 }
 
-
 .nav-pills > li {
     float:none;
     display:inline-block;
@@ -26,4 +25,10 @@
      list-style: none;
     display:inline-block;
     text-align: right;
+}
+.buttonShip{
+    text-align: center;
+}
+.buttonBill{
+    text-align: center;
 }
