@@ -93,7 +93,55 @@
 			</ul>
         </div>
         <div id="menu3" class="tab-pane fade">
-          <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+          <div class="shipping">
+            <fieldset>
+            <legend>Shipping Information</legend>
+            <ul class="ship">
+                <li>
+                    <label for="firstName">First Name:</label>
+                    <input type="text" id="firstName" name="firstName" autofocus>
+                </li>
+                
+                <li>
+                    <label for="surname">Last Name:</label>
+                    <input type="text" id="surname" name="surname">
+                </li>	
+                
+                
+                <li>
+                    <label for="StShipAddress">Street Address:</label>
+                    <input type="text" id="StShipAddress" name="StShipAddress">
+                </li>
+                
+                 <li>
+                    <label for="StShipAddress2"></label>
+                    <input type="text" id="StShipAddress2" name="StShipAddress2">
+                </li>
+                
+                <li>
+                    <label for="CityShipAddress">City/Town:</label>
+                    <input type="text" id="CityShipAddress" name="CityShipAddress">
+                </li>
+                
+                <li>
+                    <label for="StateShipAddress">State:</label>
+                    <input type="text" id="StateShipAddress" name="StateShipAddress">
+                </li>
+                
+                <li>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="you@domain.com" required>
+                </li>
+                <li>
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" placeholder="(555)555-5555" required>
+                </li>
+                <li>
+                    <button class="btn btn-success login-button" type="submit" value="Login">Submit</button>
+                </li>
+            </ul>
+        </fieldset>
+        </div>
         </div>
       </div>
     </div>
