@@ -4,17 +4,24 @@
     <style>
         .Payment{
             list-style: none;
-}
-        form ul {
-            list-style: none;
+        }
+        .info {
             padding-left: 30px;
             
+        }
+        .bill{
+            list-style: none;
+        }
+        .ship{
+            list-style:none;
         }
         
         form ul li {
             margin: 5px 0;
         }
-        
+        .pay{
+            padding-left:30px;
+        }
         label {
             display: inline-block;
             width: 150px;
@@ -24,7 +31,8 @@
     </style>
         <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-
+    <!-- Custom CSS -->
+    <link href="css/Checkout.css" rel="stylesheet"> 
     <!-- Custom CSS -->
     <link href="css/shop-homepage.css" rel="stylesheet">
 </head>
@@ -59,10 +67,10 @@
             <!-- /.container -->
         </nav>
 <!-----------------------PUT ON EVERY PAGE END---------------------------------------------------------------->
-    <form action="#" method="get">
+    <form class="info" action="#" method="get">
          <fieldset>
             <legend>Billing Information</legend>
-            <ul>
+            <ul class="bill">
                 <li>
                     <label for="firstName1">First Name:</label>
                     <input type="text" id="firstName1" name="firstName1" autofocus>
@@ -107,7 +115,7 @@
         
         <fieldset>
             <legend>Shipping Information</legend>
-            <ul>
+            <ul class="ship">
                 <li>
                     <form action="">
                         <input type="checkbox" name="vehicle" value="Bike">Shipping information is same as billing<br>
@@ -154,7 +162,7 @@
                 </li>
             </ul>
         </fieldset>
-        <fieldset>
+        <fieldset class="pay">
             <legend>Payment</legend>
             <ul class="Payment">
 				<li>

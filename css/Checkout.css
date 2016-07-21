@@ -1,0 +1,28 @@
+ 
+        .Payment{
+            list-style: none;
+        }
+        .info {
+            padding-left: 30px;
+            
+        }
+        .bill{
+            list-style: none;
+        }
+        .ship{
+            list-style:none;
+        }
+        
+        form ul li {
+            margin: 5px 0;
+        }
+        .pay{
+            padding-left:30px;
+        }
+        label {
+            display: inline-block;
+            width: 150px;
+            text-align: right;
+        }
+        
+ 
