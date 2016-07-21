@@ -12,6 +12,10 @@ body {
     width: 100%;
 }
 
+.navbar{
+    background-color:whitesmoke;
+}
+
 .carousel-holder {
     margin-bottom: 30px;
 }
@@ -23,7 +27,11 @@ body {
 
 .nav{
     display: inline;
-    width:40%;
+    width:80%;
+}
+
+.navbar-brand{
+    color:black;
 }
 
 .carousel-inner{
@@ -31,13 +39,13 @@ body {
     height:auto;
     margin:auto;
 }
-nav li{
-    margin:2%;
+
+
+.navbar-collapse{
+    text-align: center;
 }
 
-.navbar-link{
-    vertical-align: middle;
-}
+
 
 
 .caption {
@@ -55,7 +63,7 @@ nav li{
     white-space: nowrap;
     text-align: center;
 }
-
+ 
 .thumbnail img {
     width: auto;
     height: 300px;
@@ -64,7 +72,6 @@ nav li{
 
 .thumbnail {
     padding: 0;
-    max-height: 500px;
     border:none;
     background-color: whitesmoke;
 }
@@ -72,7 +79,10 @@ nav li{
 .thumbnail .caption-full {
     padding: 9px;
 }
-
+.book-buttons{
+    width: 100%;
+    margin-top: 5px;
+}
 footer {
     margin: 50px 0;
 }
