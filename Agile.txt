@@ -25,13 +25,20 @@ Things We Want to See
 			- Be able to register and sign in
 			- Customer feedback on basic UI
 			- Testing
+			RELEASE 1
 		Sprint 2: Tuesday-Wednesday
 			- generating description pages-Will
 			- ability to add to cart and Wishlist
 			- ability to checkout 
 			- user can view past purchases
 			- testing
-			
+			RELEASE 2
+		Sprint 3: Thursday
+			- Admin can add new books, modify, delete
+			- testing 
+			- Work on presentation
+			RELEASE 3
+		
 	3)B.V.C(s)
 	4)Backlogs (Product/Sprint)
 	5)Relase/ Sprint Reviews
