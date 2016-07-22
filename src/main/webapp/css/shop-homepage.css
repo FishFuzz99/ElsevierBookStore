@@ -94,8 +94,12 @@ body {
     height: 250px;
 }
 
-.navbar-toggle{
-    background-color:saddlebrown;
+.icon-bar{
+	display: block;
+	width: 22px;
+	height: 2px;
+	border-radius: 1px;
+	background-color: black;
 }
 
 .book-descrip{

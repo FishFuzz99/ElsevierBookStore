@@ -69,3 +69,6 @@ form ul li {
 .login-button{
     text-align: right;
 }
+tr.shopBook > td{
+	padding-bottom:20px;
+}
