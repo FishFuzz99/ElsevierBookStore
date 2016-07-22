@@ -31,7 +31,7 @@
                             <a href="account.jsp">Account</a>
                         </li>
                         <li >
-                             <a href="cart.html">Cart</a>
+                             <a href="cart.html">Book Bag</a>
                         </li>
                     </ul>
                 </div>

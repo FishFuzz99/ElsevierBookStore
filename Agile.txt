@@ -7,7 +7,7 @@ Agile Principals
 	Failures 
 		- 
 3) Roles
-	PO - Brittany
+	PO - Brittney
 	Scrum Master - Jenna
 	Dev - Andrew Taylor Will Alec
 4)Collaboration + Communication

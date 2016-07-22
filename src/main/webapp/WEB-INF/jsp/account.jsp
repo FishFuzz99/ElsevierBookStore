@@ -40,7 +40,7 @@
                             <a href="account">Account</a>
                         </li>
                         <li >
-                             <a href="cart">Cart</a>
+                             <a href="cart">Book Bag</a>
                         </li>
                     </ul>
                 </div>
