@@ -74,9 +74,11 @@ body {
 
 
 .caption {
-    overflow: hidden;
-    margin:auto;
     text-align: center;
+    text-overflow: clip;
+    overflow: auto;
+    margin-bottom:5px;
+    height:200px;
 }
 
 .filters{
@@ -84,13 +86,12 @@ body {
 }
 
 .caption h4 {
-    
     text-align: center;
 }
  
 .thumbnail img {
     width: auto;
-    height: 300px;
+    height: 250px;
 }
 
 .icon-bar{
@@ -101,11 +102,21 @@ body {
 	background-color: black;
 }
 
+.book-descrip{
+    height: 50px;
+    text-overflow: clip;
+    
+}
+
+.book-title{
+    height:30px;
+}
+
 
 .thumbnail {
     padding: 10px;
     border:none;
-    max-height: 600px;
+    height: 575px;
     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
     background-color:RGB(241, 233, 210);
 }
@@ -117,6 +128,7 @@ body {
 .book-buttons{
     width: 100%;
     margin-top: 5px;
+
 }
 
 .wish-list-button{

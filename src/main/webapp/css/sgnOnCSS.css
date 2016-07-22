@@ -36,14 +36,6 @@
     margin-bottom: 20px;
 }
 
-.forgot-login a{
-	color: blue;
-	text-decoration: none;
-}
-
-.forgot-login a:hover{
-	text-decoration: underline;
-}
 :-moz-placeholder{
 	color: #c9c9c9 !important;
 	font-size: 13px;
