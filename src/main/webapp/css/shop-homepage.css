@@ -41,7 +41,7 @@ body {
 
 .nav{
     display: inline;
-    width:70%;    
+    width:55%;    
     
 }
 
@@ -124,6 +124,10 @@ body {
 
 footer {
     margin: 50px 0;
+}
+.logo{
+    height: 11%;
+    width: 11%;
 }
 
 
