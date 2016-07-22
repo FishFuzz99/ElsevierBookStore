@@ -1,0 +1,28 @@
+Agile Principals
+
+1) Self Organize
+2)Define Success and Failures
+	Success 
+		-
+	Failures 
+		- 
+3) Roles
+	PO - Brittany
+	Scrum Master - Jenna
+	Dev - Andrew Taylor Will Alec
+4)Collaboration + Communication
+5)Support + Trust
+6)Quality over Quantity
+7)Customer Satisfaction
+
+
+Things We Want to See
+	1)Release Plan/ Spring Plan
+	2)Sprint Goal(s)
+	3)B.V.C(s)
+	4)Backlogs (Product/Sprint)
+	5)Relase/ Sprint Reviews
+	6)Sprint Retrospective
+	7)What Have You Learned?
+		- Course Materials?
+		- Project?
