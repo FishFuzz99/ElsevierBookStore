@@ -41,7 +41,7 @@ Things We Want to See
 		
 	3)B.V.C(s)
 	4)Backlogs (Product/Sprint)
-	5)Relase/ Sprint Reviews
+	5)Release/ Sprint Reviews
 	6)Sprint Retrospective
 	7)What Have You Learned?
 		- Course Materials?
