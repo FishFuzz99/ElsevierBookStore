@@ -53,5 +53,48 @@ public class JDBCOperator {
         return book;
     }
 
+    public
+
+    public User findUserByEmail(String email)
+    {
+        User user = new User();
+        try
+        {
+            preparedStatement = connection.prepareStatement("SELECT * FROM users WHERE email LIKE ?");
+            preparedStatement.setString(1, email);
+            ResultSet rs = preparedStatement.executeQuery();
+
+            if (rs != null)
+            {
+                user.setID(rs.getInt("userId"));
+                user.setFirstName(rs.getString("firstName"));
+                user.setLastName(rs.getString("lastName"));
+                user.setEmail(rs.getString("email"));
+                user.setPassword(rs.getString("password"));
+                if (!(rs.getString("city")).isEmpty())
+                {
+                    user.setCity("city");
+                }
+                if (!(rs.getString("state")).isEmpty())
+                {
+                    user.setCity("state");
+                }
+                if (!(rs.getString("zipCode")).isEmpty())
+                {
+                    user.setCity("zipCode");
+                }
+                if (!(rs.getString("street")).isEmpty())
+                {
+                    user.setCity("street");
+                }
+            }
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+        }
+
+        return user;
+    }
 
 }

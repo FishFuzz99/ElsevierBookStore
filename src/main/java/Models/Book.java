@@ -23,7 +23,7 @@ public class Book implements Serializable{
     public float price;
     public String ISBN;
     public String edition;
-    public List<BookFormat> formats;
+    public BookFormat format;
     public int numberOfPages;
     public String description;
 
