@@ -25,6 +25,12 @@ Things We Want to See
 			- Be able to register and sign in
 			- Customer feedback on basic UI
 			- Testing
+		Sprint 2: Tuesday-Wednesday
+			- generating description pages-Will
+			- ability to add to cart and Wishlist
+			- ability to checkout 
+			- user can view past purchases
+			- testing
 			
 	3)B.V.C(s)
 	4)Backlogs (Product/Sprint)
