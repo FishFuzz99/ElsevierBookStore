@@ -93,6 +93,10 @@ body {
     height: 300px;
 }
 
+.navbar-toggle{
+    background-color:saddlebrown;
+}
+
 
 .thumbnail {
     padding: 10px;
