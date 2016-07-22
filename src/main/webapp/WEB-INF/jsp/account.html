@@ -28,6 +28,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
+                    <img class="logo" src="../../images/Logo.png" alt="">
                      <a class="navbar-brand " href="index.html">Cover to Cover</a>
                 </div>
                 <!-- Collect the nav links, forms, and other content for toggling -->
@@ -64,98 +65,103 @@
         <form>
            <ul class="info" style="list-style-type:none">
             <li>
-            <div class="login">
-            <form>
-                <legend>Update Password</legend>
-                <p><input type="email" placeholder="Username or Email" required/></p>
-                <p><input type="password" placeholder="Old Password" required/></p>
-                <p><input type="password" placeholder="New Password" required/></p>
-                <p><input type="password" placeholder="Confirm New Password" required/></p>
-                <button class="btn btn-success login-button" type="submit" value="Login">Submit</button>
-            </form>
-        </div>
-               </li>
-               <li>
-                 <div class="payment">
-            <form>
-            <legend>Update Payment Information</legend>
-            <ul class="pay">
-				<li>
-					<label for="card">Credit Card Type:</label>
-		            <select name="card" id="card">
-		                <option value="QAJAVSC">Visa</option>
-		                <option value="QAWEBUI">Mastercard</option>
-		                <option value="QAWEBCSS">American Express</option>
-		                <option value="QAJQUERY">Discover</option>
-		            </select>
-				</li>
-                <li>
-                    <label for="Number">Credit Card Number:</label>
-                    <input type="text" id="number" name="number">
-                </li>
-                <li>
-                    <label for="expdate">Expiration Date:</label>
-                    <input type="text" id="expdate" name="expdate">
-                </li>
-                <li class="buttonBill">
-                    <button class="btn btn-success login-button" type="submit" value="Login">Submit</button>
-                </li>
-			</ul>
-            </form>
-            </div>
-               </li>
+                <div class="login">
+                    <form>
+                        <legend>Update Password</legend>
+                        <p><input type="email" placeholder="Username or Email" required/></p>
+                        <p><input type="password" placeholder="Old Password" required/></p>
+                        <p><input type="password" placeholder="New Password" required/></p>
+                        <p><input type="password" placeholder="Confirm New Password" required/></p>
+                        <button class="btn btn-success login-button" type="submit" value="Login">Submit</button>
+                    </form>
+                </div>
+            </li>
+            <li>
+                <div class="payment">
+                    <form>
+                        <legend>Update Payment Information</legend>
+                            <ul class="pay">
+                                <li>
+                                    <label for="card">Credit Card Type:</label>
+                                    <select name="card" id="card">
+                                        <option value="QAJAVSC">Visa</option>
+                                        <option value="QAWEBUI">Mastercard</option>
+                                        <option value="QAWEBCSS">American Express</option>
+                                        <option value="QAJQUERY">Discover</option>
+                                    </select>
+                                </li>
+                                <li>
+                                    <label for="Number">Credit Card Number:</label>
+                                    <input type="text" id="number" name="number">
+                                </li>
+                                <li>
+                                    <label for="expdate">Expiration Date:</label>
+                                    <input type="text" id="expdate" name="expdate">
+                                </li>
+                                <li class="buttonBill">
+                                    <button class="btn btn-success login-button" type="submit" value="Login">Submit</button>
+                                </li>
+                            </ul>
+                    </form>
+                </div>
+            </li>
                <li>
                    <div class="shipping">
-            <form>
-            <fieldset>
-            <legend>Update Shipping Information</legend>
-            <ul class="ship">
-                <li>
-                    <label for="firstName">First Name:</label>
-                    <input type="text" id="firstName" name="firstName" autofocus>
-                </li>
-                
-                <li>
-                    <label for="surname">Last Name:</label>
-                    <input type="text" id="surname" name="surname">
-                </li>	
-                
-                
-                <li>
-                    <label for="StShipAddress">Street Address:</label>
-                    <input type="text" id="StShipAddress" name="StShipAddress">
-                </li>
-                
-                 <li>
-                    <label for="StShipAddress2"></label>
-                    <input type="text" id="StShipAddress2" name="StShipAddress2">
-                </li>
-                
-                <li>
-                    <label for="CityShipAddress">City/Town:</label>
-                    <input type="text" id="CityShipAddress" name="CityShipAddress">
-                </li>
-                
-                <li>
-                    <label for="StateShipAddress">State:</label>
-                    <input type="text" id="StateShipAddress" name="StateShipAddress">
-                </li>
-                
-                <li>
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" placeholder="you@domain.com" required>
-                </li>
-                <li>
-                    <label for="phone">Phone Number:</label>
-                    <input type="tel" id="phone" name="phone" placeholder="(555)555-5555" required>
-                </li>
-                <li class="buttonShip">
-                    <button class="btn btn-success login-button" type="submit" value="Login">Submit</button>
-                </li>
-            </ul>
-        </fieldset>
+                <form>
+                    <fieldset>
+                    <legend>Update Shipping Information</legend>
+                    <ul class="ship">
+                        <li>
+                            <label for="firstName">First Name:</label>
+                            <input type="text" id="firstName" name="firstName">
+                        </li>
+
+                        <li>
+                            <label for="surname">Last Name:</label>
+                            <input type="text" id="surname" name="surname">
+                        </li>	
+
+
+                        <li>
+                            <label for="StShipAddress">Street Address:</label>
+                            <input type="text" id="StShipAddress" name="StShipAddress">
+                        </li>
+
+                         <li>
+                            <label for="StShipAddress2"></label>
+                            <input type="text" id="StShipAddress2" name="StShipAddress2">
+                        </li>
+
+                        <li>
+                            <label for="CityShipAddress">City/Town:</label>
+                            <input type="text" id="CityShipAddress" name="CityShipAddress">
+                        </li>
+
+                        <li>
+                            <label for="StateShipAddress">State:</label>
+                            <input type="text" id="StateShipAddress" name="StateShipAddress">
+                        </li>
+
+                        <li>
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" placeholder="you@domain.com" required>
+                        </li>
+                        <li>
+                            <label for="phone">Phone Number:</label>
+                            <input type="tel" id="phone" name="phone" placeholder="(555)555-5555" required>
+                        </li>
+                        <li class="buttonShip">
+                            <button class="btn btn-success login-button" type="submit" value="Login">Submit</button>
+                        </li>
+                    </ul>
+                </fieldset>
+            </form>
+        </div>
+    </li>
+        </ul>
         </form>
         </div>
+<<<<<<< HEAD
                </li>
             </ul>
             </form>
@@ -187,6 +193,34 @@
 	<tbody>
 </table>
 <!------------------------------wish list-------------------->
+=======
+       
+        <div id="menu2" class="tab-pane fade">
+              <table border="2" class="table">
+                <thead>
+                <tr>
+                    <th>Book</th>
+                    <th>Price</th>
+                    <th>Order ID</th>
+                    <th>Order Date</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>HTML For Dummies</td>
+                    <td>$130</td>
+                    <td>10010101</td>
+                    <td>Today</td>
+                </tr>
+                <tr>
+                    <td>Dummy</td>
+                    <td>Dummy</td>
+                    <td>Dummy</td>
+                    <td>Dummy</td>
+                </tr>
+                <tbody>
+            </table>
+>>>>>>> origin/master
           </div>
           <div id="menu3" class="tab-pane fade">
                                      <!----------------One Book------------->

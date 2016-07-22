@@ -21,11 +21,11 @@
 
     <!-- Bootstrap Core CSS -->
     <link href="../../css/bootstrap.min.css" rel="stylesheet">
+    
+    <link href="../../css/shop-homepage.css" rel="stylesheet">
 
     <!-- Book page-specific CSS -->
     <link href="../../css/book.css" rel="stylesheet">
-    
-     <link href="../../css/shop-homepage.css" rel="stylesheet">
 </head>
 
 <body>
@@ -50,20 +50,39 @@
                     <li >
                         <a href="shoppingCart.html">Book Bag</a>
                     </li>
+                    <li class="login-button pull-right">
+                        <a href="signOnPage.html">Login / Register</a>
+                    </li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
         </div>
         <!-- /.container -->
     </nav>
-
-    <div class="images">
-        <!-- put a carousel here with images of the book's front and back covers -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-4">
+                <div class="images">
+                    <!-- put a carousel here with images of the book's front and back covers -->
+                    <img src="../../images/catchingFire.jpg" alt="">
+                </div>
+            </div>
+            <div class="col-lg-8 col-md-8">
+                <!-- this is where the book information such as title, author, date, publisher, short summary will go -->
+                <div class="caption" style="margin-left:12px">
+                    <h1 style="text-align:left">Catching Fire</h1>
+                    <h3 style="text-align:left">Suzanne Collins</h3>
+                    <p>Publication Date: Sep 1, 2009</p>
+                    <p>ISBN: 1234567890</p>
+                    <p class="book-descrip" style="text-align:left">This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+                <div class="col-md-4">
+                    <button type="button" class="btn btn-primary book-buttons cart-button">Add to Cart</button>
+                    <button type="button" class="btn book-buttons wish-list-button">Add to Wish List</button>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="bookinfo">
-        <!-- this is where the book information such as title, author, date, publisher, short summary will go -->
-    </div>
-
 
     <!-- jQuery -->
     <script src="../../js/jquery.js"></script>
