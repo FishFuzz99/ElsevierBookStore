@@ -29,6 +29,7 @@ html {
     border-radius: 5px;
     display: table;
     position: static;
+	    background-color:RGB(241, 233, 210);
 }
 
 #signup .header {

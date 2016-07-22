@@ -1,6 +1,8 @@
 .container {
 	margin: 50px auto;
-	width: 640px;
+	width: 440px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+	background-color:RGB(241, 233, 210);
 }
 
 .login{
@@ -43,10 +45,7 @@
 	color: #ccc;
 	font-size: 13px;
 }
-.container {
-	margin: 50px auto;
-	width: 640px;
-}
+
 .login:before {
 	content: '';
 	position: absolute;
