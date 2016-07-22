@@ -17,8 +17,15 @@ Agile Principals
 
 
 Things We Want to See
-	1)Release Plan/ Spring Plan
+	1)Release Plan/ Sprint Plan
 	2)Sprint Goal(s)
+		Sprint 1 7/25/16
+			- UI
+			- Pages linked to others
+			- Be able to register and sign in
+			- Customer feedback on basic UI
+			- Testing
+			
 	3)B.V.C(s)
 	4)Backlogs (Product/Sprint)
 	5)Relase/ Sprint Reviews
