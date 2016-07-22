@@ -9,7 +9,7 @@
 	position: relative;
 	margin: 0 auto;
 	padding: 20px 20px 20px;
-	width: 310px;
+    text-align: center;
 }
 
 .login p.submit {
@@ -21,11 +21,19 @@
     width: 100%;
 }
 
-.forgot-login {
-	margin: 20px 0;
-	font-size: 11px;
-	color: blue;
-	text-align: center;
+.forgot-submit-button {
+	display: block; 
+    width: 100%;
+    background-color:firebrick;
+    color:white;
+    margin-bottom: 20px;
+}
+
+.register-submit-button{
+    display: block; 
+    width: 100%;
+    color:white;
+    margin-bottom: 20px;
 }
 
 .forgot-login a{
