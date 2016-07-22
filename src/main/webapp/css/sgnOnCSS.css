@@ -18,18 +18,22 @@
 
 .login-submit-button{
     display: block; 
-    width: 40%;
-    text-align: center;
-    margin: 0 auto;
+    width: 100%;
+}
+
+.forgot-submit-button {
+	display: block; 
+    width: 100%;
+    background-color:firebrick;
+    color:white;
+    margin-bottom: 20px;
 }
 
 .register-submit-button{
     display: block; 
-    width: 40%;
+    width: 100%;
     color:white;
     margin-bottom: 20px;
-    text-align: center;
-    margin: 0 auto;
 }
 
 .forgot-login a{
