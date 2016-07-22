@@ -51,26 +51,31 @@
      <div class="container tabs-menu">
       <h2>Account</h2>
       <ul class="nav nav-pills pills-menu">
-        <li class="active"><a data-toggle="tab" href="#menu1">Login Info</a></li>
-        <li><a data-toggle="tab" href="#menu2">Payment Info</a></li>
-        <li><a data-toggle="tab" href="#menu3">Shipping Info</a></li>
-        <li><a data-toggle="tab" href="#menu4">Order History</a></li>
-        <li><a data-toggle="tab" href="#menu5">Wish List</a></li>
+        <li class="active"><a data-toggle="tab" href="#menu1">Edit Account Info</a></li>
+        <li><a data-toggle="tab" href="#menu2">Order History</a></li>
+        <li><a data-toggle="tab" href="#menu3">Wish List</a></li>
       </ul>
 
       <div class="tab-content">
         <div id="menu1" class="tab-pane fade in active">
+        <form>
+           <ul class="info">
+            <li>
             <div class="login">
             <form>
+                <legend>Update Password</legend>
                 <p><input type="email" placeholder="Username or Email" required/></p>
-                <p><input type="password" placeholder="Password" required/></p>
+                <p><input type="password" placeholder="Old Password" required/></p>
+                <p><input type="password" placeholder="New Password" required/></p>
+                <p><input type="password" placeholder="Confirm New Password" required/></p>
                 <button class="btn btn-success login-button" type="submit" value="Login">Submit</button>
             </form>
         </div>
-          </div>
-        <div id="menu2" class="tab-pane fade">
-        <div class="payment">
+               </li>
+               <li>
+                 <div class="payment">
             <form>
+            <legend>Update Payment Information</legend>
             <ul class="pay">
 				<li>
 					<label for="card">Credit Card Type:</label>
@@ -95,12 +100,12 @@
 			</ul>
             </form>
             </div>
-        </div>
-        <div id="menu3" class="tab-pane fade">
-          <div class="shipping">
+               </li>
+               <li>
+                   <div class="shipping">
             <form>
             <fieldset>
-            <legend>Shipping Information</legend>
+            <legend>Update Shipping Information</legend>
             <ul class="ship">
                 <li>
                     <label for="firstName">First Name:</label>
@@ -148,11 +153,15 @@
         </fieldset>
         </form>
         </div>
-        </div>
-          <div id="menu4" class="tab-pane fade">
+               </li>
+            </ul>
+            </form>
+          </div>
+       
+          <div id="menu2" class="tab-pane fade">
               Order History menu goes here 
           </div>
-          <div id="menu5" class="tab-pane fade">
+          <div id="menu3" class="tab-pane fade">
               Wish List goes here
           </div>
       </div>

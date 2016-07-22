@@ -40,6 +40,7 @@ form ul li {
     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
     background-color:RGB(241, 233, 210);
 	padding-left:10px;
+    padding-top: 20px;
 	width:35%;
 	height:400px;
 	display:inline-block;
@@ -50,8 +51,8 @@ form ul li {
     background-color:RGB(241, 233, 210);
 	padding-left:10px;
     padding-top: 20px;
-	width:27%;
-	height:160px;
+	width:35%;
+	height:280px;
 	display:inline-block;
 }
 
@@ -62,6 +63,9 @@ form ul li {
     padding-right:12px;
     padding-top: 20px;
 	width:35%;
-	height:170px;
+	height:230px;
 	display:inline-block;
+}
+.info{
+    list-style: none;
 }
