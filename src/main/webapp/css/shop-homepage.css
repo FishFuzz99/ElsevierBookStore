@@ -4,11 +4,6 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
-.container-nav{
-    padding:0;
-    margin:0 !important;
-    display:inline-block
-}
 
 
 body {
@@ -25,10 +20,9 @@ body {
     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
 
-.navbar-form{
-    margin: 0;
+.login-button{
+    text-align: right;
 }
-
 
 .carousel-holder {
     margin-bottom: 30px;
@@ -47,6 +41,8 @@ body {
 
 .nav{
     display: inline;
+    width:55%;    
+    
 }
 
 
@@ -73,7 +69,7 @@ body {
 
 
 .navbar-collapse{
-    text-align: center;
+    text-align: right;
 }
 
 
