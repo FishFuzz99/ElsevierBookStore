@@ -4,6 +4,8 @@ import Models.Book;
 import Models.JDBCOperator;
 import Models.User;
 import Models.UserDto;
+import com.ElsevierResources.services.UserService;
+import com.ElsevierResources.validation.EmailExistsException;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -76,7 +78,6 @@ public class HomeController {
         Book book = jdbcOperator.getBook(id); // replace this with database query that gets the information
         ModelAndView mv = new ModelAndView("book");
         mv.addObject("book", book);
-        mv.addObject("testing", "testing");
         return mv;
 
     }
@@ -92,10 +93,14 @@ public class HomeController {
         if (registered == null) {
             result.rejectValue("email", "message.regError");
         }
+
+        ModelAndView mv = new ModelAndView();
+        return mv;
         // rest of the implementation
     }
     private User createUserAccount(UserDto accountDto, BindingResult result) {
         User registered = null;
+        UserService service = new UserService(jdbcOperator);
         try {
             registered = service.registerNewUserAccount(accountDto);
         } catch (EmailExistsException e) {

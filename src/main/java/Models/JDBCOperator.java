@@ -53,7 +53,37 @@ public class JDBCOperator {
         return book;
     }
 
-    public
+    public User saveUser(User user)
+    {
+        try
+        {
+            if ((!(user.getCity().isEmpty()) && !(user.getCity().equals(""))) && (!user.getStreet().isEmpty() && !user.getStreet().equals("")))
+            {
+                preparedStatement = connection.prepareStatement("INSERT INTO users(firstName, lastName, email, password, street, city, state, zipCode) VALUES(?, ?, ?, ?, ?, ?, ?, ?)");
+                preparedStatement.setString(5, user.getStreet());
+                preparedStatement.setString(6, user.getCity());
+                preparedStatement.setString(7, user.getState());
+                preparedStatement.setString(8, user.getZipCode());
+            }
+            else
+            {
+                preparedStatement = connection.prepareStatement("INSERT INTO users(firstName, lastName, email, password) VALUES(?, ?, ?, ?)");
+            }
+            preparedStatement.setString(1, user.getFirstName());
+            preparedStatement.setString(2, user.getLastName());
+            preparedStatement.setString(3, user.getEmail());
+            preparedStatement.setString(4, user.getPassword());
+
+            preparedStatement.execute();
+
+
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+        }
+        return user;
+    }
 
     public User findUserByEmail(String email)
     {

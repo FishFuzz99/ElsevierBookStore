@@ -17,6 +17,7 @@ public class User {
     private String city;
     private String state;
     private String zipCode;
+    private boolean isAdmin;
 
     public String getFirstName() {
         return firstName;
@@ -88,5 +89,13 @@ public class User {
 
     public void setID(int ID) {
         this.ID = ID;
+    }
+
+    public boolean isAdmin() {
+        return isAdmin;
+    }
+
+    public void setAdmin(boolean admin) {
+        isAdmin = admin;
     }
 }
