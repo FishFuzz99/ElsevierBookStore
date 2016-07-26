@@ -84,6 +84,37 @@ public class HomeController {
     @RequestMapping(value="checkout", method=RequestMethod.GET)
     public String viewCheckout () {return "checkout";}
 
+    @RequestMapping(value="checkout", method=RequestMethod.POST)
+    public String checkTest(HttpServletRequest request){
+        String billFirstName = request.getParameter("firstName1");
+        String billSurname = request.getParameter("surname1");
+        String billStreetAddress = request.getParameter("StBillAddress");
+        String billStreetAddress2 = request.getParameter("StBillAddress2");
+        String billCityAddress = request.getParameter("CityBillAddress");
+        String billStateAddress = request.getParameter("StateBillAddress");
+        String billEmail = request.getParameter("email1");
+        String billPhone = request.getParameter("phone1");
+        String shipFirstName = request.getParameter("firstName");
+        String shipSurname = request.getParameter("surname");
+        String shipStreetAddress = request.getParameter("StShipAddress");
+        String shipStreetAddress2 = request.getParameter("StShipAddress2");
+        String shipCityAddress = request.getParameter("CityShipAddress");
+        String shipStateAddress = request.getParameter("StateShipAddress");
+        String shipEmail = request.getParameter("email");
+        String shipPhone = request.getParameter("phone");
+        String cardType = request.getParameter("card");
+        String cardNumber = request.getParameter("number");
+        String expDate = request.getParameter("expdate");
+
+        jdbcOperator.placeOrder("2016-12-12","100","2016-12-12",shipStreetAddress,shipCityAddress,"45342","OH");
+
+
+
+        System.out.println(billFirstName);
+        return "checkout";
+    }
+
+
     @RequestMapping(value="login", method=RequestMethod.POST)
     public ModelAndView login(HttpServletRequest request)
     {
