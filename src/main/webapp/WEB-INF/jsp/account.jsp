@@ -220,29 +220,73 @@
                                     <legend>Add Book</legend>
                                     <ul class="ship">
                                         <li>
+                                            <label for="bookId">Book ID:</label>
+                                            <input type="text" id="bookId" name="bookId">
+                                        </li>
+                                        <li>
                                             <label for="bookTitle">Title:</label>
-                                            <input type="text" id="bookTitle" name="bookTitle">
+                                            <input type="text" id="bookTitle1" name="bookTitle">
+                                        </li>
+                                        <li>
+                                            <p class="formDesc">
+                                                <label for="message1">
+                                                    Description: </label>
+                                                <textarea rows="5" cols="20" name="message" id="message1"></textarea>
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <label for="isbn">ISBN:</label>
+                                            <input type="text" id="isbn" name="isbn">
+                                        </li>
+                                        <li>
+                                            <label for="publisher">Publisher:</label>
+                                            <input type="text" id="publisher" name="publisher">
+                                        </li>
+
+
+
+
+
+
+                                        <li>
+                                            <label for="format">Format:</label>
+                                            <select name="format" id="format">
+                                                <option value="QAJAVSC">EBook</option>
+                                                <option value="QAWEBUI">Print Book</option>
+                                            </select>
                                         </li>
 
                                         <li>
-                                            <label for="author">Author:</label>
-                                            <input type="text" id="author" name="author">
-                                        </li>
-
-
-                                        <li>
-                                            <label for="description">Description:</label>
-                                            <input type="text" id="description" name="description">
+                                            <label for="publishDate">Date Published:</label>
+                                            <input type="text" id="publishDate" name="publishDate">
                                         </li>
 
                                         <li>
-                                            <label for="price">Price:</label>
-                                            <input type="text" id="price" name="price">
+                                            <label for="edition">Edition:</label>
+                                            <input type="text" id="edition" name="edition">
+                                        </li>
+                                        <li>
+                                            <label for="pages">Number of pages:</label>
+                                            <input type="text" id="pages" name="pages">
                                         </li>
 
                                         <li>
-                                            <label for="imageUrl">Image URL:</label>
-                                            <input type="text" id="imageUrl" name="imageUrl">
+                                            <label for="author1">Author:</label>
+                                            <input type="text" id="author1" name="author">
+                                        </li>
+                                        <li>
+                                            <label for="genre">Genre:</label>
+                                            <input type="text" id="genre" name="genre">
+                                        </li>
+
+                                        <li>
+                                            <label for="price1">Price:</label>
+                                            <input type="text" placeholder="0.00" id="price1" name="price">
+                                        </li>
+
+                                        <li>
+                                            <label for="imageUrl1">Image URL:</label>
+                                            <input type="text" placeholder=".jpg or .png" id="imageUrl1" name="imageUrl">
                                         </li>
                                         <li class="buttonShip">
                                             <button class="btn btn-success login-button" type="submit" value="Login">Submit</button>
@@ -259,7 +303,6 @@
                                     <legend>Delete Book</legend>
                                     <ul class="ship">
                                         <li>
-                                            <label for="delete">Select Book:</label>
                                             <select name="delete" id="delete">
                                             <option value="QAJAVSC">Catching Fire</option>
                                             <option value="QAWEBUI">Divergent</option>
@@ -272,7 +315,7 @@
                                         </select>
                                         </li>
                                         <li class="buttonShip">
-                                            <button class="btn btn-success login-button" type="submit" value="Login">Remove</button>
+                                            <button class="btn btn-success login-button" type="submit" value="Login">Delete</button>
                                         </li>
                                     </ul>
                                 </fieldset>
@@ -286,8 +329,8 @@
                                     <legend>Edit Book Info</legend>
                                     <ul class="ship">
                                         <li>
-                                            <label for="delete">Select Book:</label>
-                                            <select name="delete" id="delete">
+                                            <label for="delete">Book:</label>
+                                            <select name="delete" id="delete1">
                                             <option value="QAJAVSC">Catching Fire</option>
                                             <option value="QAWEBUI">Divergent</option>
                                             <option value="QAWEBCSS">The Rainbow Fish</option>
@@ -298,47 +341,78 @@
                                             <option value="QAJQUERY">Harry Potter and the Half Blood Prince</option>
                                         </select>
                                         </li>
-                                        <ul class="ship">
+                                        <li>
+                                            <label for="bookId1">Book ID:</label>
+                                            <input type="text" id="bookId1" name="bookId1">
+                                        </li>
                                         <li>
                                             <label for="bookTitle">Title:</label>
                                             <input type="text" id="bookTitle" name="bookTitle">
                                         </li>
-
                                         <li>
-                                            <label for="author">Author:</label>
-                                            <input type="text" id="author" name="author">
+                                            <p class="formDesc">
+                                                <label for="message2">
+                                                    Description: </label>
+                                                <textarea rows="5" cols="20" name="message2" id="message2"></textarea>
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <label for="isbn2">ISBN:</label>
+                                            <input type="text" id="isbn2" name="isbn2">
+                                        </li>
+                                        <li>
+                                            <label for="publisher2">Publisher:</label>
+                                            <input type="text" id="publisher2" name="publisher2">
                                         </li>
 
 
                                         <li>
-                                            
-				                            <label for="message">
-                                                Description: </label>
-				                            <textarea rows="10" cols="10" name="message" id="message"></textarea>
-			                                
+                                            <label for="format2">Format:</label>
+                                            <select name="format2" id="format2">
+                                                <option value="QAJAVSC">EBook</option>
+                                                <option value="QAWEBUI">Print Book</option>
+                                            </select>
                                         </li>
 
                                         <li>
-                                            <label for="price">Price:</label>
-                                            <input type="text" id="price" name="price">
+                                            <label for="publishDate2">Date Published:</label>
+                                            <input type="text" id="publishDate2" name="publishDate2">
                                         </li>
 
                                         <li>
-                                            <label for="imageUrl">Image URL:</label>
-                                            <input type="text" id="imageUrl" name="imageUrl">
+                                            <label for="edition2">Edition:</label>
+                                            <input type="text" id="edition2" name="edition2">
+                                        </li>
+                                        <li>
+                                            <label for="pages2">Number of pages:</label>
+                                            <input type="text" id="pages2" name="pages2">
+                                        </li>
+
+                                        <li>
+                                            <label for="author2">Author:</label>
+                                            <input type="text" id="author2" name="author2">
+                                        </li>
+                                        <li>
+                                            <label for="genre2">Genre:</label>
+                                            <input type="text" id="genre2" name="genre2">
+                                        </li>
+
+                                        <li>
+                                            <label for="price2">Price:</label>
+                                            <input type="text" placeholder="0.00" id="price2" name="price2">
+                                        </li>
+
+                                        <li>
+                                            <label for="imageUrl2">Image URL:</label>
+                                            <input type="text" placeholder=".jpg or .png" id="imageUrl2" name="imageUrl2">
                                         </li>
                                         <li class="buttonShip">
                                             <button class="btn btn-success login-button" type="submit" value="Login">Submit</button>
                                         </li>
                                     </ul>
-                                    </ul>
                                 </fieldset>
                             </form>
-                        </div>  
-                 
-                 
-                 
-                 
+                        </div>
                  </li>
             </ul>
     </div>
