@@ -214,7 +214,7 @@
              <ul class="info" style="list-style-type:none">
                  <li>
                 <div class="addBook">
-                            <form>
+                            <form action = "insert" method="get">
     
                                 <fieldset>
                                     <legend>Add Book</legend>
