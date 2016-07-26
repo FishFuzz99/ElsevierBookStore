@@ -59,9 +59,7 @@ public class JDBCOperator {
             preparedStatement = connection.prepareStatement("SELECT * FROM booktest WHERE id = ?");
             preparedStatement.setString(1, String.valueOf(id));
             ResultSet rs = preparedStatement.executeQuery();
-            if (rs != null)
-            {
-                rs.next();
+            if ((rs != null) && rs.next()) {
                 book.title = rs.getString("title");
                 book.author = rs.getString("author");
             }
