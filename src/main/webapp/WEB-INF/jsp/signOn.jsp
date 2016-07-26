@@ -5,8 +5,12 @@
   Time: 4:03 PM
   To change this template use File | Settings | File Templates.
 --%>
+
+<%@ taglib prefix="d" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page isELIgnored="false" %>
 <%@ taglib prefix="c" uri="http://www.springframework.org/tags" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <!DOCTYPE html>
@@ -72,6 +76,9 @@
                     Remember me on this computer?
                 </label>
                 </label>
+                <d:if test="${!empty error}">
+                    <div class="has-error">${error}</div>
+                </d:if>
             </p>
             <button class="btn btn-success login-submit-button" type="submit" value="Login">Submit</button>
         </form>

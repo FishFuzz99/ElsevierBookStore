@@ -54,8 +54,8 @@ public class HomeController {
     }
 
 
-    @RequestMapping(value="front", method = RequestMethod.GET)
-    public String viewFront(HttpServletRequest request)
+   /* @RequestMapping(value="front", method = RequestMethod.GET)
+    public String viewFront(WebRequest request)
     {
         Book book = new Book();
 
@@ -73,7 +73,7 @@ public class HomeController {
         request.setAttribute("bookMap", map);
 
         return "front";
-    }
+    }*/
 
     @RequestMapping(value="signOn", method=RequestMethod.GET)
     public String viewSignOn () {return "signOn";}
@@ -84,50 +84,30 @@ public class HomeController {
     @RequestMapping(value="checkout", method=RequestMethod.GET)
     public String viewCheckout () {return "checkout";}
 
-    @RequestMapping(value="checkout", method=RequestMethod.POST)
-    public String checkTest(HttpServletRequest request){
-        String billFirstName = request.getParameter("firstName1");
-        String billSurname = request.getParameter("surname1");
-        String billStreetAddress = request.getParameter("StBillAddress");
-        String billStreetAddress2 = request.getParameter("StBillAddress2");
-        String billCityAddress = request.getParameter("CityBillAddress");
-        String billStateAddress = request.getParameter("StateBillAddress");
-        String billEmail = request.getParameter("email1");
-        String billPhone = request.getParameter("phone1");
-        String shipFirstName = request.getParameter("firstName");
-        String shipSurname = request.getParameter("surname");
-        String shipStreetAddress = request.getParameter("StShipAddress");
-        String shipStreetAddress2 = request.getParameter("StShipAddress2");
-        String shipCityAddress = request.getParameter("CityShipAddress");
-        String shipStateAddress = request.getParameter("StateShipAddress");
-        String shipEmail = request.getParameter("email");
-        String shipPhone = request.getParameter("phone");
-        String cardType = request.getParameter("card");
-        String cardNumber = request.getParameter("number");
-        String expDate = request.getParameter("expdate");
-
-        jdbcOperator.placeOrder("07/25/2011","100","date",shipStreetAddress,shipCityAddress,"45342","ohio");
-
-
-
-        System.out.println(billFirstName);
-        return "checkout";
-    }
-
-
     @RequestMapping(value="login", method=RequestMethod.POST)
-    public String loginTest(HttpServletRequest request)
+    public ModelAndView login(HttpServletRequest request)
     {
         HttpSession session = request.getSession();
+        ModelAndView mv = new ModelAndView();
+        mv.setViewName("front");
         String email = request.getParameter("email");
         String password = request.getParameter("password");
         String remember = request.getParameter("remember");
         if (!(email.isEmpty() || email.equals("")))
         {
             User user = jdbcOperator.findUserByEmail(email);
-            if (user == null || (user.getFirstName().equals("") || user.getEmail().equals("")) || user.getEmail().isEmpty() || user.getFirstName().isEmpty() )
+            if (user == null
+                    || user.getFirstName() == null
+                    || user.getEmail() == null
+                    || user.getFirstName().equals("")
+                    || user.getEmail().equals("")
+                    || user.getEmail().isEmpty()
+                    || user.getFirstName().isEmpty()
+                    || !user.getPassword().equals(password))
             {
-                // failed to log in
+                mv.setViewName("signOn");
+                String error = "No user with that email and password exists.";
+                mv.addObject("error", error);
             }
             else
             {
@@ -135,12 +115,11 @@ public class HomeController {
                 session.setAttribute("user", user);
             }
         }
-        return "front";
+        return mv;
     }
 
     @RequestMapping(value = "/user/registration", method = RequestMethod.GET)
-        public String showRegistrationForm(HttpServletRequest request, Model model) {
-
+    public String showRegistrationForm(WebRequest request, Model model) {
         UserDto userDto = new UserDto();
         model.addAttribute("user", userDto);
         return "registration";
