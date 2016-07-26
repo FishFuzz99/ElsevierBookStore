@@ -104,7 +104,7 @@
             <ul class="ship">
                 <li>
 
-                        <input type="checkbox" name="vehicle" value="Bike">Shipping information is same as billing<br>
+                        <input type="checkbox" onClick=flood() id="floodInfo">Shipping information is same as billing<br>
 
                 </li>
                 <li>
@@ -201,6 +201,6 @@
 
 <!-- Bootstrap Core JavaScript -->
 <script src="<c:url value="js/bootstrap.min.js"/>"></script>
-<!-----------------------PUT ON EVERY PAGE END---------------------------------------------------------------->
+<script src="<c:url value="js/infoFlood.js"/>"></script>
 </body>
 </html>
