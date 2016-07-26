@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="864a8d9f-9ae7-4289-a16e-d5f325689642" name="Default" comment="removed all security stuff to get it to work">
+    <list default="true" id="864a8d9f-9ae7-4289-a16e-d5f325689642" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/ElsevierResources/controllers/HomeController.java" afterPath="$PROJECT_DIR$/src/main/java/com/ElsevierResources/controllers/HomeController.java" />
     </list>
     <ignored path="ElsevierResources.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -986,7 +985,7 @@
       <workItem from="1469451337895" duration="9404000" />
       <workItem from="1469461322150" duration="21607000" />
       <workItem from="1469547032675" duration="6460000" />
-      <workItem from="1469555468469" duration="895000" />
+      <workItem from="1469555468469" duration="968000" />
     </task>
     <task id="LOCAL-00002" summary="removed some stuff in web.xml that was breaking everything">
       <created>1469462061520</created>
@@ -1002,11 +1001,18 @@
       <option name="project" value="LOCAL" />
       <updated>1469475263671</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Created Connection between Place Order Form and DataBase.">
+      <created>1469556406264</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1469556406264</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42440000" />
+    <option name="totallyTimeSpent" value="42513000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -1062,7 +1068,8 @@
     <MESSAGE value="adding in stuff for spring security. Have validation and working on saving the users." />
     <MESSAGE value="removed some stuff in web.xml that was breaking everything" />
     <MESSAGE value="removed all security stuff to get it to work" />
-    <option name="LAST_COMMIT_MESSAGE" value="removed all security stuff to get it to work" />
+    <MESSAGE value="Created Connection between Place Order Form and DataBase." />
+    <option name="LAST_COMMIT_MESSAGE" value="Created Connection between Place Order Form and DataBase." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
