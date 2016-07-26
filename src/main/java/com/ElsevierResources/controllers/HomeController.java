@@ -51,8 +51,13 @@ public class HomeController {
     }
 
 
+<<<<<<< HEAD
+    @RequestMapping(value="front", method = RequestMethod.GET)
+    public ModelAndView viewFront(HttpServletRequest request)
+=======
    /* @RequestMapping(value="front", method = RequestMethod.GET)
     public String viewFront(WebRequest request)
+>>>>>>> refs/remotes/origin/master
     {
         Book book = new Book();
 
@@ -63,14 +68,20 @@ public class HomeController {
         book.setDescription("This is a test description");
 
         Map<String, Object> map = new HashMap<>();
-        map.put("book1", book);
+        map.put("book", book);
         ModelAndView mav = new ModelAndView("someView", map);
         mav.addAllObjects(map);
 
-        request.setAttribute("bookMap", map);
+        ModelAndView mv = new ModelAndView();
+        mv.addAllObjects( map);
 
+<<<<<<< HEAD
+        return mv;
+    }
+=======
         return "front";
     }*/
+>>>>>>> refs/remotes/origin/master
 
     @RequestMapping(value="signOn", method=RequestMethod.GET)
     public String viewSignOn () {return "signOn";}

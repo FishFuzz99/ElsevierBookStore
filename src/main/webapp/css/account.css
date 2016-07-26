@@ -26,7 +26,7 @@ form ul li {
     padding-top: 25px;
 }
 .ship{
-    list-style: none;
+     list-style: none;
     display:inline-block;
     text-align: right;
 }
@@ -35,9 +35,6 @@ form ul li {
 }
 .buttonBill{
     text-align: center;
-}
-.info{
-    margin: 5px 0;
 }
 .shipping{
     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
@@ -51,9 +48,8 @@ form ul li {
     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
     background-color:RGB(241, 233, 210);
 	padding-left:10px;
-    padding-top: 20px;
 	width:35%;
-	height:640px;
+	height:400px;
 	display:inline-block;
 }
 .deleteBook{
@@ -61,18 +57,15 @@ form ul li {
     background-color:RGB(241, 233, 210);
 	padding-left:10px;
 	width:35%;
-	height:170px;
-    padding-top: 20px;
+	height:400px;
 	display:inline-block;
 }
 .editBook{
     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
     background-color:RGB(241, 233, 210);
 	padding-left:10px;
-    padding-top: 20px;
-    padding-right: 10px;
 	width:35%;
-	height:670px;
+	height:400px;
 	display:inline-block;
 }
 
@@ -102,13 +95,4 @@ form ul li {
 }
 tr.shopBook > td{
 	padding-bottom:20px;
-}
-.formDesc * {
-    vertical-align: top;
-}
-#format2{
-    width: 180px;
-}
-#format{
-    width: 180px;
 }
