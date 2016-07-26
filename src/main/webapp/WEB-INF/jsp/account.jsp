@@ -150,7 +150,7 @@
                                             <label for="ZipCode">Zip Code:</label>
                                             <input type="text" id="ZipCode" name="ZipCode">
                                         </li>
-                                        
+
                                         <li>
                                             <label for="email">Email:</label>
                                             <input type="email" id="email" name="email" placeholder="you@domain.com" required>

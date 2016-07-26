@@ -8,7 +8,9 @@ flood=function() {
     document.getElementById("StShipAddress2").value = document.getElementById("StBillAddress2").value
     document.getElementById("StateShipAddress").value = document.getElementById("StateBillAddress").value
     document.getElementById("CityShipAddress").value = document.getElementById("CityBillAddress").value
+    document.getElementById("ZipCodeShipAddress").value = document.getElementById("zipCode").value
     document.getElementById("email").value = document.getElementById("email1").value
     document.getElementById("phone").value = document.getElementById("phone1").value
+
 
 }
