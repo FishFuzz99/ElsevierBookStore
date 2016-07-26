@@ -45,15 +45,24 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
+
+
+                <% if (session.getAttribute("user") != null) { %>
                 <li >
                     <a href="account">Account</a>
                 </li>
+                <% } %>
+
                 <li >
                     <a href="shoppingCart">Book Bag</a>
                 </li>
-                <li class="login-button pull-right">
-                    <a href="signOn">Login / Register</a>
-                </li>
+
+
+                <% if (session.getAttribute("user") == null) { %>
+                    <li class="login-button pull-right">
+                        <a href="signOn">Login / Register</a>
+                    </li>
+                <% } %>
             </ul>
         </div>
         <!-- /.navbar-collapse -->
