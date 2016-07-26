@@ -211,8 +211,57 @@
             </tr>
         </div>
         <div id="menu4" class="tab-pane fade">
-   kjhiuo
-                                             
+                <div class="addBook">
+                            <form>
+                                <fieldset>
+                                    <legend>Add Book</legend>
+                                    <ul class="ship">
+                                        <li>
+                                            <label for="bookTitle">Title:</label>
+                                            <input type="text" id="bookTitle" name="bookTitle">
+                                        </li>
+
+                                        <li>
+                                            <label for="surname">Last Name:</label>
+                                            <input type="text" id="surname" name="surname">
+                                        </li>
+
+
+                                        <li>
+                                            <label for="StShipAddress">Street Address:</label>
+                                            <input type="text" id="StShipAddress" name="StShipAddress">
+                                        </li>
+
+                                        <li>
+                                            <label for="StShipAddress2"></label>
+                                            <input type="text" id="StShipAddress2" name="StShipAddress2">
+                                        </li>
+
+                                        <li>
+                                            <label for="CityShipAddress">City/Town:</label>
+                                            <input type="text" id="CityShipAddress" name="CityShipAddress">
+                                        </li>
+
+                                        <li>
+                                            <label for="StateShipAddress">State:</label>
+                                            <input type="text" id="StateShipAddress" name="StateShipAddress">
+                                        </li>
+
+                                        <li>
+                                            <label for="email">Email:</label>
+                                            <input type="email" id="email" name="email" placeholder="you@domain.com" required>
+                                        </li>
+                                        <li>
+                                            <label for="phone">Phone Number:</label>
+                                            <input type="tel" id="phone" name="phone" placeholder="(555)555-5555" required>
+                                        </li>
+                                        <li class="buttonShip">
+                                            <button class="btn btn-success login-button" type="submit" value="Login">Submit</button>
+                                        </li>
+                                    </ul>
+                                </fieldset>
+                            </form>
+                        </div>                   
     </div>
     </div>
 </div>
