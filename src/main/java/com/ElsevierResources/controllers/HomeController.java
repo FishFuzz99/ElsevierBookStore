@@ -18,6 +18,8 @@ import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.validation.Valid;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Created by GRAY1 on 7/18/2016.
@@ -50,8 +52,23 @@ public class HomeController {
 
 
     @RequestMapping(value="front", method = RequestMethod.GET)
-    public String viewFront()
+    public String viewFront(WebRequest request)
     {
+        Book book = new Book();
+
+        book.setImage("../../images/book2.jpg");
+        book.setTitle("Book Test Title");
+        book.setAuthor("Testing Author");
+        book.setPrice(25.54f);
+        book.setDescription("This is a test description");
+
+        Map<String, Object> map = new HashMap<>();
+        map.put("book1", book);
+        ModelAndView mav = new ModelAndView("someView", map);
+        mav.addAllObjects(map);
+
+        request.setAttribute("bookMap", map);
+
         return "front";
     }
 

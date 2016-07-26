@@ -1,8 +1,6 @@
 package Models;
 
-import javax.persistence.*;
 import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -14,8 +12,11 @@ public class Book implements Serializable{
     //@Id @GeneratedValue
     public int ID;
     public String title;
+
+
+
     //@OneToMany
-    public ArrayList<String> authors;
+    public String author;
     //@OneToMany
     public List<Genre> genres;
     public String publisher;
@@ -25,6 +26,25 @@ public class Book implements Serializable{
     public String edition;
     public BookFormat format;
     public int numberOfPages;
+    public String description;
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
+    }
+
+    public String getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(String author) {
+        this.author = author;
+    }
+
+    public String image;
 
     public int getID() {
         return ID;
@@ -36,10 +56,6 @@ public class Book implements Serializable{
 
     public void setTitle(String title) {
         this.title = title;
-    }
-
-    public void setAuthors(ArrayList<String> authors) {
-        this.authors = authors;
     }
 
     public List<Genre> getGenres() {
@@ -114,8 +130,6 @@ public class Book implements Serializable{
         this.description = description;
     }
 
-    public String description;
-
     public Book()
     {
 
@@ -124,11 +138,6 @@ public class Book implements Serializable{
     public String getTitle()
     {
         return title;
-    }
-
-    public List<String> getAuthors()
-    {
-        return authors;
     }
 
     public Book(String title)

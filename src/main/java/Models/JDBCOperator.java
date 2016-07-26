@@ -1,8 +1,6 @@
 package Models;
 
 import java.sql.*;
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Created by GRAY1 on 7/20/2016.
@@ -44,8 +42,7 @@ public class JDBCOperator {
             {
                 rs.next();
                 book.title = rs.getString("title");
-                book.authors = new ArrayList<String>();
-                book.authors.add(rs.getString("author"));
+                book.author = rs.getString("author");
             }
         } catch (SQLException e) {
             e.printStackTrace();

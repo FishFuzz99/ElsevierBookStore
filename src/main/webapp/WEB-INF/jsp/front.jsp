@@ -1,5 +1,6 @@
 <%@ taglib prefix="c" uri="http://www.springframework.org/tags" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@taglib prefix="d" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html ng-app lang="en">
@@ -65,12 +66,10 @@
 
     <div class="row">
         <div class="col-md-12">
-            
-
             <div class="row">
 
                 <div class=" col-md-12 col-lg-12 filters">
-                    <img class="logo" src="<c:url value="images/Logo.png"/>" alt="">
+                    <img class="logo" src="<c:url value="../../images/Logo.png"/>" alt="">
                     <p class="lead">Cover to Cover Library</p>
                     <div class="list-group">
                         <button class="btn btn-primary">eBooks</button>
@@ -80,123 +79,21 @@
             </div>
 
             <div class="row">
-                <div class=" col-sm-6 col-lg-3 col-md-4 book">
-                    <div class="thumbnail">
-                        <img src="<c:url value="images/catchingFire.jpg"/>" alt="">
-                        <div class="caption">
-                            <h4 class="book-title"><a href="book">Catching Fire</a></h4>
-                            <h4 >$10.99</h4>
-                            <p class="book-author">Suzanne Collins</p>
-                            <p class="book-descrip">The second book in the popular Hunger Games trilogy. Against all odds, Katniss Everdeen has won the annual Hunger Games with fellow district tribute Peeta Mellark. But it was a victory won by defiance of the Capitol and their harsh rules. Katniss and Peeta should be happy. After all, they have just won for themselves and their families a life of safety and plenty. But there are rumors of rebellion among the subjects, and Katniss and Peeta, to their horror, are the faces of that rebellion. The Capitol is angry. The Capitol wants revenge</p>
+                <d:forEach items="${books}" var="book">
+                    <div class=" col-sm-6 col-lg-3 col-md-4 book">
+                        <div class="thumbnail">
+                            <img src="<c:url value="${book.image}"/>" alt="">
+                            <div class="caption">
+                                <h4 class="book-title"><a href="book"><d:out value="${book.title}"/></a></h4>
+                                <h4><d:out value="${book.price}"/></h4>
+                                <p class="book-author"><d:out value="${book.author}"/></p>
+                                <p class="book-descrip"></p><d:out value="${book.description}"/>
+                            </div>
+                            <a href="shoppingCart"><button type="button" class="btn btn-primary book-buttons cart-button ">Add to Cart</button></a>
+                            <button type="button" class="btn book-buttons wish-list-button">Add to Wish List</button>
                         </div>
-                        <a href="shoppingCart"><button type="button" class="btn btn-primary book-buttons cart-button ">Add to Cart</button></a>
-                        <button type="button" class="btn book-buttons wish-list-button">Add to Wish List</button>
                     </div>
-                </div>
-
-                <div class=" col-sm-6 col-lg-3 col-md-4 book">
-                    <div class="thumbnail">
-                        <img src="<c:url value="images/divergent.jpg"/>" alt="">
-                        <div class="caption">
-                            <h4 class="book-title"><a href="#">Divergent</a></h4>
-                            <h4 >$9.99</h4>
-                            <p class="book-author">Veronica Roth</p>
-                            <p class="book-descrip">This first book in Roth's #1 New York Times bestselling Divergent trilogy</p>
-                        </div>
-                        <button type="button" class="btn btn-primary book-buttons cart-button">Add to Cart</button>
-                        <button type="button" class="btn book-buttons wish-list-button">Add to Wish List</button>
-
-                    </div>
-                </div>
-
-
-
-                <div class=" col-sm-6 col-lg-3 col-md-4 book">
-                    <div class="thumbnail">
-                        <img src="<c:url value="images/theRainbowFish.jpg"/>" alt="">
-                        <div class="caption">
-                            <h4 class="book-title"><a href="#">The Rainbow Fish</a></h4>
-                            <h4 >$12.99</h4>
-                            <p class="book-author">Marcus Pfister</p>
-                            <p class="book-descrip">The story of a beautiful fish who finds happiness when he learns to share</p>
-                        </div>
-                        <button type="button" class="btn btn-primary book-buttons cart-button">Add to Cart</button>
-                        <button type="button" class="btn book-buttons wish-list-button">Add to Wish List</button>
-                    </div>
-                </div>
-
-
-
-                <div class=" col-sm-6 col-lg-3 col-md-4">
-                    <div class="thumbnail">
-                        <img src="<c:url value="images/lordOfTheRings.jpg"/>" alt="">
-                        <div class="caption">
-                            <h4 class="book-title"><a href="#">The Lord of the Rings</a></h4>
-                            <h4 >$14.99</h4>
-                            <p class="book-author">J.R.R. Tolkien</p>
-                            <p class="book-descrip">The epic, high-fantasy sequal to Tolkien's "The Hobbit"</p>
-                        </div>
-                        <button type="button" class="btn btn-primary book-buttons cart-button">Add to Cart</button>
-                        <button type="button" class="btn book-buttons wish-list-button">Add to Wish List</button>
-                    </div>
-                </div>
-
-                <div class=" col-sm-6 col-lg-3 col-md-4">
-                    <div class="thumbnail">
-                        <img src="<c:url value="images/water-for-elephants.jpg"/>" alt="">
-                        <div class="caption">
-                            <h4 class="book-title"><a href="#">Water for Elephants</a></h4>
-                            <h4 >$9.99</h4>
-                            <p class="book-author">Sara Gruen</p>
-                            <p class="book-descrip">A series of memories from 93-year-old Jacob Jankowski</p>
-                        </div>
-                        <button type="button" class="btn btn-primary book-buttons cart-button">Add to Cart</button>
-                        <button type="button" class="btn book-buttons wish-list-button">Add to Wish List</button>
-                    </div>
-                </div>
-
-                <div class=" col-sm-6 col-lg-3 col-md-4">
-                    <div class="thumbnail">
-                        <img src="<c:url value="images/harry-potter1.jpg"/>" alt="">
-                        <div class="caption">
-                            <h4 class="book-title"><a href="#">Harry Potter and the Sorcerer's Stone</a></h4>
-                            <h4 >$10.99</h4>
-                            <p class="book-author">J.K. Rowling</p>
-                            <p class="book-descrip">The first book in the popular Harry Potter Series</p>
-                        </div>
-                        <button type="button" class="btn btn-primary book-buttons cart-button">Add to Cart</button>
-                        <button type="button" class="btn book-buttons wish-list-button">Add to Wish List</button>
-                    </div>
-                </div>
-
-                <div class=" col-sm-6 col-lg-3 col-md-4">
-                    <div class="thumbnail">
-                        <img src="<c:url value="images/harryPotter4.jpg"/>" alt="">
-                        <div class="caption">
-                            <h4 class="book-title"><a href="#">Harry Potter and the Prisoner of Azkaban</a></h4>
-                            <h4 >$10.99</h4>
-                            <p class="book-author">J.K. Rowling</p>
-                            <p class="book-descrip">Book 3 of the popular Harry Potter Series</p>
-                        </div>
-                        <button type="button" class="btn btn-primary book-buttons cart-button">Add to Cart</button>
-                        <button type="button" class="btn book-buttons wish-list-button">Add to Wish List</button>
-                    </div>
-                </div>
-
-                <div class=" col-sm-6 col-lg-3 col-md-4">
-                    <div class="thumbnail">
-                        <img src="<c:url value="images/harry-potter3.jpg"/>" alt="">
-                        <div class="caption">
-                            <h4 class="book-title"><a href="#">Harry Potter and the Half Blood Prince</a></h4>
-                            <h4 >$12.99</h4>
-                            <p class="book-author">J.K. Rowling</p>
-                            <p class="book-descrip">Book 6 of the popular Harry Potter Series</p>
-                        </div>
-                        <button type="button" class="btn btn-primary book-buttons cart-button">Add to Cart</button>
-                        <button type="button" class="btn book-buttons wish-list-button">Add to Wish List</button>
-                    </div>
-                </div>
-
+                </d:forEach>
             </div>
 
         </div>
