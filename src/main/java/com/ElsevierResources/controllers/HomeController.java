@@ -6,7 +6,6 @@ import Models.User;
 import Models.UserDto;
 import com.ElsevierResources.services.UserService;
 import com.ElsevierResources.validation.EmailExistsException;
-import org.springframework.http.HttpRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -55,7 +54,7 @@ public class HomeController {
 
 
     @RequestMapping(value="front", method = RequestMethod.GET)
-    public String viewFront(HttpServletRequest request)
+    public ModelAndView viewFront(HttpServletRequest request)
     {
         Book book = new Book();
 
@@ -66,13 +65,14 @@ public class HomeController {
         book.setDescription("This is a test description");
 
         Map<String, Object> map = new HashMap<>();
-        map.put("book1", book);
+        map.put("book", book);
         ModelAndView mav = new ModelAndView("someView", map);
         mav.addAllObjects(map);
 
-        request.setAttribute("bookMap", map);
+        ModelAndView mv = new ModelAndView();
+        mv.addAllObjects( map);
 
-        return "front";
+        return mv;
     }
 
     @RequestMapping(value="signOn", method=RequestMethod.GET)
