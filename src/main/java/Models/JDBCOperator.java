@@ -2,7 +2,6 @@ package Models;
 
 import java.sql.*;
 import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Created by GRAY1 on 7/20/2016.
@@ -20,7 +19,7 @@ public class JDBCOperator {
     {
         try {
             Class.forName(JDBC_DRIVER);
-            connection = DriverManager.getConnection(DB_URL, "root", "74Challenger");
+            connection = DriverManager.getConnection(DB_URL, "root", "password");
 
 
         } catch (ClassNotFoundException e) {
@@ -50,9 +49,28 @@ public class JDBCOperator {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+
         return book;
     }
 
+    /***********************Jennas mess********************/
+
+    public Book insertBook(Book book) {
+
+        try {
+            preparedStatement = connection.prepareStatement("INSERT INTO booktest(ID, title) VALUES (?,?)");
+            preparedStatement.setInt(1, book.getID());
+            preparedStatement.setString(2, book.getTitle());
+            preparedStatement.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return book;
+    }
+
+
+
+    /**********************end mess**************************/
     public User saveUser(User user)
     {
         try

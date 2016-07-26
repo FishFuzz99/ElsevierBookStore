@@ -17,24 +17,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.ModelAndView;
 
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
-import javax.validation.Constraint;
-import javax.validation.Payload;
 import javax.validation.Valid;
-
-
-import java.lang.annotation.Documented;
-import java.lang.annotation.Retention;
-import java.lang.annotation.Target;
-import java.util.ArrayList;
-import java.util.List;
-
-import static java.lang.annotation.ElementType.ANNOTATION_TYPE;
-import static java.lang.annotation.ElementType.FIELD;
-import static java.lang.annotation.ElementType.TYPE;
-import static java.lang.annotation.RetentionPolicy.RUNTIME;
 
 /**
  * Created by GRAY1 on 7/18/2016.
@@ -109,5 +92,26 @@ public class HomeController {
         return registered;
     }
 
+//jenna
+    private void insertBook(){
+        JDBCOperator db = new JDBCOperator();
+        Book book = new Book();
+        book.setID(4);
+        book.setTitle("insertTitle");
+        db.insertBook(book);
+    }
+    @RequestMapping(value = "insert", method = RequestMethod.GET, params = {"id","title"})
+    public void insertBookData(@RequestParam("id") int id, @RequestParam("title") String title)
+    {
+
+       Book book = new Book();
+        book.setID(id);
+        book.setTitle(title);
+        JDBCOperator db = new JDBCOperator();
+        db.insertBook(book);
+        // replace this with database query that gets the information
+
+
+    }
 
 }
