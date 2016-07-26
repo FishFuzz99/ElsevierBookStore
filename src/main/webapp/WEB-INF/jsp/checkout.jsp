@@ -84,7 +84,11 @@
 
                 <li>
                     <label for="StateBillAddress">State:</label>
-                    <input type="text" id="StateBillAddress" name="StateBillAddress">
+                    <input type="text" id="StateBillAddress" name="StateBillAddress" placeholder="XX">
+                </li>
+                <li>
+                    <label for="zipCode">Zip Code:</label>
+                    <input type="text" id="zipCode" name="zipCode">
                 </li>
 
                 <li>
@@ -93,7 +97,7 @@
                 </li>
                 <li>
                     <label for="phone1">Phone Number:</label>
-                    <input type="tel1" id="phone1" name="phone1" placeholder="(555)555-5555" required>
+                    <input type="tel" id="phone1" name="phone1" placeholder="(555)555-5555" required>
                 </li>
             </ul>
         </fieldset>
@@ -104,7 +108,7 @@
             <ul class="ship">
                 <li>
 
-                        <input type="checkbox" name="vehicle" value="Bike">Shipping information is same as billing<br>
+                        <input type="checkbox" onClick=flood() id="floodInfo">Shipping information is same as billing<br>
 
                 </li>
                 <li>
@@ -135,9 +139,12 @@
 
                 <li>
                     <label for="StateShipAddress">State:</label>
-                    <input type="text" id="StateShipAddress" name="StateShipAddress">
+                    <input type="text" id="StateShipAddress" name="StateShipAddress" placeholder="XX">
                 </li>
-
+                <li>
+                    <label for="ZipCodeShipAddress">Zip Code:</label>
+                    <input type="text" id="ZipCodeShipAddress" name="ZipCodeShipAddress">
+                </li>
                 <li>
                     <label for="email">Email:</label>
                     <input type="email" id="email" name="email" placeholder="you@domain.com" required>
@@ -168,7 +175,7 @@
                 </li>
                 <li>
                     <label for="expdate">Expiration Date:</label>
-                    <input type="text" id="expdate" name="expdate">
+                    <input type="text" id="expdate" name="expdate" placeholder="YYYY-MM-DD">
                 </li>
             </ul>
         </fieldset>
@@ -201,6 +208,6 @@
 
 <!-- Bootstrap Core JavaScript -->
 <script src="<c:url value="js/bootstrap.min.js"/>"></script>
-<!-----------------------PUT ON EVERY PAGE END---------------------------------------------------------------->
+<script src="<c:url value="js/infoFlood.js"/>"></script>
 </body>
 </html>

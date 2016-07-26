@@ -124,7 +124,12 @@ public class JDBCOperator {
     {
         try
         {
-            if ((!(user.getCity().isEmpty()) && !(user.getCity().equals(""))) && (!user.getStreet().isEmpty() && !user.getStreet().equals("")))
+            if (user.getCity() != null
+                    && user.getStreet() != null
+                    && !user.getCity().isEmpty()
+                    && !user.getCity().equals("")
+                    && !user.getStreet().isEmpty()
+                    && !user.getStreet().equals(""))
             {
                 preparedStatement = connection.prepareStatement("INSERT INTO users(firstName, lastName, email, password, street, city, state, zipCode) VALUES(?, ?, ?, ?, ?, ?, ?, ?)");
                 preparedStatement.setString(5, user.getStreet());
@@ -154,15 +159,16 @@ public class JDBCOperator {
 
     public User findUserByEmail(String email)
     {
-        User user = new User();
+        User user = null;
         try
         {
             preparedStatement = connection.prepareStatement("SELECT * FROM users WHERE email LIKE ?");
             preparedStatement.setString(1, email);
             ResultSet rs = preparedStatement.executeQuery();
 
-            if (rs != null)
+            if (rs != null && rs.next())
             {
+                user = new User();
                 user.setID(rs.getInt("userId"));
                 user.setFirstName(rs.getString("firstName"));
                 user.setLastName(rs.getString("lastName"));

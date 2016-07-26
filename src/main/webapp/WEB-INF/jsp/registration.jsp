@@ -51,7 +51,7 @@
 
 <!--------------------Registration Form------------>
 <div class="containerReg">
-    <form id="signup">
+    <form id="signup" action="registerUserAccount" method="post">
         <div class="header">
             <h3>Register</h3>
             <p>Cover To Cover Registered User</p>
@@ -59,17 +59,17 @@
         <div class="sep"></div>
         <div class="inputs">
 
-            <input type="text" name="first" required="required" placeholder="First Name" autofocus style="font-size:12px" />
+            <input type="text" name="firstName" required="required" placeholder="First Name" autofocus style="font-size:12px" />
 
-            <input type="text" name="last" required="required" placeholder="Last Name" style="font-size:12px" />
+            <input type="text" name="lastName" required="required" placeholder="Last Name" style="font-size:12px" />
 
 
             <input type="email" name="email" required="required" placeholder="Email" style="font-size:12px" />
-            <input type="email" name="conEmail" required="required" placeholder="Confirm Email" style="font-size:12px" />
+            <input type="email" name="matchingEmail" required="required" placeholder="Confirm Email" style="font-size:12px" />
 
             <input type="password" name="password" required="required" placeholder="Password" style="font-size:12px" />
 
-            <input type="password" name="conPassword" required="required" placeholder="Confirm Password" style="font-size:12px" />
+            <input type="password" name="matchingPassword" required="required" placeholder="Confirm Password" style="font-size:12px" />
 
         </div>
         <div class="checkboxy">

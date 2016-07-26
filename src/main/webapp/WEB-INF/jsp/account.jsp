@@ -1,8 +1,6 @@
 <%@ taglib prefix="c" uri="http://www.springframework.org/tags" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/sql" prefix="sql"%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-
 <!DOCTYPE html>
 <html ng-app="app">
 
@@ -216,11 +214,15 @@
              <ul class="info" style="list-style-type:none">
                  <li>
                 <div class="addBook">
-                            <form action = "insert" method="get">
+                            <form>
     
                                 <fieldset>
                                     <legend>Add Book</legend>
                                     <ul class="ship">
+                                        <li>
+                                            <label for="bookId">Book ID:</label>
+                                            <input type="text" id="bookId" name="bookId">
+                                        </li>
                                         <li>
                                             <label for="bookTitle">Title:</label>
                                             <input type="text" id="bookTitle1" name="bookTitle">
@@ -322,13 +324,13 @@
                  </li>
                  <li>
                  <div class="editBook">
-                            <form action="update" method="get">
+                            <form>
                                 <fieldset>
                                     <legend>Edit Book Info</legend>
                                     <ul class="ship">
                                         <li>
                                             <label for="delete">Book:</label>
-                                            <select name="edit" id="delete1">
+                                            <select name="delete" id="delete1">
                                             <option value="QAJAVSC">Catching Fire</option>
                                             <option value="QAWEBUI">Divergent</option>
                                             <option value="QAWEBCSS">The Rainbow Fish</option>
@@ -339,7 +341,10 @@
                                             <option value="QAJQUERY">Harry Potter and the Half Blood Prince</option>
                                         </select>
                                         </li>
-
+                                        <li>
+                                            <label for="bookId1">Book ID:</label>
+                                            <input type="text" id="bookId1" name="bookId1">
+                                        </li>
                                         <li>
                                             <label for="bookTitle">Title:</label>
                                             <input type="text" id="bookTitle" name="bookTitle">
@@ -348,22 +353,22 @@
                                             <p class="formDesc">
                                                 <label for="message2">
                                                     Description: </label>
-                                                <textarea rows="5" cols="20" name="message" id="message2"></textarea>
+                                                <textarea rows="5" cols="20" name="message2" id="message2"></textarea>
                                             </p>
                                         </li>
                                         <li>
                                             <label for="isbn2">ISBN:</label>
-                                            <input type="text" id="isbn2" name="isbn">
+                                            <input type="text" id="isbn2" name="isbn2">
                                         </li>
                                         <li>
                                             <label for="publisher2">Publisher:</label>
-                                            <input type="text" id="publisher2" name="publisher">
+                                            <input type="text" id="publisher2" name="publisher2">
                                         </li>
 
 
                                         <li>
                                             <label for="format2">Format:</label>
-                                            <select name="format" id="format2">
+                                            <select name="format2" id="format2">
                                                 <option value="QAJAVSC">EBook</option>
                                                 <option value="QAWEBUI">Print Book</option>
                                             </select>
@@ -371,35 +376,35 @@
 
                                         <li>
                                             <label for="publishDate2">Date Published:</label>
-                                            <input type="text" id="publishDate2" name="publishDate">
+                                            <input type="text" id="publishDate2" name="publishDate2">
                                         </li>
 
                                         <li>
                                             <label for="edition2">Edition:</label>
-                                            <input type="text" id="edition2" name="edition">
+                                            <input type="text" id="edition2" name="edition2">
                                         </li>
                                         <li>
                                             <label for="pages2">Number of pages:</label>
-                                            <input type="text" id="pages2" name="pages">
+                                            <input type="text" id="pages2" name="pages2">
                                         </li>
 
                                         <li>
                                             <label for="author2">Author:</label>
-                                            <input type="text" id="author2" name="author">
+                                            <input type="text" id="author2" name="author2">
                                         </li>
                                         <li>
                                             <label for="genre2">Genre:</label>
-                                            <input type="text" id="genre2" name="genre">
+                                            <input type="text" id="genre2" name="genre2">
                                         </li>
 
                                         <li>
                                             <label for="price2">Price:</label>
-                                            <input type="text" placeholder="0.00" id="price2" name="price">
+                                            <input type="text" placeholder="0.00" id="price2" name="price2">
                                         </li>
 
                                         <li>
                                             <label for="imageUrl2">Image URL:</label>
-                                            <input type="text" placeholder=".jpg or .png" id="imageUrl2" name="imageUrl">
+                                            <input type="text" placeholder=".jpg or .png" id="imageUrl2" name="imageUrl2">
                                         </li>
                                         <li class="buttonShip">
                                             <button class="btn btn-success login-button" type="submit" value="Login">Submit</button>

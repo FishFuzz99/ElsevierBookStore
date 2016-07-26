@@ -14,7 +14,9 @@
     http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
 
 
-
+    <!--<bean id="myBeansValidator"
+          class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean" />
+    <mvc:annotation-driven validator="myBeansValidator"/>-->
     <mvc:annotation-driven />
     <mvc:resources mapping="/css/**" location="/css/" />
     <mvc:resources mapping="/images/**" location="/images/" />
