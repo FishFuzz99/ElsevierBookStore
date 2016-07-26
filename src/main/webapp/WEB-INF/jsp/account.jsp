@@ -258,7 +258,7 @@
 
                                         <li>
                                             <label for="publishDate">Date Published:</label>
-                                            <input type="text" id="publishDate" name="publishDate">
+                                            <input type="text" id="publishDate" name="publishDate" placeholder="MM/DD/YYYY">
                                         </li>
 
                                         <li>
@@ -376,7 +376,7 @@
 
                                         <li>
                                             <label for="publishDate2">Date Published:</label>
-                                            <input type="text" id="publishDate2" name="publishDate2">
+                                            <input type="text" id="publishDate2" name="publishDate2" placeholder="MM/DD/YYYY">
                                         </li>
 
                                         <li>

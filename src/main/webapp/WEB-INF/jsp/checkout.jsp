@@ -84,7 +84,7 @@
 
                 <li>
                     <label for="StateBillAddress">State:</label>
-                    <input type="text" id="StateBillAddress" name="StateBillAddress">
+                    <input type="text" id="StateBillAddress" name="StateBillAddress" placeholder="XX">
                 </li>
 
                 <li>
@@ -93,7 +93,7 @@
                 </li>
                 <li>
                     <label for="phone1">Phone Number:</label>
-                    <input type="tel1" id="phone1" name="phone1" placeholder="(555)555-5555" required>
+                    <input type="tel" id="phone1" name="phone1" placeholder="(555)555-5555" required>
                 </li>
             </ul>
         </fieldset>
@@ -135,7 +135,7 @@
 
                 <li>
                     <label for="StateShipAddress">State:</label>
-                    <input type="text" id="StateShipAddress" name="StateShipAddress">
+                    <input type="text" id="StateShipAddress" name="StateShipAddress" placeholder="XX">
                 </li>
 
                 <li>
@@ -168,7 +168,7 @@
                 </li>
                 <li>
                     <label for="expdate">Expiration Date:</label>
-                    <input type="text" id="expdate" name="expdate">
+                    <input type="text" id="expdate" name="expdate" placeholder="YYYY-MM-DD">
                 </li>
             </ul>
         </fieldset>

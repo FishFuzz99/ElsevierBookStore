@@ -1,3 +1,4 @@
+
 package com.ElsevierResources.validation;
 
 import javax.validation.Constraint;
@@ -14,6 +15,7 @@ import static java.lang.annotation.RetentionPolicy.RUNTIME;
 /**
  * Created by GRAY1 on 7/22/2016.
  */
+
 @Target({TYPE, FIELD, ANNOTATION_TYPE})
 @Retention(RUNTIME)
 @Constraint(validatedBy = EmailValidator.class)
