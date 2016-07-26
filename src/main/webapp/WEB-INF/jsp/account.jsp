@@ -259,7 +259,7 @@
                                     <legend>Delete Book</legend>
                                     <ul class="ship">
                                         <li>
-                                            <label for="delete">Select Book to Remove:</label>
+                                            <label for="delete">Select Book:</label>
                                             <select name="delete" id="delete">
                                             <option value="QAJAVSC">Catching Fire</option>
                                             <option value="QAWEBUI">Divergent</option>
@@ -272,7 +272,7 @@
                                         </select>
                                         </li>
                                         <li class="buttonShip">
-                                            <button class="btn btn-success login-button" type="submit" value="Login">Submit</button>
+                                            <button class="btn btn-success login-button" type="submit" value="Login">Remove</button>
                                         </li>
                                     </ul>
                                 </fieldset>
@@ -286,7 +286,7 @@
                                     <legend>Edit Book Info</legend>
                                     <ul class="ship">
                                         <li>
-                                            <label for="delete">Select Book to Edit:</label>
+                                            <label for="delete">Select Book:</label>
                                             <select name="delete" id="delete">
                                             <option value="QAJAVSC">Catching Fire</option>
                                             <option value="QAWEBUI">Divergent</option>
@@ -311,8 +311,10 @@
 
 
                                         <li>
-                                            <label for="description">Description:</label>
-                                            <input type="text" id="description" name="description">
+                                            
+				                            <label for="message">Message: </label>
+				                            <textarea rows="10" cols="40" name="message" id="message"></textarea>
+			                                
                                         </li>
 
                                         <li>
