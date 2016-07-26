@@ -6,7 +6,6 @@ import Models.User;
 import Models.UserDto;
 import com.ElsevierResources.services.UserService;
 import com.ElsevierResources.validation.EmailExistsException;
-import org.springframework.http.HttpRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -21,8 +20,8 @@ import org.springframework.web.servlet.ModelAndView;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by GRAY1 on 7/18/2016.
@@ -36,7 +35,6 @@ public class HomeController {
     public ModelAndView getAccountData()
     {
         ModelAndView mv = new ModelAndView("account");
-
 
         return mv;
     }
@@ -54,26 +52,25 @@ public class HomeController {
     }
 
 
-   /* @RequestMapping(value="front", method = RequestMethod.GET)
-    public String viewFront(WebRequest request)
+    @RequestMapping(value="front", method = RequestMethod.GET)
+    public ModelAndView viewFront(HttpServletRequest request)
     {
         Book book = new Book();
 
-        book.setImage("../../images/book2.jpg");
+        book.setImage("/images/harry-potter1.jpg");
         book.setTitle("Book Test Title");
         book.setAuthor("Testing Author");
         book.setPrice(25.54f);
         book.setDescription("This is a test description");
 
-        Map<String, Object> map = new HashMap<>();
-        map.put("book1", book);
-        ModelAndView mav = new ModelAndView("someView", map);
-        mav.addAllObjects(map);
+        List<Book> booksList = new ArrayList<Book>();
+        booksList.add(book);
+        ModelAndView mav = new ModelAndView();
+        mav.setViewName("front");
+        mav.addObject("list", booksList);
 
-        request.setAttribute("bookMap", map);
-
-        return "front";
-    }*/
+        return mav;
+    }
 
     @RequestMapping(value="signOn", method=RequestMethod.GET)
     public String viewSignOn () {return "signOn";}
