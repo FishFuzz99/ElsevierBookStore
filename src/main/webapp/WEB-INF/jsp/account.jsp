@@ -61,6 +61,7 @@
         <li class="active"><a data-toggle="tab" href="#menu1">Edit Account Info</a></li>
         <li><a data-toggle="tab" href="#menu2">Order History</a></li>
         <li><a data-toggle="tab" href="#menu3">Wish List</a></li>
+        <li><a data-toggle="tab" href="#menu4">Edit Library</a></li>
     </ul>
 
     <div class="tab-content">
@@ -209,6 +210,10 @@
                 </td>
             </tr>
         </div>
+        <div id="menu4" class="tab-pane fade">
+   kjhiuo
+                                             
+    </div>
     </div>
 </div>
 </body>
