@@ -19,7 +19,6 @@ import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
-import javax.validation.Valid;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -72,8 +71,6 @@ public class HomeController {
         return mav;
     }
 
-   @RequestMapping(value="front", method=RequestMethod.GET)
-   public String viewFront () {return "front";}
 
 
 
