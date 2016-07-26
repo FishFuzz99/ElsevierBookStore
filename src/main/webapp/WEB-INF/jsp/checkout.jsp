@@ -51,7 +51,7 @@
     <!-- /.container -->
 </nav>
 <!-----------------------PUT ON EVERY PAGE END---------------------------------------------------------------->
-<form action="#" method="get">
+<form action="checkout" method="post">
     <div class="billing">
         <fieldset>
             <legend>Billing Information</legend>
@@ -103,9 +103,9 @@
             <legend>Shipping Information</legend>
             <ul class="ship">
                 <li>
-                    <form action="">
+
                         <input type="checkbox" name="vehicle" value="Bike">Shipping information is same as billing<br>
-                    </form>
+
                 </li>
                 <li>
                     <label for="firstName">First Name:</label>
@@ -176,7 +176,7 @@
     <div class="click">
         <fieldset>
             <legend>Place Order</legend>
-            <button class="btn btn-info">Place Order</button>
+            <input type="submit" value="Submit" class="btn btn-info"/>
         </fieldset>
     </div>
 </form>

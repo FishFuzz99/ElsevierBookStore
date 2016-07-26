@@ -1,6 +1,8 @@
 package Models;
 
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by GRAY1 on 7/20/2016.
@@ -28,6 +30,25 @@ public class JDBCOperator {
             es.printStackTrace();
         }
 
+
+    }
+
+    public void  placeOrder(String orderDate, String total,String shipmentDate,String street,String city,String zipcode,String state){
+        try {
+            preparedStatement = connection.prepareStatement("INSERT INTO orders(orderDate,total,shipmentDate,street,city,zipcode,state) VALUES(?,?,?,?,?,?,?)");
+            preparedStatement.setString(1,orderDate);
+            preparedStatement.setString(2,total);
+            preparedStatement.setString(3,shipmentDate);
+            preparedStatement.setString(4,street);
+            preparedStatement.setString(5,city);
+            preparedStatement.setString(6,zipcode);
+            preparedStatement.setString(7,state);
+
+            preparedStatement.execute();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
 
     }
 
