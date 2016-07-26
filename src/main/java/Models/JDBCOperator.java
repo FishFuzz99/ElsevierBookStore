@@ -1,6 +1,8 @@
 package Models;
 
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by GRAY1 on 7/20/2016.

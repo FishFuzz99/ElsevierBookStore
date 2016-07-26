@@ -11,10 +11,10 @@
     <meta charset="utf-8" />
     <title>Registration</title>
     <!-- Bootstrap Core CSS -->
-    <link href="<c:url value="css/bootstrap.css"/>" rel="stylesheet">
+    <link href="<c:url value="/css/bootstrap.css"/>" rel="stylesheet">
     <!-- Custom CSS -->
-    <link href="<c:url value="css/registration.css"/>" rel="stylesheet">
-    <link href="<c:url value="css/shop-homepage.css"/>" rel="stylesheet">
+    <link href="<c:url value="/css/registration.css"/>" rel="stylesheet">
+    <link href="<c:url value="/css/shop-homepage.css"/>" rel="stylesheet">
 </head>
 <body>
 <!-----------------------PUT ON EVERY PAGE START---------------------------------------------------------------->
@@ -29,7 +29,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a href="front"><img class="logo" src="<c:url value="images/Logo.png"/>" alt=""></a>
+            <a href="front"><img class="logo" src="<c:url value="/images/Logo.png"/>" alt=""></a>
             <a class="navbar-brand " href="front">Cover to Cover</a>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->

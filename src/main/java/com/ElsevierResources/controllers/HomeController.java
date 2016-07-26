@@ -6,6 +6,7 @@ import Models.User;
 import Models.UserDto;
 import com.ElsevierResources.services.UserService;
 import com.ElsevierResources.validation.EmailExistsException;
+import org.springframework.http.HttpRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -17,6 +18,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
 /**
@@ -50,7 +53,7 @@ public class HomeController {
 
 
     @RequestMapping(value="front", method = RequestMethod.GET)
-    public String viewFront(WebRequest request)
+    public String viewFront(HttpServletRequest request)
     {
         Book book = new Book();
 
@@ -79,8 +82,32 @@ public class HomeController {
     @RequestMapping(value="checkout", method=RequestMethod.GET)
     public String viewCheckout () {return "checkout";}
 
+    @RequestMapping(value="login", method=RequestMethod.POST)
+    public String loginTest(HttpServletRequest request)
+    {
+        HttpSession session = request.getSession();
+        String email = request.getParameter("email");
+        String password = request.getParameter("password");
+        String remember = request.getParameter("remember");
+        if (!(email.isEmpty() || email.equals("")))
+        {
+            User user = jdbcOperator.findUserByEmail(email);
+            if (user == null || (user.getFirstName().equals("") || user.getEmail().equals("")) || user.getEmail().isEmpty() || user.getFirstName().isEmpty() )
+            {
+                // failed to log in
+            }
+            else
+            {
+                user.setPassword("");
+                session.setAttribute("user", user);
+            }
+        }
+        return "front";
+    }
+
     @RequestMapping(value = "/user/registration", method = RequestMethod.GET)
-    public String showRegistrationForm(WebRequest request, Model model) {
+        public String showRegistrationForm(HttpServletRequest request, Model model) {
+
         UserDto userDto = new UserDto();
         model.addAttribute("user", userDto);
         return "registration";
@@ -93,6 +120,8 @@ public class HomeController {
         ModelAndView mv = new ModelAndView("book");
         mv.addObject("book", book);
         return mv;
+
+
 
     }
 
