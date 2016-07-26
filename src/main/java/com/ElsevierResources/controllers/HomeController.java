@@ -40,6 +40,14 @@ public class HomeController {
 
         return mv;
     }
+    @RequestMapping(value="admin", method = RequestMethod.GET)
+    public ModelAndView getAdminDat()
+    {
+        ModelAndView mv = new ModelAndView("admin");
+
+
+        return mv;
+    }
 
     @RequestMapping(value="home", method = RequestMethod.GET)
     public String viewHome()
