@@ -3,6 +3,7 @@ package Models;
 import com.ElsevierResources.validation.EmailMatches;
 import com.ElsevierResources.validation.PasswordMatches;
 import com.ElsevierResources.validation.ValidEmail;
+import org.springframework.validation.annotation.Validated;
 
 import javax.validation.constraints.*;
 

@@ -75,6 +75,11 @@ public class HomeController {
         return "front";
     }*/
 
+   @RequestMapping(value="front", method=RequestMethod.GET)
+   public String viewFront () {return "front";}
+
+
+
     @RequestMapping(value="signOn", method=RequestMethod.GET)
     public String viewSignOn () {return "signOn";}
 
@@ -168,10 +173,9 @@ public class HomeController {
 
     }
 
-    @RequestMapping(value = "/user/registration", method = RequestMethod.POST)
-    public ModelAndView registerUserAccount
-            (@ModelAttribute("user") @Valid UserDto accountDto,
-             BindingResult result, WebRequest request, Errors errors) {
+    @RequestMapping(value = "registerUserAccount", method = RequestMethod.POST)
+    public ModelAndView registerUserAccount(@ModelAttribute("user") UserDto accountDto,
+             BindingResult result, HttpServletRequest request, Errors errors) {
         User registered = new User();
         if (!result.hasErrors()) {
             registered = createUserAccount(accountDto, result);
@@ -179,8 +183,11 @@ public class HomeController {
         if (registered == null) {
             result.rejectValue("email", "message.regError");
         }
+        HttpSession session = request.getSession();
+        registered.setPassword("");
+        session.setAttribute("user", registered);
 
-        ModelAndView mv = new ModelAndView();
+        ModelAndView mv = new ModelAndView("front");
         return mv;
         // rest of the implementation
     }
