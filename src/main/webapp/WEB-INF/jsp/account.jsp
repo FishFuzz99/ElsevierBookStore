@@ -76,7 +76,7 @@
                                 <p><input type="password" placeholder="Old Password" required/></p>
                                 <p><input type="password" placeholder="New Password" required/></p>
                                 <p><input type="password" placeholder="Confirm New Password" required/></p>
-                                <button class="btn btn-success login-button" type="submit" value="Login">Submit</button>
+                                <input class="btn btn-success login-button" type="submit" value="Submit"/>
                             </form>
                         </div>
                     </li>
@@ -103,7 +103,7 @@
                                         <input type="text" id="expdate" name="expdate">
                                     </li>
                                     <li class="buttonBill">
-                                        <button class="btn btn-success login-button" type="submit" value="Login">Submit</button>
+                                        <input class="btn btn-success login-button" type="submit" value="Submit"/>
                                     </li>
                                 </ul>
                             </form>
@@ -160,7 +160,7 @@
                                             <input type="tel" id="phone" name="phone" placeholder="(555)555-5555" required>
                                         </li>
                                         <li class="buttonShip">
-                                            <button class="btn btn-success login-button" type="submit" value="Login">Submit</button>
+                                            <input class="btn btn-success login-button" type="submit" value="Submit"/><a href="account.jsp#menu4"></a>
                                         </li>
                                     </ul>
                                 </fieldset>
@@ -294,7 +294,7 @@
                                             <input type="text" placeholder=".jpg or .png" id="imageUrl1" name="imageUrl">
                                         </li>
                                         <li class="buttonShip">
-                                            <button class="btn btn-success login-button" type="submit" value="Login">Submit</button>
+                                            <input class="btn btn-success login-button" type="submit" value="Submit"/>
                                         </li>
                                     </ul>
                                 </fieldset>
@@ -320,7 +320,7 @@
                                         </select>
                                         </li>
                                         <li class="buttonShip">
-                                            <button class="btn btn-success login-button" type="submit" value="Login">Delete</button>
+                                            <input class="btn btn-success login-button" type="submit" value="Delete"/>
                                         </li>
                                     </ul>
                                 </fieldset>
@@ -412,7 +412,7 @@
                                             <input type="text" placeholder=".jpg or .png" id="imageUrl2" name="imageUrl2">
                                         </li>
                                         <li class="buttonShip">
-                                            <button class="btn btn-success login-button" type="submit" value="Login">Submit</button>
+                                            <input class="btn btn-success login-button" type="submit" value="Submit"/>
                                         </li>
                                     </ul>
                                 </fieldset>
