@@ -196,58 +196,9 @@ public class HomeController {
         return registered;
     }
 
-//jenna
+    public Book bookInfo(Book book, HttpServletRequest request) throws ParseException {
 
-    @RequestMapping(value = "insert", method = RequestMethod.GET)
-    public void insertBookData(HttpServletRequest request) throws ParseException {
-        //HttpSession session = request.getSession();
-        //User user = (User)session.getAttribute("user");
-       //if (user.isAdmin()) {
-            Book book = new Book();
-            String title = request.getParameter("bookTitle");
-            String author = request.getParameter("author");
-            String description = request.getParameter("message");
-            String price = request.getParameter("price");
-            String imageUrl = request.getParameter("imageUrl");
-            String ISBN = request.getParameter("isbn");
-            String publisher = request.getParameter("publisher");
-            String format = request.getParameter("format");
-            String datePublished = request.getParameter("publishDate");
-            String edition = request.getParameter("edition");
-            String numberOfPages = request.getParameter("pages");
-          //  String tableOfContents = request.getParameter("tableOfContents");
-            String genre = request.getParameter("genre");
-            book.setTitle(title);
-            book.setAuthor(author);
-            book.setDescription(description);
-            book.setPrice(Float.valueOf(price));
-            book.setImage(imageUrl);
-            book.setISBN(ISBN);
-            book.setPublisher(publisher);
-            book.setFormat(format);
-            DateFormat df = new SimpleDateFormat("mm/dd/yyyy");
-            Date dateDF = (Date)df.parse(datePublished);
-            book.setDatePublished(dateDF);
-            book.setEdition(edition);
-            book.setNumberOfPages(Integer.valueOf(numberOfPages));
-            book.setGenre(genre);
-           // book.setTableOfContents(tableOfContents);
-
-            JDBCOperator db = new JDBCOperator();
-            db.insertBook(book);
-
-       /* }
-        else{
-            System.out.println("not admin");
-       }*/
-    }
-
-    @RequestMapping(value = "update", method = RequestMethod.GET)
-    public void updateBookData(HttpServletRequest request) throws ParseException {
-        //HttpSession session = request.getSession();
-        //User user = (User)session.getAttribute("user");
-        //if (user.isAdmin()) {
-        Book book = new Book();
+        String id = request.getParameter("id");
         String title = request.getParameter("bookTitle");
         String author = request.getParameter("author");
         String description = request.getParameter("message");
@@ -276,14 +227,27 @@ public class HomeController {
         book.setNumberOfPages(Integer.valueOf(numberOfPages));
         book.setGenre(genre);
         // book.setTableOfContents(tableOfContents);
-
-        JDBCOperator db = new JDBCOperator();
-        db.insertBook(book);
-
-       /* }
-        else{
-            System.out.println("not admin");
-       }*/
+        return book;
     }
 
-}
+    @RequestMapping(value = "insert", method = RequestMethod.GET)
+        public void insertBookData(HttpServletRequest request) throws ParseException {
+                Book book = new Book();
+                book = bookInfo(book, request);
+                JDBCOperator db = new JDBCOperator();
+                db.insertBook(book);
+
+            }
+        @RequestMapping(value = "update", method = RequestMethod.GET)
+        public void updateBookData(HttpServletRequest request) throws ParseException {
+            Book book = new Book();
+            book.setID(4);
+            book = bookInfo(book, request);
+            JDBCOperator db = new JDBCOperator();
+            db.updateBook(book);
+
+            }
+
+    }
+
+

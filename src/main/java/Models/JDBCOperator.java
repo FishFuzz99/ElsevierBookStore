@@ -1,8 +1,6 @@
 package Models;
 
 import java.sql.*;
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Created by GRAY1 on 7/20/2016.
@@ -72,7 +70,7 @@ public class JDBCOperator {
         return book;
     }
 
-    /***********************Jennas mess********************/
+
 
     public Book insertBook(Book book) {
 
@@ -97,9 +95,31 @@ public class JDBCOperator {
         return book;
     }
 
+    public Book updateBook(Book book) {
+
+        try {
+            preparedStatement = connection.prepareStatement("UPDATE books SET title=?, author=?,description=?,price=?,IBSN=?,publisher=?,format=?,datePublished=?,edition=?,numberOfPages=?,genre=? WHERE bookID =?");
+            preparedStatement.setString(1,book.getTitle());
+            preparedStatement.setString(2, book.getAuthor());
+            preparedStatement.setString(3, book.getDescription());
+            preparedStatement.setFloat(4, book.getPrice());
+            preparedStatement.setString(5, book.getISBN());
+            preparedStatement.setString(6, book.getPublisher());
+            preparedStatement.setString(7, book.getFormat());
+            java.sql.Date sqlDate = new java.sql.Date(book.getDatePublished().getTime());
+            preparedStatement.setDate(8, sqlDate);
+            preparedStatement.setString(9, book.getEdition());
+            preparedStatement.setInt(10, book.getNumberOfPages());
+            preparedStatement.setString(11, book.getGenre());
+            preparedStatement.setInt(12, book.getID());
+            preparedStatement.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return book;
+    }
 
 
-    /**********************end mess**************************/
     public User saveUser(User user)
     {
         try
