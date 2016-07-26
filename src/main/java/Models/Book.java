@@ -2,7 +2,6 @@ package Models;
 
 import java.io.Serializable;
 import java.util.Date;
-import java.util.List;
 
 /**
  * Created by GRAY1 on 7/14/2016.
@@ -18,7 +17,7 @@ public class Book implements Serializable{
     //@OneToMany
     public String author;
     //@OneToMany
-    public List<Genre> genres;
+    public String genre;
     public String publisher;
     public Date datePublished;
     public float price;
@@ -58,12 +57,12 @@ public class Book implements Serializable{
         this.title = title;
     }
 
-    public List<Genre> getGenres() {
-        return genres;
+    public String getGenre() {
+        return genre;
     }
 
-    public void setGenres(List<Genre> genres) {
-        this.genres = genres;
+    public void setGenre(String genre) {
+        this.genre = genre;
     }
 
     public String getPublisher() {

@@ -1,8 +1,6 @@
 package Models;
 
 import java.sql.*;
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Created by GRAY1 on 7/20/2016.
@@ -58,7 +56,7 @@ public class JDBCOperator {
     public Book insertBook(Book book) {
 
         try {
-            preparedStatement = connection.prepareStatement("INSERT INTO booktest(ID, title) VALUES (?,?)");
+            preparedStatement = connection.prepareStatement("INSERT INTO book(title, authtor,description,price,IBSN,publiser,format,datePublished,edition,numberOfPages,tableOfContents) VALUES (?,?,?,?,?,?,?,?,?,?,?)");
             preparedStatement.setInt(1, book.getID());
             preparedStatement.setString(2, book.getTitle());
             preparedStatement.executeUpdate();

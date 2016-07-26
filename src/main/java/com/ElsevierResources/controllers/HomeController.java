@@ -6,7 +6,6 @@ import Models.User;
 import Models.UserDto;
 import com.ElsevierResources.services.UserService;
 import com.ElsevierResources.validation.EmailExistsException;
-import org.springframework.http.HttpRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -21,6 +20,10 @@ import org.springframework.web.servlet.ModelAndView;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 /**
  * Created by GRAY1 on 7/18/2016.
@@ -63,12 +66,6 @@ public class HomeController {
         book.setPrice(25.54f);
         book.setDescription("This is a test description");
 
-        Map<String, Object> map = new HashMap<>();
-        map.put("book1", book);
-        ModelAndView mav = new ModelAndView("someView", map);
-        mav.addAllObjects(map);
-
-        request.setAttribute("bookMap", map);
 
         return "front";
     }
@@ -86,6 +83,7 @@ public class HomeController {
     public String loginTest(HttpServletRequest request)
     {
         HttpSession session = request.getSession();
+
         String email = request.getParameter("email");
         String password = request.getParameter("password");
         String remember = request.getParameter("remember");
@@ -153,25 +151,46 @@ public class HomeController {
     }
 
 //jenna
-    private void insertBook(){
-        JDBCOperator db = new JDBCOperator();
-        Book book = new Book();
-        book.setID(4);
-        book.setTitle("insertTitle");
-        db.insertBook(book);
-    }
-    @RequestMapping(value = "insert", method = RequestMethod.GET, params = {"id","title"})
-    public void insertBookData(@RequestParam("id") int id, @RequestParam("title") String title)
-    {
 
-       Book book = new Book();
-        book.setID(id);
-        book.setTitle(title);
-        JDBCOperator db = new JDBCOperator();
-        db.insertBook(book);
-        // replace this with database query that gets the information
+    @RequestMapping(value = "insert", method = RequestMethod.GET)
+    public void insertBookData(HttpServletRequest request) throws ParseException {
+        HttpSession session = request.getSession();
+        User user = (User)session.getAttribute("user");
+        if (user.isAdmin()) {
+            Book book = new Book();
+            String title = request.getParameter("title");
+            String author = request.getParameter("author");
+            String description = request.getParameter("description");
+            String price = request.getParameter("price");
+            String imageUrl = request.getParameter("imageUrl");
+            String ISBN = request.getParameter("ISBN");
+            String publisher = request.getParameter("publisher");
+          //  String format = request.getParameter("format");
+            String datePublished = request.getParameter("datePublished");
+            String edition = request.getParameter("edition");
+            String numberOfPages = request.getParameter("numberOfPages");
+          //  String tableOfContents = request.getParameter("tableOfContents");
+            String genre = request.getParameter("genre");
+            book.setTitle(title);
+            book.setAuthor(author);
+            book.setDescription(description);
+            book.setPrice(Float.valueOf(price));
+            book.setImage(imageUrl);
+            book.setISBN(ISBN);
+            book.setPublisher(publisher);
+           // book.setFormat(format);
+            DateFormat df = new SimpleDateFormat("MM/dd/yyyy");
+            Date dateDF = (Date)df.parse(datePublished);
+            book.setDatePublished(dateDF);
+            book.setEdition(edition);
+            book.setNumberOfPages(Integer.valueOf(numberOfPages));
+            book.setGenre(genre);
+           // book.setTableOfContents(tableOfContents);
 
+            JDBCOperator db = new JDBCOperator();
+            db.insertBook(book);
 
+        }
     }
 
 }
