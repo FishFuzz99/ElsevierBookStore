@@ -42,11 +42,42 @@ public class HomeController {
         return "home";
     }
 
-    @RequestMapping(value="front", method = RequestMethod.GET)
-    public String viewFront()
+    @RequestMapping(value="registration", method = RequestMethod.GET)
+    public String viewRegistration()
     {
+        return "registration";
+    }
+
+
+    @RequestMapping(value="front", method = RequestMethod.GET)
+    public String viewFront(WebRequest request)
+    {
+        Book book = new Book();
+
+        book.setImage("../../images/book2.jpg");
+        book.setTitle("Book Test Title");
+        book.setAuthor("Testing Author");
+        book.setPrice(25.54f);
+        book.setDescription("This is a test description");
+
+        Map<String, Object> map = new HashMap<>();
+        map.put("book1", book);
+        ModelAndView mav = new ModelAndView("someView", map);
+        mav.addAllObjects(map);
+
+        request.setAttribute("bookMap", map);
+
         return "front";
     }
+
+    @RequestMapping(value="signOn", method=RequestMethod.GET)
+    public String viewSignOn () {return "signOn";}
+
+    @RequestMapping(value="shoppingCart", method=RequestMethod.GET)
+    public String viewShoppingCart () {return "shoppingCart";}
+
+    @RequestMapping(value="checkout", method=RequestMethod.GET)
+    public String viewCheckout () {return "checkout";}
 
     @RequestMapping(value = "/user/registration", method = RequestMethod.GET)
     public String showRegistrationForm(WebRequest request, Model model) {
