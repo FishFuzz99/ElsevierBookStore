@@ -156,7 +156,7 @@ public class HomeController {
     public void insertBookData(HttpServletRequest request) throws ParseException {
         HttpSession session = request.getSession();
         User user = (User)session.getAttribute("user");
-        if (user.isAdmin()) {
+       //if (user.isAdmin()) {
             Book book = new Book();
             String title = request.getParameter("title");
             String author = request.getParameter("author");
@@ -165,7 +165,7 @@ public class HomeController {
             String imageUrl = request.getParameter("imageUrl");
             String ISBN = request.getParameter("ISBN");
             String publisher = request.getParameter("publisher");
-          //  String format = request.getParameter("format");
+            String format = request.getParameter("format");
             String datePublished = request.getParameter("datePublished");
             String edition = request.getParameter("edition");
             String numberOfPages = request.getParameter("numberOfPages");
@@ -178,8 +178,8 @@ public class HomeController {
             book.setImage(imageUrl);
             book.setISBN(ISBN);
             book.setPublisher(publisher);
-           // book.setFormat(format);
-            DateFormat df = new SimpleDateFormat("MM/dd/yyyy");
+            book.setFormat(format);
+            DateFormat df = new SimpleDateFormat("mm/dd/yyyy");
             Date dateDF = (Date)df.parse(datePublished);
             book.setDatePublished(dateDF);
             book.setEdition(edition);
@@ -190,7 +190,10 @@ public class HomeController {
             JDBCOperator db = new JDBCOperator();
             db.insertBook(book);
 
-        }
+       /* }
+        else{
+            System.out.println("not admin");
+       }*/
     }
 
 }

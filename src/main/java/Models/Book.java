@@ -23,7 +23,7 @@ public class Book implements Serializable{
     public float price;
     public String ISBN;
     public String edition;
-    public BookFormat format;
+    public String format;
     public int numberOfPages;
     public String description;
 
@@ -105,11 +105,11 @@ public class Book implements Serializable{
         this.edition = edition;
     }
 
-    public BookFormat getFormat() {
+    public String getFormat() {
         return format;
     }
 
-    public void setFormat(BookFormat format) {
+    public void setFormat(String format) {
         this.format = format;
     }
 

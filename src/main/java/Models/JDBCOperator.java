@@ -56,9 +56,19 @@ public class JDBCOperator {
     public Book insertBook(Book book) {
 
         try {
-            preparedStatement = connection.prepareStatement("INSERT INTO book(title, authtor,description,price,IBSN,publiser,format,datePublished,edition,numberOfPages,tableOfContents) VALUES (?,?,?,?,?,?,?,?,?,?,?)");
-            preparedStatement.setInt(1, book.getID());
-            preparedStatement.setString(2, book.getTitle());
+            preparedStatement = connection.prepareStatement("INSERT INTO books(title, author,description,price,IBSN,publisher,format,datePublished,edition,numberOfPages,genre) VALUES (?,?,?,?,?,?,?,?,?,?,?)");
+            preparedStatement.setString(1,book.getTitle());
+            preparedStatement.setString(2, book.getAuthor());
+            preparedStatement.setString(3, book.getDescription());
+            preparedStatement.setFloat(4, book.getPrice());
+            preparedStatement.setString(5, book.getISBN());
+            preparedStatement.setString(6, book.getPublisher());
+            preparedStatement.setString(7, book.getFormat());
+            java.sql.Date sqlDate = new java.sql.Date(book.getDatePublished().getTime());
+            preparedStatement.setDate(8, sqlDate);
+            preparedStatement.setString(9, book.getEdition());
+            preparedStatement.setInt(10, book.getNumberOfPages());
+            preparedStatement.setString(11, book.getGenre());
             preparedStatement.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
