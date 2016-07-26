@@ -65,7 +65,7 @@
                 <!-- this is where the book information such as title, author, date, publisher, short summary will go -->
                 <div style="margin-left:12px">
                     <h1 style="text-align:left"><%= bookybook.title%></h1>
-                    <h3 style="text-align:left"><%= bookybook.getAuthors()%></h3>
+                    <h3 style="text-align:left"><%= bookybook.author%></h3>
                     <p>Publication Date: <%= bookybook.datePublished%></p>
                     <p>ISBN: <%= bookybook.getISBN()%></p>
                     <p class="book-descrip" style="text-align:left"><%= bookybook.getDescription()%></p>
