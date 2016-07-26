@@ -220,10 +220,6 @@
                                     <legend>Add Book</legend>
                                     <ul class="ship">
                                         <li>
-                                            <label for="bookId">Book ID:</label>
-                                            <input type="text" id="bookId" name="bookId">
-                                        </li>
-                                        <li>
                                             <label for="bookTitle">Title:</label>
                                             <input type="text" id="bookTitle1" name="bookTitle">
                                         </li>
@@ -341,10 +337,7 @@
                                             <option value="QAJQUERY">Harry Potter and the Half Blood Prince</option>
                                         </select>
                                         </li>
-                                        <li>
-                                            <label for="bookId1">Book ID:</label>
-                                            <input type="text" id="bookId1" name="bookId1">
-                                        </li>
+
                                         <li>
                                             <label for="bookTitle">Title:</label>
                                             <input type="text" id="bookTitle" name="bookTitle">
