@@ -147,6 +147,11 @@
                                         </li>
 
                                         <li>
+                                            <label for="ZipCode">Zip Code:</label>
+                                            <input type="text" id="ZipCode" name="ZipCode">
+                                        </li>
+
+                                        <li>
                                             <label for="email">Email:</label>
                                             <input type="email" id="email" name="email" placeholder="you@domain.com" required>
                                         </li>
@@ -258,7 +263,7 @@
 
                                         <li>
                                             <label for="publishDate">Date Published:</label>
-                                            <input type="text" id="publishDate" name="publishDate">
+                                            <input type="text" id="publishDate" name="publishDate" placeholder="MM/DD/YYYY">
                                         </li>
 
                                         <li>
@@ -376,7 +381,7 @@
 
                                         <li>
                                             <label for="publishDate2">Date Published:</label>
-                                            <input type="text" id="publishDate2" name="publishDate2">
+                                            <input type="text" id="publishDate2" name="publishDate2" placeholder="MM/DD/YYYY">
                                         </li>
 
                                         <li>

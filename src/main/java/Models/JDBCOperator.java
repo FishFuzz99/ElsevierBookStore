@@ -20,7 +20,7 @@ public class JDBCOperator {
     {
         try {
             Class.forName(JDBC_DRIVER);
-            connection = DriverManager.getConnection(DB_URL, "root", "74Challenger");
+            connection = DriverManager.getConnection(DB_URL, "root", "Madcata8");
 
 
         } catch (ClassNotFoundException e) {
@@ -30,6 +30,25 @@ public class JDBCOperator {
             es.printStackTrace();
         }
 
+
+    }
+
+    public void  placeOrder(String orderDate, String total,String shipmentDate,String street,String city,String zipcode,String state){
+        try {
+            preparedStatement = connection.prepareStatement("INSERT INTO orders(orderDate,total,shipmentDate,street,city,zipcode,state) VALUES(?,?,?,?,?,?,?)");
+            preparedStatement.setString(1,orderDate);
+            preparedStatement.setString(2,total);
+            preparedStatement.setString(3,shipmentDate);
+            preparedStatement.setString(4,street);
+            preparedStatement.setString(5,city);
+            preparedStatement.setString(6,zipcode);
+            preparedStatement.setString(7,state);
+
+            preparedStatement.execute();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
 
     }
 
@@ -56,7 +75,12 @@ public class JDBCOperator {
     {
         try
         {
-            if ((!(user.getCity().isEmpty()) && !(user.getCity().equals(""))) && (!user.getStreet().isEmpty() && !user.getStreet().equals("")))
+            if (user.getCity() != null
+                    && user.getStreet() != null
+                    && !user.getCity().isEmpty()
+                    && !user.getCity().equals("")
+                    && !user.getStreet().isEmpty()
+                    && !user.getStreet().equals(""))
             {
                 preparedStatement = connection.prepareStatement("INSERT INTO users(firstName, lastName, email, password, street, city, state, zipCode) VALUES(?, ?, ?, ?, ?, ?, ?, ?)");
                 preparedStatement.setString(5, user.getStreet());
@@ -86,15 +110,16 @@ public class JDBCOperator {
 
     public User findUserByEmail(String email)
     {
-        User user = new User();
+        User user = null;
         try
         {
             preparedStatement = connection.prepareStatement("SELECT * FROM users WHERE email LIKE ?");
             preparedStatement.setString(1, email);
             ResultSet rs = preparedStatement.executeQuery();
 
-            if (rs != null)
+            if (rs != null && rs.next())
             {
+                user = new User();
                 user.setID(rs.getInt("userId"));
                 user.setFirstName(rs.getString("firstName"));
                 user.setLastName(rs.getString("lastName"));

@@ -54,7 +54,7 @@
         <div class="row">
             <div class="col-lg-4 col-md-4">
                 <div class="images">
-                    <img src= <%= ""//we need an image location attribute in our Book class %> alt="" style="display:block; margin:auto;">
+                    <img src= <%= bookybook.image%> alt="" style="display:block; margin:auto;">
                 </div>
                 <div style="padding: 0% 20%">
                     <button type="button" class="btn btn-primary book-buttons cart-button">Add to Cart</button>
