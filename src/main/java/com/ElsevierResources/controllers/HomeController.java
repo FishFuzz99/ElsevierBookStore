@@ -6,6 +6,7 @@ import Models.User;
 import Models.UserDto;
 import com.ElsevierResources.services.UserService;
 import com.ElsevierResources.validation.EmailExistsException;
+import org.springframework.http.HttpRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -17,6 +18,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 import java.util.HashMap;
 import java.util.Map;
@@ -81,6 +84,40 @@ public class HomeController {
     @RequestMapping(value="checkout", method=RequestMethod.GET)
     public String viewCheckout () {return "checkout";}
 
+    @RequestMapping(value="login", method=RequestMethod.POST)
+    public ModelAndView login(HttpServletRequest request)
+    {
+        HttpSession session = request.getSession();
+        ModelAndView mv = new ModelAndView();
+        mv.setViewName("front");
+        String email = request.getParameter("email");
+        String password = request.getParameter("password");
+        String remember = request.getParameter("remember");
+        if (!(email.isEmpty() || email.equals("")))
+        {
+            User user = jdbcOperator.findUserByEmail(email);
+            if (user == null
+                    || user.getFirstName() == null
+                    || user.getEmail() == null
+                    || user.getFirstName().equals("")
+                    || user.getEmail().equals("")
+                    || user.getEmail().isEmpty()
+                    || user.getFirstName().isEmpty()
+                    || !user.getPassword().equals(password))
+            {
+                mv.setViewName("signOn");
+                String error = "No user with that email and password exists.";
+                mv.addObject("error", error);
+            }
+            else
+            {
+                user.setPassword("");
+                session.setAttribute("user", user);
+            }
+        }
+        return mv;
+    }
+
     @RequestMapping(value = "/user/registration", method = RequestMethod.GET)
     public String showRegistrationForm(WebRequest request, Model model) {
         UserDto userDto = new UserDto();
@@ -95,6 +132,8 @@ public class HomeController {
         ModelAndView mv = new ModelAndView("book");
         mv.addObject("book", book);
         return mv;
+
+
 
     }
 
