@@ -312,8 +312,9 @@
 
                                         <li>
                                             
-				                            <label for="message">Message: </label>
-				                            <textarea rows="10" cols="40" name="message" id="message"></textarea>
+				                            <label for="message">
+                                                Description: </label>
+				                            <textarea rows="10" cols="10" name="message" id="message"></textarea>
 			                                
                                         </li>
 
