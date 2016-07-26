@@ -63,9 +63,9 @@
 <div class="container-login">
     <div class="login">
         <h1>Login Form</h1>
-        <form>
-            <p><input type="email" placeholder="Username or Email" required/></p>
-            <p><input type="password" placeholder="Password" required/></p>
+        <form action="login" method="post">
+            <p><input name="email" type="email" placeholder="Username or Email" required/></p>
+            <p><input name="password" type="password" placeholder="Password" required/></p>
             <p class="remember">
                 <label><label>
                     <input type="checkbox" name="remember" id="remember"/>
