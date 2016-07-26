@@ -86,6 +86,10 @@
                     <label for="StateBillAddress">State:</label>
                     <input type="text" id="StateBillAddress" name="StateBillAddress" placeholder="XX">
                 </li>
+                <li>
+                    <label for="zipCode">Zip Code:</label>
+                    <input type="text" id="zipCode" name="zipCode">
+                </li>
 
                 <li>
                     <label for="email1">Email:</label>
@@ -137,7 +141,10 @@
                     <label for="StateShipAddress">State:</label>
                     <input type="text" id="StateShipAddress" name="StateShipAddress" placeholder="XX">
                 </li>
-
+                <li>
+                    <label for="ZipCodeShipAddress">Zip Code:</label>
+                    <input type="text" id="ZipCodeShipAddress" name="ZipCodeShipAddress">
+                </li>
                 <li>
                     <label for="email">Email:</label>
                     <input type="email" id="email" name="email" placeholder="you@domain.com" required>
