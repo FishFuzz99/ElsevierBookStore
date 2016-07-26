@@ -17,24 +17,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.ModelAndView;
 
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
-import javax.validation.Constraint;
-import javax.validation.Payload;
 import javax.validation.Valid;
-
-
-import java.lang.annotation.Documented;
-import java.lang.annotation.Retention;
-import java.lang.annotation.Target;
-import java.util.ArrayList;
-import java.util.List;
-
-import static java.lang.annotation.ElementType.ANNOTATION_TYPE;
-import static java.lang.annotation.ElementType.FIELD;
-import static java.lang.annotation.ElementType.TYPE;
-import static java.lang.annotation.RetentionPolicy.RUNTIME;
 
 /**
  * Created by GRAY1 on 7/18/2016.
@@ -59,11 +42,27 @@ public class HomeController {
         return "home";
     }
 
+    @RequestMapping(value="registration", method = RequestMethod.GET)
+    public String viewRegistration()
+    {
+        return "registration";
+    }
+
+
     @RequestMapping(value="front", method = RequestMethod.GET)
     public String viewFront()
     {
         return "front";
     }
+
+    @RequestMapping(value="signOn", method=RequestMethod.GET)
+    public String viewSignOn () {return "signOn";}
+
+    @RequestMapping(value="shoppingCart", method=RequestMethod.GET)
+    public String viewShoppingCart () {return "shoppingCart";}
+
+    @RequestMapping(value="checkout", method=RequestMethod.GET)
+    public String viewCheckout () {return "checkout";}
 
     @RequestMapping(value = "/user/registration", method = RequestMethod.GET)
     public String showRegistrationForm(WebRequest request, Model model) {
