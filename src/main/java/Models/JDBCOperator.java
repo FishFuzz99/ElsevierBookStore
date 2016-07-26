@@ -119,6 +119,16 @@ public class JDBCOperator {
         return book;
     }
 
+    public void deleteBook(Book book){
+        try {
+            preparedStatement = connection.prepareStatement("DELETE FROM books WHERE bookID=?");
+            preparedStatement.setInt(1,book.getID());
+            preparedStatement.executeUpdate();
+
+        }catch (SQLException e) {
+        e.printStackTrace();
+        }
+    }
 
     public User saveUser(User user)
     {

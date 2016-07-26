@@ -298,7 +298,7 @@
                  </li>
                  <li>
             <div class="deleteBook">
-                            <form>
+                            <form action="delete" method="get">
                                 <fieldset>
                                     <legend>Delete Book</legend>
                                     <ul class="ship">

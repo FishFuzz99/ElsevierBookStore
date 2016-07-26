@@ -19,7 +19,6 @@ import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
-import javax.validation.Valid;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -255,6 +254,14 @@ public class HomeController {
 
             }
 
+    @RequestMapping(value = "delete", method = RequestMethod.GET)
+    public void deleteBookData(HttpServletRequest request) throws ParseException {
+        Book book = new Book();
+        book.setID(4);
+        JDBCOperator db = new JDBCOperator();
+        db.deleteBook(book);
+
+    }
     }
 
 
