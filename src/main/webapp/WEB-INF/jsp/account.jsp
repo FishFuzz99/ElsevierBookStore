@@ -211,8 +211,11 @@
             </tr>
         </div>
         <div id="menu4" class="tab-pane fade">
+             <ul class="info" style="list-style-type:none">
+                 <li>
                 <div class="addBook">
                             <form>
+    
                                 <fieldset>
                                     <legend>Add Book</legend>
                                     <ul class="ship">
@@ -222,38 +225,24 @@
                                         </li>
 
                                         <li>
-                                            <label for="surname">Last Name:</label>
-                                            <input type="text" id="surname" name="surname">
+                                            <label for="author">Author:</label>
+                                            <input type="text" id="author" name="author">
                                         </li>
 
 
                                         <li>
-                                            <label for="StShipAddress">Street Address:</label>
-                                            <input type="text" id="StShipAddress" name="StShipAddress">
+                                            <label for="description">Description:</label>
+                                            <input type="text" id="description" name="description">
                                         </li>
 
                                         <li>
-                                            <label for="StShipAddress2"></label>
-                                            <input type="text" id="StShipAddress2" name="StShipAddress2">
+                                            <label for="price">Price:</label>
+                                            <input type="text" id="price" name="price">
                                         </li>
 
                                         <li>
-                                            <label for="CityShipAddress">City/Town:</label>
-                                            <input type="text" id="CityShipAddress" name="CityShipAddress">
-                                        </li>
-
-                                        <li>
-                                            <label for="StateShipAddress">State:</label>
-                                            <input type="text" id="StateShipAddress" name="StateShipAddress">
-                                        </li>
-
-                                        <li>
-                                            <label for="email">Email:</label>
-                                            <input type="email" id="email" name="email" placeholder="you@domain.com" required>
-                                        </li>
-                                        <li>
-                                            <label for="phone">Phone Number:</label>
-                                            <input type="tel" id="phone" name="phone" placeholder="(555)555-5555" required>
+                                            <label for="imageUrl">Image URL:</label>
+                                            <input type="text" id="imageUrl" name="imageUrl">
                                         </li>
                                         <li class="buttonShip">
                                             <button class="btn btn-success login-button" type="submit" value="Login">Submit</button>
@@ -261,7 +250,94 @@
                                     </ul>
                                 </fieldset>
                             </form>
-                        </div>                   
+                        </div>   
+                 </li>
+                 <li>
+            <div class="deleteBook">
+                            <form>
+                                <fieldset>
+                                    <legend>Delete Book</legend>
+                                    <ul class="ship">
+                                        <li>
+                                            <label for="delete">Select Book to Remove:</label>
+                                            <select name="delete" id="delete">
+                                            <option value="QAJAVSC">Catching Fire</option>
+                                            <option value="QAWEBUI">Divergent</option>
+                                            <option value="QAWEBCSS">The Rainbow Fish</option>
+                                            <option value="QAJQUERY">The Lord of the Rings</option>
+                                            <option value="QAJAVSC">Water for Elephants</option>
+                                            <option value="QAWEBUI">Harry Potter and the Sorceror's Stone</option>
+                                            <option value="QAWEBCSS">Harry Potter and the Prisoner of Azkaban</option>
+                                            <option value="QAJQUERY">Harry Potter and the Half Blood Prince</option>
+                                        </select>
+                                        </li>
+                                        <li class="buttonShip">
+                                            <button class="btn btn-success login-button" type="submit" value="Login">Submit</button>
+                                        </li>
+                                    </ul>
+                                </fieldset>
+                            </form>
+                        </div>  
+                 </li>
+                 <li>
+                 <div class="editBook">
+                            <form>
+                                <fieldset>
+                                    <legend>Edit Book Info</legend>
+                                    <ul class="ship">
+                                        <li>
+                                            <label for="delete">Select Book to Edit:</label>
+                                            <select name="delete" id="delete">
+                                            <option value="QAJAVSC">Catching Fire</option>
+                                            <option value="QAWEBUI">Divergent</option>
+                                            <option value="QAWEBCSS">The Rainbow Fish</option>
+                                            <option value="QAJQUERY">The Lord of the Rings</option>
+                                            <option value="QAJAVSC">Water for Elephants</option>
+                                            <option value="QAWEBUI">Harry Potter and the Sorceror's Stone</option>
+                                            <option value="QAWEBCSS">Harry Potter and the Prisoner of Azkaban</option>
+                                            <option value="QAJQUERY">Harry Potter and the Half Blood Prince</option>
+                                        </select>
+                                        </li>
+                                        <ul class="ship">
+                                        <li>
+                                            <label for="bookTitle">Title:</label>
+                                            <input type="text" id="bookTitle" name="bookTitle">
+                                        </li>
+
+                                        <li>
+                                            <label for="author">Author:</label>
+                                            <input type="text" id="author" name="author">
+                                        </li>
+
+
+                                        <li>
+                                            <label for="description">Description:</label>
+                                            <input type="text" id="description" name="description">
+                                        </li>
+
+                                        <li>
+                                            <label for="price">Price:</label>
+                                            <input type="text" id="price" name="price">
+                                        </li>
+
+                                        <li>
+                                            <label for="imageUrl">Image URL:</label>
+                                            <input type="text" id="imageUrl" name="imageUrl">
+                                        </li>
+                                        <li class="buttonShip">
+                                            <button class="btn btn-success login-button" type="submit" value="Login">Submit</button>
+                                        </li>
+                                    </ul>
+                                    </ul>
+                                </fieldset>
+                            </form>
+                        </div>  
+                 
+                 
+                 
+                 
+                 </li>
+            </ul>
     </div>
     </div>
 </div>
