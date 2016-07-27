@@ -56,13 +56,21 @@
                 <li >
                     <a href="shoppingCart">Book Bag</a>
                 </li>
+
+
                 <% if (session.getAttribute("user") == null) { %>
                     <li class="login-button pull-right">
                         <a href="signOn">Login / Register</a>
                     </li>
                 <% } %>
-
-
+                <div class="search">
+                    <li>
+                        <form id="searchBox" action="search.php" method="post">
+                            <input id="searchBook"  type="text" placeholder="Find a Book" name="search">
+                            <input name="submitBook" class="btn btn-primary" type="submit" id="submit" formmethod="POST" value="Search">
+                        </form>
+                    </li>
+                </div>
             </ul>
         </div>
         <!-- /.navbar-collapse -->
