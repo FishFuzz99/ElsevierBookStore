@@ -65,12 +65,12 @@
 
 
             <input type="email" name="email" id="email1" required="required" placeholder="Email" style="font-size:12px" />
-            <input type="email" name="matchingEmail" id="email2" required="required" placeholder="Confirm Email" style="font-size:12px" />
-
+            <input type="email" name="matchingEmail" id="email2" required="required" placeholder="Confirm Email" style="font-size:12px" onkeyup="emailValidation(); return false;" />
+            <span id="confirmMessage2" class="confirmMessage"></span>
             <input type="password" name="password" id="password1" required="required" placeholder="Password" style="font-size:12px" />
 
-            <input type="password" name="matchingPassword" id="password2" required="required" placeholder="Confirm Password" style="font-size:12px" onkeyup="registerValidation(); return false;"/>
-            <span id="confirmMessage" class="confirmMessage"></span>
+            <input type="password" name="matchingPassword" id="password2" required="required" placeholder="Confirm Password" style="font-size:12px" onkeyup="passwordValidation(); return false;"/>
+            <span id="confirmMessage1" class="confirmMessage"></span>
         </div>
         <div class="checkboxy">
             <input name="cecky" id="checky" value="1" type="checkbox" /><label class="terms">&nbsp;I accept the terms of use</label>
