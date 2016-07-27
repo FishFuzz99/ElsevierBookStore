@@ -1,9 +1,6 @@
 package com.ElsevierResources.controllers;
 
-import Models.Book;
-import Models.JDBCOperator;
-import Models.User;
-import Models.UserDto;
+import Models.*;
 import com.ElsevierResources.services.UserService;
 import com.ElsevierResources.validation.EmailExistsException;
 import org.springframework.stereotype.Controller;
@@ -16,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.view.RedirectView;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -153,6 +151,16 @@ public class HomeController {
         UserDto userDto = new UserDto();
         model.addAttribute("user", userDto);
         return "registration";
+    }
+
+    @RequestMapping(value="account/menu2", method=RequestMethod.GET)
+    public ModelAndView getOrderData(){
+        ModelAndView model = new ModelAndView();
+        List<Order> orders=jdbcOperator.getOrderHistory();
+        model.addObject("orders",orders);
+        System.out.println(orders);
+
+        return model;
     }
 
     @RequestMapping(value = "book", method = RequestMethod.GET, params = {"id"})
