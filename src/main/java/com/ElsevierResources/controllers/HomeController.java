@@ -59,6 +59,13 @@ public class HomeController {
         return model;
     }
 
+    @RequestMapping(value="admin", method = RequestMethod.GET)
+    public String viewAdmin()
+    {
+        return "admin";
+    }
+
+    
     @RequestMapping(value="home", method = RequestMethod.GET)
     public String viewHome()
     {
@@ -174,12 +181,6 @@ public class HomeController {
         HttpSession session = request.getSession();
         ModelAndView mv = new ModelAndView();
         mv.setViewName("front");
-
-        if (session.getAttribute("user") != null)
-        {
-            return mv;
-        }
-
         String email = request.getParameter("email");
         String password = request.getParameter("password");
         String remember = request.getParameter("remember");
@@ -228,39 +229,21 @@ public class HomeController {
 
     }
 
-    @RequestMapping(value="addToCart", method = RequestMethod.POST)
-    public Boolean addToCart(HttpServletRequest request)
-    {
-        int ID = Integer.valueOf(request.getParameter("id"));
-
-        return true;
-    }
-
-
     @RequestMapping(value = "registerUserAccount", method = RequestMethod.POST)
     public ModelAndView registerUserAccount(@ModelAttribute("user") UserDto accountDto,
              BindingResult result, HttpServletRequest request, Errors errors) {
         User registered = new User();
-
-        HttpSession session = request.getSession();
-        ModelAndView mv = new ModelAndView("front");
-
-        if (session.getAttribute("user") != null)
-        {
-            return mv;
-        }
-
         if (!result.hasErrors()) {
             registered = createUserAccount(accountDto, result);
         }
         if (registered == null) {
             result.rejectValue("email", "message.regError");
         }
-
+        HttpSession session = request.getSession();
         registered.setPassword("");
         session.setAttribute("user", registered);
 
-
+        ModelAndView mv = new ModelAndView("front");
         return mv;
         // rest of the implementation
     }

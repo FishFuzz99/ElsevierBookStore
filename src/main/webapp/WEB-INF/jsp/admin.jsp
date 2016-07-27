@@ -64,10 +64,10 @@
     <div class="tab-content">
         <div id="menu1" class="tab-pane fade in active ">
  <!---this--->
-            <ul class="info" style="list-style-type:none" style="align-content: center">
+            <ul class="info" style="align-content: center">
                 <li>
                     <div class="addBook">
-                        <form>
+                        <form action="insert" method="get">
 
                             <fieldset>
                                 <legend>Add Book</legend>
@@ -176,7 +176,7 @@
         </div>
         <div id="menu3" class="tab-pane fade">
             <div class="editBook">
-                <form>
+                <form action="insert" method="get">
                     <fieldset>
                         <legend>Edit Book Info</legend>
                         <ul class="edit" >
