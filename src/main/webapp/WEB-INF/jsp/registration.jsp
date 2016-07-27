@@ -67,8 +67,8 @@
             <input type="email" name="email" id="email1" required="required" placeholder="Email" style="font-size:12px" />
             <input type="email" name="matchingEmail" id="email2" required="required" placeholder="Confirm Email" style="font-size:12px" onkeyup="emailValidation(); return false;" />
             <span id="confirmMessage2" class="confirmMessage"></span>
-            <input type="password" name="password" id="password1" required="required" placeholder="Password" style="font-size:12px" />
-
+            <input type="password" name="password" id="password1" required="required" placeholder="Password" style="font-size:12px" onkeyup="passwordValidationLength(); return false;"/>
+            <span id="confirmMessage3" class="confirmMessage"></span>
             <input type="password" name="matchingPassword" id="password2" required="required" placeholder="Confirm Password" style="font-size:12px" onkeyup="passwordValidationMatch(); return false;"/>
             <span id="confirmMessage1" class="confirmMessage"></span>
         </div>

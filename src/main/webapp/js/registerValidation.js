@@ -31,11 +31,19 @@ function passwordValidationMatch()
     }
 }
 function passwordValidationLength(){
-    if (pass1.length>7) {
+    var pass1 = document.getElementById('password1');
+    //Store the Confirmation Message Object ...
+    var message = document.getElementById('confirmMessage3');
+    //Set the colors we will be using ...
+    var goodColor = "#66cc66";
+    var badColor = "#ff6666";
+    if (pass1.value.length < 8) {
+        pass1.style.backgroundColor = badColor;
+        message.style.color = badColor;
+        message.innerHTML = "Password too short"
+    } else {
         pass1.style.backgroundColor = goodColor;
-    }
-    else{
-        pass1.style.backgroundColor= badColor;
+        message.innerHTML = " "
     }
 }
 
