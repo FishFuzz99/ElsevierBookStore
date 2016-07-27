@@ -69,7 +69,6 @@
         <li class="active"><a data-toggle="tab" href="#menu1">Edit Account Info</a></li>
         <li><a data-toggle="tab" href="#menu2">Order History</a></li>
         <li><a data-toggle="tab" href="#menu3">Wish List</a></li>
-
     </ul>
 
     <div class="tab-content">
@@ -227,7 +226,6 @@
                 </td>
             </form>
         </div>
-
     </div>
 </div>
 </body>

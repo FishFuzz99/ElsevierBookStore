@@ -21,7 +21,7 @@ public class JDBCOperator {
     {
         try {
             Class.forName(JDBC_DRIVER);
-            connection = DriverManager.getConnection(DB_URL, "root", "74Challenger");
+            connection = DriverManager.getConnection(DB_URL, "root", "Madcata8");
 
 
         } catch (ClassNotFoundException e) {
@@ -34,9 +34,9 @@ public class JDBCOperator {
 
     }
 
-    public void  placeOrder(String orderDate, String total,String shipmentDate,String street,String city,String zipcode,String state){
+    public void  placeOrder(String orderDate, String total,String shipmentDate,String street,String city,String zipcode,String state, int userId){
         try {
-            preparedStatement = connection.prepareStatement("INSERT INTO orders(orderDate,total,shipmentDate,street,city,zipcode,state) VALUES(?,?,?,?,?,?,?)");
+            preparedStatement = connection.prepareStatement("INSERT INTO orders(orderDate,total,shipmentDate,street,city,zipcode,state) VALUES(?,?,?,?,?,?,?,?)");
             preparedStatement.setString(1,orderDate);
             preparedStatement.setString(2,total);
             preparedStatement.setString(3,shipmentDate);
@@ -44,6 +44,7 @@ public class JDBCOperator {
             preparedStatement.setString(5,city);
             preparedStatement.setString(6,zipcode);
             preparedStatement.setString(7,state);
+            preparedStatement.setInt(8,userId);
 
             preparedStatement.execute();
 
@@ -53,11 +54,12 @@ public class JDBCOperator {
 
     }
 
-    public List<Order> getOrderHistory(){
+    public List<Order> getOrderHistory(int userId){
         List<Order> orderList = new ArrayList<Order>();
 
         try {
-            preparedStatement = connection.prepareStatement("SELECT * FROM orders");
+            preparedStatement = connection.prepareStatement("SELECT * FROM orders WHERE userID = ?");
+            preparedStatement.setInt(1,userId);
             ResultSet orders = preparedStatement.executeQuery();
             while(orders.next()){
                 Order order = new Order();
