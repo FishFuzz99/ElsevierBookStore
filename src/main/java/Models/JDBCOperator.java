@@ -99,12 +99,22 @@ public class JDBCOperator {
     {
         Book book = new Book();
         try {
-            preparedStatement = connection.prepareStatement("SELECT * FROM booktest WHERE id = ?");
+            preparedStatement = connection.prepareStatement("SELECT * FROM books WHERE bookID = ?");
             preparedStatement.setString(1, String.valueOf(id));
             ResultSet rs = preparedStatement.executeQuery();
             if ((rs != null) && rs.next()) {
                 book.title = rs.getString("title");
                 book.author = rs.getString("author");
+                book.description = rs.getString("description");
+                book.price = rs.getFloat("price");
+                book.ISBN = rs.getString("ISBN");
+                book.publisher = rs.getString("publisher");
+                book.datePublished = rs.getDate("datePublished");
+                book.edition = rs.getString("edition");
+                book.numberOfPages = rs.getInt("numberOfPages");
+                book.genre = rs.getString("genre");
+                book.image = rs.getString("imageURL");
+                book.format = rs.getString("format");
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -118,7 +128,7 @@ public class JDBCOperator {
     public Book insertBook(Book book) {
 
         try {
-            preparedStatement = connection.prepareStatement("INSERT INTO books(title, author,description,price,IBSN,publisher,format,datePublished,edition,numberOfPages,genre) VALUES (?,?,?,?,?,?,?,?,?,?,?)");
+            preparedStatement = connection.prepareStatement("INSERT INTO books (title, author,description,price,IBSN,publisher,format,datePublished,edition,numberOfPages,genre) VALUES (?,?,?,?,?,?,?,?,?,?,?)");
             preparedStatement.setString(1,book.getTitle());
             preparedStatement.setString(2, book.getAuthor());
             preparedStatement.setString(3, book.getDescription());

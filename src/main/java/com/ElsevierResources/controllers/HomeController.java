@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.ModelAndView;
-import org.springframework.web.servlet.view.RedirectView;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -273,4 +272,42 @@ public class HomeController {
         // book.setTableOfContents(tableOfContents);
         return book;
     }
-}
+
+    @RequestMapping(value = "insert", method = RequestMethod.GET)
+        public void insertBookData(HttpServletRequest request) throws ParseException {
+                Book book = new Book();
+                book = bookInfo(book, request);
+                JDBCOperator db = new JDBCOperator();
+                db.insertBook(book);
+
+            }
+        @RequestMapping(value = "update", method = RequestMethod.GET)
+        public void updateBookData(HttpServletRequest request) throws ParseException {
+            Book book = new Book();
+            book.setID(4);
+            book = bookInfo(book, request);
+            JDBCOperator db = new JDBCOperator();
+            db.updateBook(book);
+
+            }
+
+    @RequestMapping(value = "delete", method = RequestMethod.GET)
+    public void deleteBookData(HttpServletRequest request) throws ParseException {
+        Book book = new Book();
+        book.setID(4);
+        JDBCOperator db = new JDBCOperator();
+        db.deleteBook(book);
+
+    }
+
+ /*   @RequestMapping(value = "shoppingCart", method = RequestMethod.GET)
+    public void insertShopBookData(HttpServletRequest request) throws ParseException {
+        Book book = new Book();
+        book = bookInfo(book, request);
+        JDBCOperator db = new JDBCOperator();
+        db.insertBook(book);
+
+    }*/
+    }
+
+
