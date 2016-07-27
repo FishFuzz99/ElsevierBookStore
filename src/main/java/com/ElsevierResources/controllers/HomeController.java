@@ -114,8 +114,9 @@ public class HomeController {
         String cardType = request.getParameter("card");
         String cardNumber = request.getParameter("number");
         String expDate = request.getParameter("expdate");
+        String zipcode = request.getParameter("ZipCodeShipAddress");
 
-        jdbcOperator.placeOrder("2016-12-12","100","2016-12-12",shipStreetAddress,shipCityAddress,"45342","OH");
+        jdbcOperator.placeOrder("2016-07-29","100.75",null,shipStreetAddress,shipCityAddress,zipcode,shipStateAddress);
 
 
 

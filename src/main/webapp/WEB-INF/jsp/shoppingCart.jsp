@@ -85,48 +85,13 @@
                         $19.99
                     </td>
                     <td class="option">
-                        <input type="submit" value="Remove" />
+                        <button type="button" class="btn book-buttons ">Remove</button>
                         <p></p>
                         <p></p>
-                        <input type="submit" value="Add to Wishlist" />
+                        <button type="button" class="btn book-buttons wish-list-button">Add to Wish List</button>
                     </td>
                 </tr>
-                <!----------------Second Book------------->
-                <tr class="shopBook">
-                    <td class="books">
-                        <img src="<c:url value="images/book2.jpg"/>">
-                    </td>
-                    <td class="des">
-                        This is what a description will look like.
-                    </td>
-                    <td class="price">
-                        $19.99
-                    </td>
-                    <td class="option">
-                        <input type="submit" value="Remove" />
-                        <p></p>
-                        <p></p>
-                        <input type="submit" value="Add to Wishlist" />
-                    </td>
-                </tr>
-                <!----------------Third Book------------->
-                <tr class="shopBook">
-                    <td class="books">
-                        <img src="<c:url value="images/book2.jpg"/>">
-                    </td>
-                    <td class="des">
-                        This is what a description will look like.
-                    </td>
-                    <td class="price">
-                        $19.99
-                    </td>
-                    <td class="option">
-                        <input type="submit" value="Remove" />
-                        <p></p>
-                        <p></p>
-                        <input type="submit" value="Add to Wishlist" />
-                    </td>
-                </tr>
+
 
                 </tbody>
             </table>
@@ -144,23 +109,7 @@
                     <td class="item">book 1</td>
                     <td>$0.00</td>
                 </tr>
-                <tr>
-                    <td class="item">book 2</td>
-                    <td>$0.00</td>
-                </tr>
-                <tr>
-                    <td class="item">book 3</td>
-                    <td>$0.00</td>
-                </tr>
-                <tr>
-                    <td class="defMoney">Shipping:</td>
-                    <td class="money">$0.00</td>
-                </tr>
 
-                <tr>
-                    <td class="defMoney">Tax:</td>
-                    <td class="money">$0.00</td>
-                </tr>
             </table>
 
             <hr />
@@ -172,7 +121,7 @@
             </table>
             <p></p>
 
-            <input type="button" value="Checkout" class="btn btn-info glyphicon glyphicon-user navbar-links" onClick="location='checkout'" >
+            <input type="button" value="Checkout" class=" btn btn-primary book-buttons cart-button" onClick="location='checkout'" >
 
         </div>
     </section>
