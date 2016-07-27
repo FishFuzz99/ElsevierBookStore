@@ -69,7 +69,7 @@
             <span id="confirmMessage2" class="confirmMessage"></span>
             <input type="password" name="password" id="password1" required="required" placeholder="Password" style="font-size:12px" />
 
-            <input type="password" name="matchingPassword" id="password2" required="required" placeholder="Confirm Password" style="font-size:12px" onkeyup="passwordValidation(); return false;"/>
+            <input type="password" name="matchingPassword" id="password2" required="required" placeholder="Confirm Password" style="font-size:12px" onkeyup="passwordValidationMatch(); return false;"/>
             <span id="confirmMessage1" class="confirmMessage"></span>
         </div>
         <div class="checkboxy">

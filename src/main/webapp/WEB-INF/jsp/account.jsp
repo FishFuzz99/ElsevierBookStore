@@ -80,7 +80,7 @@
                                 <p><input type="password" name="password" id="password1" required="required" placeholder="New Password"  />
                                 </p>
                                 <p>
-                                <input type="password" name="matchingPassword" id="password2" required="required" placeholder="Confirm New Password"  onkeyup="passwordValidation(); return false;"/>
+                                <input type="password" name="matchingPassword" id="password2" required="required" placeholder="Confirm New Password"  onkeyup="passwordValidationMatch(); return false;"/>
                                 </p>
                                 <p><span id="confirmMessage1" class="confirmMessage"></span></p>
                                 <input class="btn btn-success login-button" type="submit" value="Submit"/>
