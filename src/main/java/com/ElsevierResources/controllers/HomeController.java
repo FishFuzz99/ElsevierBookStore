@@ -31,6 +31,11 @@ public class HomeController {
 
     JDBCOperator jdbcOperator = new JDBCOperator();
 
+    @RequestMapping(value="account/#menu4", method=RequestMethod.GET)
+    public String viewAdmin(){
+        return "admin";
+    }
+
     @RequestMapping(value="account", method = RequestMethod.GET)
     public ModelAndView getAccountData(HttpServletRequest request)
     {
@@ -38,7 +43,7 @@ public class HomeController {
         User user = (User) session.getAttribute("user");
         System.out.println("User "+user.getID());
         ModelAndView model = new ModelAndView("account");
-        List<Order> orders=jdbcOperator.getOrderHistory();
+        List<Order> orders=jdbcOperator.getOrderHistory(user.getID());
         model.addObject("orders",orders);
         System.out.println(orders);
         List<Book> books=jdbcOperator.getWishlist();
@@ -130,6 +135,8 @@ public class HomeController {
 
     @RequestMapping(value="checkout", method=RequestMethod.POST)
     public String checkTest(HttpServletRequest request){
+        HttpSession session = request.getSession();
+        User user = (User) session.getAttribute("user");
         String billFirstName = request.getParameter("firstName1");
         String billSurname = request.getParameter("surname1");
         String billStreetAddress = request.getParameter("StBillAddress");
@@ -150,8 +157,9 @@ public class HomeController {
         String cardNumber = request.getParameter("number");
         String expDate = request.getParameter("expdate");
         String zipcode = request.getParameter("ZipCodeShipAddress");
+        int userId = user.getID();
 
-        jdbcOperator.placeOrder("2016-07-29","100.75",null,shipStreetAddress,shipCityAddress,zipcode,shipStateAddress);
+        jdbcOperator.placeOrder("2016-07-29","100.75",null,shipStreetAddress,shipCityAddress,zipcode,shipStateAddress,userId);
 
 
 
