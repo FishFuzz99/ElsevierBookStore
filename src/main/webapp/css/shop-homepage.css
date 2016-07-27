@@ -149,4 +149,9 @@ footer {
 .search{
     padding-top: 1.5%;
 }
+.form-control{
+    width: 15%;
+    background-color: white;
+    display: inline;
+}
 
