@@ -179,7 +179,6 @@
         </div>
 
         <div id="menu2" class="tab-pane fade">
-            <form action="test" method="get">
             <table border="2" class="table">
                         <caption><h2>Order History</h2></caption>
                         <tr>
@@ -200,7 +199,6 @@
             <div>
                 <input type="submit" onClick=confirmOrder() value="View Your Order History"/>
             </div>
-                </form>
         </div>
         <div id="menu3" class="tab-pane fade">
             <form action="wishlist" method="get">

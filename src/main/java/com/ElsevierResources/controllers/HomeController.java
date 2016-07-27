@@ -31,9 +31,13 @@ public class HomeController {
     @RequestMapping(value="account", method = RequestMethod.GET)
     public ModelAndView getAccountData()
     {
-        ModelAndView mv = new ModelAndView("account");
-
-        return mv;
+        ModelAndView model = new ModelAndView("account");
+        List<Order> orders=jdbcOperator.getOrderHistory();
+        model.addObject("orders",orders);
+        System.out.println(orders);
+        List<Book> books=jdbcOperator.getWishlist();
+        model.addObject("books",books);
+        return model;
     }
 
     @RequestMapping(value="home", method = RequestMethod.GET)
@@ -180,26 +184,6 @@ public class HomeController {
         UserDto userDto = new UserDto();
         model.addAttribute("user", userDto);
         return "registration";
-    }
-
-    @RequestMapping(value="test", method=RequestMethod.GET)
-    public ModelAndView getOrderData(){
-        ModelAndView model = new ModelAndView("account");
-        List<Order> orders=jdbcOperator.getOrderHistory();
-        model.addObject("orders",orders);
-        System.out.println(orders);
-
-        return model;
-    }
-
-    @RequestMapping(value="wishlist", method=RequestMethod.GET)
-    public ModelAndView getWishlist(){
-        ModelAndView model = new ModelAndView("account");
-        List<Book> books=jdbcOperator.getWishlist();
-        model.addObject("books",books);
-        System.out.println(books);
-
-        return model;
     }
 
     @RequestMapping(value = "book", method = RequestMethod.GET, params = {"id"})
