@@ -64,19 +64,19 @@
             <input type="text" name="lastName" required="required" placeholder="Last Name" style="font-size:12px" />
 
 
-            <input type="email" name="email" required="required" placeholder="Email" style="font-size:12px" />
-            <input type="email" name="matchingEmail" required="required" placeholder="Confirm Email" style="font-size:12px" />
+            <input type="email" name="email" id="email1" required="required" placeholder="Email" style="font-size:12px" />
+            <input type="email" name="matchingEmail" id="email2" required="required" placeholder="Confirm Email" style="font-size:12px" />
 
-            <input type="password" name="password" required="required" placeholder="Password" style="font-size:12px" />
+            <input type="password" name="password" id="password1" required="required" placeholder="Password" style="font-size:12px" />
 
-            <input type="password" name="matchingPassword" required="required" placeholder="Confirm Password" style="font-size:12px" />
+            <input type="password" name="matchingPassword" id="password2" required="required" placeholder="Confirm Password" style="font-size:12px" />
 
         </div>
         <div class="checkboxy">
             <input name="cecky" id="checky" value="1" type="checkbox" /><label class="terms">&nbsp;I accept the terms of use</label>
         </div>
         <p>
-            <input type="submit" value="Create Account" class="btn btn-info glyphicon glyphicon-user navbar-links">
+            <input type="submit" onclick="registerValidation()" value="Create Account" class="btn btn-info glyphicon glyphicon-user navbar-links">
         </p>
 
 
@@ -99,7 +99,9 @@
     </footer>
 
 </div>
+
 <!-- /.container -->
 <!-----------------------PUT ON EVERY PAGE END---------------------------------------------------------------->
+<script src="<c:url value="js/registerValidation.js"/>"></script>
 </body>
 </html>
