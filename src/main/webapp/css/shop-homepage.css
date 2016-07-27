@@ -28,27 +28,39 @@ body {
     margin-bottom: 30px;
 }
 
-.carousel-control,
-.item {
-    border-radius: 4px;
-}
-.carousel-control.left, .carousel-control.right {
-    background-image: none
-}
-.carousel-slide{
-    
-}
 
-.nav{
-    display: inline;
-    width:55%;    
-    
+
+
+
+
+#searchBox{
+   width:auto;
+    padding-top: 2%;
+    padding-bottom: 2%;
 }
 
 
+
+.search{
+    padding-top:2%;
+    width:auto;
+}
+
+.book-bag{
+    padding-right:50px;
+}
+
+.search-cat{
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
 .navbar-nav>li>a:hover{
     background-color: tan;
 }
+
+
+
+
 
 .nav a{
     color:black;
@@ -60,12 +72,7 @@ body {
     color:black;
 }
 
-.carousel-inner{
-    width:20%;
-    height:auto;
-    margin:auto;
-    
-}
+
 
 
 .navbar-collapse{
@@ -146,9 +153,7 @@ footer {
     height: 11%;
     width: 11%;
 }
-.search{
-    padding-top: 1.5%;
-}
+
 .form-control{
     width: 15%;
     background-color: white;
