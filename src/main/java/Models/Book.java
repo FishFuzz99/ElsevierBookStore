@@ -18,15 +18,16 @@ public class Book implements Serializable{
     //@OneToMany
     public String author;
     //@OneToMany
-    public List<Genre> genres;
+    public String genre;
     public String publisher;
     public Date datePublished;
     public float price;
     public String ISBN;
     public String edition;
-    public BookFormat format;
+    public String format;
     public int numberOfPages;
     public String description;
+    public String image;
 
     public String getImage() {
         return image;
@@ -44,7 +45,7 @@ public class Book implements Serializable{
         this.author = author;
     }
 
-    public String image;
+
 
     public int getID() {
         return ID;
@@ -58,12 +59,12 @@ public class Book implements Serializable{
         this.title = title;
     }
 
-    public List<Genre> getGenres() {
-        return genres;
+    public String getGenre() {
+        return genre;
     }
 
-    public void setGenres(List<Genre> genres) {
-        this.genres = genres;
+    public void setGenre(String genre) {
+        this.genre = genre;
     }
 
     public String getPublisher() {
@@ -106,11 +107,11 @@ public class Book implements Serializable{
         this.edition = edition;
     }
 
-    public BookFormat getFormat() {
+    public String getFormat() {
         return format;
     }
 
-    public void setFormat(BookFormat format) {
+    public void setFormat(String format) {
         this.format = format;
     }
 

@@ -1,8 +1,8 @@
 package Models;
 
 import java.sql.*;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
+import java.util.Date;
 
 /**
  * Created by GRAY1 on 7/20/2016.
@@ -21,7 +21,7 @@ public class JDBCOperator {
     {
         try {
             Class.forName(JDBC_DRIVER);
-            connection = DriverManager.getConnection(DB_URL, "root", "Madcata8");
+            connection = DriverManager.getConnection(DB_URL, "root", "74Challenger");
 
 
         } catch (ClassNotFoundException e) {
@@ -127,6 +127,94 @@ public class JDBCOperator {
             e.printStackTrace();
         }
         return user;
+    }
+
+    public List<Book> searchBooks(String category, String query, int levenshteinDistance)
+    {
+        List<Book> books = new ArrayList<>();
+        try
+        {
+            preparedStatement = connection.prepareStatement("SELECT * FROM books WHERE levenshtein(?, ?) <= ?");
+
+            preparedStatement.setString(1, category);
+            preparedStatement.setString(2, query);
+            preparedStatement.setInt(3, levenshteinDistance);
+
+            ResultSet rs = preparedStatement.executeQuery();
+
+            Book book;
+
+            while(rs != null && rs.next())
+            {
+                book = new Book();
+                int ID = rs.getInt("bookID");
+                String title = rs.getString("title");
+                String author = rs.getString("author");
+                String description = rs.getString("description");
+                Date datePublished = rs.getDate("datePublished");
+                float price = rs.getFloat("price");
+                String ISBN = rs.getString("ISBN");
+                String edition = rs.getString("edition");
+                int numberOfPages = rs.getInt("numberOfPages");
+                String format = rs.getString("format");
+                String genre = rs.getString("genre");
+                String imageURL = rs.getString("imageURL");
+
+                if (!author.isEmpty() || !author.equals(""))
+                {
+                    book.setAuthor("author");
+                }
+
+                if (!genre.isEmpty() || !genre.equals(""))
+                {
+                    book.setGenre("genre");
+                }
+
+
+                book.setNumberOfPages(numberOfPages);
+                book.setPrice(price);
+                book.setID(ID);
+
+                if (datePublished != null)
+                {
+                    book.setDatePublished(datePublished);
+                }
+
+                if (!edition.isEmpty() || !edition.equals(""))
+                {
+                    book.setEdition("edition");
+                }
+
+                if (!ISBN.isEmpty() || !ISBN.equals(""))
+                {
+                    book.setISBN("ISBN");
+                }
+
+                if (!imageURL.isEmpty() || !imageURL.equals(""))
+                {
+                    book.setImage("imageURL");
+                }
+
+                if (!format.isEmpty() || !format.equals(""))
+                {
+                    book.setFormat("format");
+                }
+
+                if (!description.isEmpty() || !description.equals(""))
+                {
+                    book.setDescription("description");
+                }
+
+                books.add(book);
+            }
+
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+        }
+
+        return books;
     }
 
     public User findUserByEmail(String email)

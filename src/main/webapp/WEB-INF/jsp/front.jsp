@@ -48,9 +48,9 @@
 
 
                 <% if (session.getAttribute("user") != null) { %>
-                <li >
-                    <a href="account">Account</a>
-                </li>
+                    <li >
+                        <a href="account">Account</a>
+                    </li>
                 <% } %>
 
                 <li >
