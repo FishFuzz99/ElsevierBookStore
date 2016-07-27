@@ -177,7 +177,7 @@
                 </li>
                 <li>
                     <label for="expdate">Expiration Date:</label>
-                    <input type="text" id="expdate" name="expdate" placeholder="YYYY-MM-DD">
+                    <input type="text" id="expdate" name="expdate" placeholder="MM/YY">
                 </li>
             </ul>
         </fieldset>
@@ -185,7 +185,7 @@
     <div class="click">
         <fieldset>
             <legend>Place Order</legend>
-            <input type="submit" value="Submit" class="btn btn-info" onsubmit="confirmOrder()"/>
+            <input type="submit" value="Submit" class="btn btn-info"/>
         </fieldset>
     </div>
 </form>

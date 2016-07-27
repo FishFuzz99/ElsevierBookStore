@@ -63,27 +63,25 @@
                         <a href="signOn">Login / Register</a>
                     </li>
                 <% } %>
-                </li>
 
-                <select class="form-control">
-                    <option>Title:</option>
-                    <option>Author:</option>
-                    <option>Genre:</option>
-                    <option>ISBN:</option>
-                </select>
-                </li>
-
-                        <li>
-                            <div class="col-lg-6">
-                                <div class="input-group">
-                                <input class="form-control" id="searchBook"  type="text" placeholder="Find a Book" name="query" required>
-                                <%--<input name="submitBook" class="btn btn-primary" type="submit" id="submit" value="Search">--%>
-                                    <span class="input-group-btn">
-                                        <button class="btn btn-secondary" type="button">Search</button>
-                                    </span>
-                                </div>
+                <div class="search">
+                    <form action="search" method="post">
+                        <li class="pull-right">
+                            <div id="searchBox">
+                                <input id="searchBook"  type="text" placeholder="Find a Book" name="query" value="${query}" required>
+                                <input name="submitBook" class="btn btn-primary" type="submit" id="submit" value="Search">
                             </div>
-
+                        </li>
+                        <li class="pull-right">
+                            <select name="category" id="bookType">
+                                <option <%if(request.getAttribute("category") == "title"){%> selected <%}%> value="title">Title</option>
+                                <option <%if(request.getAttribute("category") == "author"){%> selected <%}%> value="author">Author</option>
+                                <option <%if(request.getAttribute("category") == "genre"){%> selected <%}%> value="genre">Genre</option>
+                                <option <%if(request.getAttribute("category") == "isbn"){%> selected <%}%> value="isbn">ISBN</option>
+                            </select>
+                        </li>
+                    </form>
+                </div>
             </ul>
         </div>
         <!-- /.navbar-collapse -->

@@ -85,7 +85,7 @@
                                 <p><input type="password" name="password" id="password1" required="required" placeholder="New Password"  />
                                 </p>
                                 <p>
-                                <input type="password" name="matchingPassword" id="password2" required="required" placeholder="Confirm New Password"  onkeyup="passwordValidation(); return false;"/>
+                                <input type="password" name="matchingPassword" id="password2" required="required" placeholder="Confirm New Password"  onkeyup="passwordValidationMatch(); return false;"/>
                                 </p>
                                 <p><span id="confirmMessage1" class="confirmMessage"></span></p>
                                 <input class="btn btn-success login-button" type="submit" value="Submit"/>
@@ -202,7 +202,7 @@
                         </w:forEach>
             </table>
             <div>
-                <input type="submit" onClick=confirmOrder() value="View Your Order History"/>
+                <input type="submit" value="View Your Order History"/>
             </div>
         </div>
         <div id="menu3" class="tab-pane fade">

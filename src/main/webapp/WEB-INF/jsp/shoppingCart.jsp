@@ -8,6 +8,10 @@
 <%@ taglib prefix="c" uri="http://www.springframework.org/tags" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core"  prefix="w" %>
+<%@ page isELIgnored="false" %>
+
+
 <!DOCTYPE html>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
@@ -59,30 +63,20 @@
         <h1 class="title">Book Bag</h1>
         <div class="cart">
 
-            <table>
-                <thead>
-                <tr class="shopHeaders">
+            <table border ="2" class="table">
+                <tr>
                     <th>Book</th>
                     <th>Description</th>
-                    <th style="text-align:center">Price</th>
                     <th style="text-align:center">Options</th>
 
                 </tr>
-                </thead>
-                <tbody table frame="box">
+                <w:forEach var="book" items="${shoppingList}">
                 <tr>
-                    <td colspan="4"> <hr /> </td>
-                </tr>
-                <!----------------First Book------------->
-                <tr class="shopBook">
-                    <td class="books">
+                    <td>
                         <img src="<c:url value="images/book2.jpg"/>">
                     </td>
-                    <td class="des">
-                        This is what a description will look like.
-                    </td>
-                    <td class="price">
-                        $19.99
+                    <td>
+                    <w:out value="${book.description}"/>
                     </td>
                     <td class="option">
                         <button type="button" class="btn book-buttons ">Remove</button>
@@ -91,9 +85,7 @@
                         <button type="button" class="btn book-buttons wish-list-button">Add to Wish List</button>
                     </td>
                 </tr>
-
-
-                </tbody>
+                </w:forEach>
             </table>
         </div>
         <!----------------Checkout------------->

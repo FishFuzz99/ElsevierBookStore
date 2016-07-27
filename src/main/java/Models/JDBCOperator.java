@@ -83,7 +83,7 @@ public class JDBCOperator {
             while(books.next()){
                 Book book = new Book();
                 book.setTitle(books.getString("title"));
-                //book.setPrice(wishlist.get("price"));
+                //book.setPrice(wishlist.getInt("price"));
                 book.setDescription(books.getString("description"));
                 wishlist.add(book);
 
@@ -215,11 +215,25 @@ public class JDBCOperator {
         List<Book> books = new ArrayList<>();
         try
         {
-            preparedStatement = connection.prepareStatement("SELECT * FROM books WHERE levenshtein(?, ?) <= ?");
+            switch (category)
+            {
+                case "title":
+                    preparedStatement = connection.prepareStatement("SELECT * FROM books WHERE levenshtein(title, ?) <= ?");
+                    break;
+                case "author":
+                    preparedStatement = connection.prepareStatement("SELECT * FROM books WHERE levenshtein(author, ?) <= ?");
+                    break;
+                case "isbn":
+                    preparedStatement = connection.prepareStatement("SELECT * FROM books WHERE levenshtein(isbn, ?) <= ?");
+                    break;
+                case "genre":
+                    preparedStatement = connection.prepareStatement("SELECT * FROM books WHERE levenshtein(genre, ?) <= ?");
+                    break;
+            }
 
-            preparedStatement.setString(1, category);
-            preparedStatement.setString(2, query);
-            preparedStatement.setInt(3, levenshteinDistance);
+
+            preparedStatement.setString(1, query);
+            preparedStatement.setInt(2, levenshteinDistance);
 
             ResultSet rs = preparedStatement.executeQuery();
 
@@ -241,14 +255,19 @@ public class JDBCOperator {
                 String genre = rs.getString("genre");
                 String imageURL = rs.getString("imageURL");
 
-                if (!author.isEmpty() || !author.equals(""))
+                if (author != null && !author.isEmpty() && !author.equals(""))
                 {
-                    book.setAuthor("author");
+                    book.setAuthor(author);
                 }
 
-                if (!genre.isEmpty() || !genre.equals(""))
+                if (title != null && !title.isEmpty() && !title.equals(""))
                 {
-                    book.setGenre("genre");
+                    book.setTitle(title);
+                }
+
+                if (genre != null && !genre.isEmpty() && !genre.equals(""))
+                {
+                    book.setGenre(genre);
                 }
 
 
@@ -261,29 +280,29 @@ public class JDBCOperator {
                     book.setDatePublished(datePublished);
                 }
 
-                if (!edition.isEmpty() || !edition.equals(""))
+                if (edition != null && !edition.isEmpty() && !edition.equals(""))
                 {
-                    book.setEdition("edition");
+                    book.setEdition(edition);
                 }
 
-                if (!ISBN.isEmpty() || !ISBN.equals(""))
+                if (ISBN != null && !ISBN.isEmpty() && !ISBN.equals(""))
                 {
-                    book.setISBN("ISBN");
+                    book.setISBN(ISBN);
                 }
 
-                if (!imageURL.isEmpty() || !imageURL.equals(""))
+                if (imageURL != null && !imageURL.isEmpty() && !imageURL.equals(""))
                 {
-                    book.setImage("imageURL");
+                    book.setImage(imageURL);
                 }
 
-                if (!format.isEmpty() || !format.equals(""))
+                if (format != null && !format.isEmpty() && !format.equals(""))
                 {
-                    book.setFormat("format");
+                    book.setFormat(format);
                 }
 
-                if (!description.isEmpty() || !description.equals(""))
+                if (description != null && !description.isEmpty() && !description.equals(""))
                 {
-                    book.setDescription("description");
+                    book.setDescription(description);
                 }
 
                 books.add(book);

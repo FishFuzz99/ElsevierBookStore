@@ -43,6 +43,14 @@ public class HomeController {
         model.addObject("books",books);
         return model;
     }
+    @RequestMapping(value="shoppingCart", method = RequestMethod.GET)
+    public ModelAndView getShoppingCart()
+    {
+        ModelAndView model = new ModelAndView("shoppingCart");
+        List<Book> shoppingList =jdbcOperator.getWishlist();
+        model.addObject("shoppingList",shoppingList);
+        return model;
+    }
 
     @RequestMapping(value="home", method = RequestMethod.GET)
     public String viewHome()
@@ -85,7 +93,10 @@ public class HomeController {
 
 
 
+
         ModelAndView mv = new ModelAndView("front");
+        mv.addObject("category", category);
+        mv.addObject("query", query);
 
         if (category.isEmpty()
                 || category.equals("")
@@ -97,7 +108,7 @@ public class HomeController {
             return mv;
         }
 
-        int levenshteinDistance = (query.length() / 5) + 1;
+        int levenshteinDistance = (query.length() / 5) + 3;
 
 
         List<Book> books = jdbcOperator.searchBooks(category, query, levenshteinDistance);
@@ -111,8 +122,6 @@ public class HomeController {
     @RequestMapping(value="signOn", method=RequestMethod.GET)
     public String viewSignOn () {return "signOn";}
 
-    @RequestMapping(value="shoppingCart", method=RequestMethod.GET)
-    public String viewShoppingCart () {return "shoppingCart";}
 
     @RequestMapping(value="checkout", method=RequestMethod.GET)
     public String viewCheckout () {return "checkout";}
