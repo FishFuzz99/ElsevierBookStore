@@ -1,0 +1,34 @@
+    @RequestMapping(value = "test2", method = RequestMethod.GET)
+    public ModelAndView getShoppingCartBooks() {
+        ModelAndView model = new ModelAndView("shoppingCart");
+        List<Book> shopBooks = jdbcOperator.getShoppingCart();
+        model.addObject("shopBooks", shopBooks);
+        System.out.println(shopBooks);
+
+        return model;
+    }
+	
+	
+	
+	
+    public List<Book> getShoppingCart(){
+        List<Book> shoppingCart = new ArrayList<Book>();
+
+        try {
+            preparedStatement = connection.prepareStatement("SELECT * FROM books");
+            ResultSet shopBooks= preparedStatement.executeQuery();
+            while(shopBooks.next()){
+                Book book = new Book();
+                book.setID(shopBooks.getInt("ID"));
+                book.setTitle(shopBooks.getString("title"));
+                book.setPrice(shopBooks.getFloat("price"));
+                book.setDescription(shopBooks.getString("description"));
+                shoppingCart.add(book);
+
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return shoppingCart;
+    }
