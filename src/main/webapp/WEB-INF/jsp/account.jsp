@@ -211,8 +211,8 @@
                     $19.99
                 </td>
                 <td class="option">
-                    <input type="submit" value="Remove" />
-                    <input type="submit" value="Add to Shopping Cart" />
+                    <button type="submit" class="btn  ">Remove</button>
+                    <a href="shoppingCart"><button type="button" class="btn btn-primary  ">Add to Cart</button></a>
                 </td>
             </tr>
         </div>
