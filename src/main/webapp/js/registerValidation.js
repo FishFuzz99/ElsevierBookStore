@@ -75,3 +75,22 @@ function emailValidation()
         message.innerHTML = "Emails Do Not Match!"
     }
 }
+
+function addToCart( )
+{
+
+
+    $.ajax({
+        url : 'addToCart',
+        type: 'post',
+        data : {
+            data: {myArray:myArray.toString()}
+        },
+        dataType : 'json',
+        success : function(data, success)
+        {
+            $('.error').fadeIn(400).delay(3000).fadeOut(400);
+        }
+    })
+}
+

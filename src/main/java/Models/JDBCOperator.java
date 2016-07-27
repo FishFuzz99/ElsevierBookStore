@@ -21,7 +21,7 @@ public class JDBCOperator {
     {
         try {
             Class.forName(JDBC_DRIVER);
-            connection = DriverManager.getConnection(DB_URL, "root", "password");
+            connection = DriverManager.getConnection(DB_URL, "root", "74Challenger");
 
 
         } catch (ClassNotFoundException e) {
