@@ -69,7 +69,7 @@ public class HomeController {
         return mav;
     }
 
-    @RequestMapping(value="search", method = RequestMethod.GET)
+    @RequestMapping(value="search", method = RequestMethod.POST)
     public ModelAndView search(HttpServletRequest request)
     {
         String category = request.getParameter("category");
