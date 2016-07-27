@@ -29,8 +29,11 @@ public class HomeController {
     JDBCOperator jdbcOperator = new JDBCOperator();
 
     @RequestMapping(value="account", method = RequestMethod.GET)
-    public ModelAndView getAccountData()
+    public ModelAndView getAccountData(HttpServletRequest request)
     {
+        HttpSession session = request.getSession();
+        User user = (User) session.getAttribute("user");
+        System.out.println("User "+user.getID());
         ModelAndView model = new ModelAndView("account");
         List<Order> orders=jdbcOperator.getOrderHistory();
         model.addObject("orders",orders);
