@@ -77,8 +77,12 @@
                                 <legend>Update Password</legend>
                                 <p><input type="email" placeholder="Username or Email" required/></p>
                                 <p><input type="password" placeholder="Old Password" required/></p>
-                                <p><input type="password" placeholder="New Password" required/></p>
-                                <p><input type="password" placeholder="Confirm New Password" required/></p>
+                                <p><input type="password" name="password" id="password1" required="required" placeholder="New Password"  />
+                                </p>
+                                <p>
+                                <input type="password" name="matchingPassword" id="password2" required="required" placeholder="Confirm New Password"  onkeyup="passwordValidation(); return false;"/>
+                                </p>
+                                <p><span id="confirmMessage1" class="confirmMessage"></span></p>
                                 <input class="btn btn-success login-button" type="submit" value="Submit"/>
                             </form>
                         </div>
@@ -453,7 +457,7 @@
 <!-- Bootstrap Core JavaScript -->
 <script src="<c:url value="js/bootstrap.min.js"/>"></script>
 
-
+<script src="<c:url value="js/registerValidation.js"/>"></script>
 
 
 </html>
