@@ -28,6 +28,7 @@ public class Book implements Serializable{
     public String description;
     public String image;
 
+
     public String getImage() {
         return image;
     }
