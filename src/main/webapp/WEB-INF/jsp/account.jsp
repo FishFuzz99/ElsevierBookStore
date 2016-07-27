@@ -82,8 +82,12 @@
                                 <legend>Update Password</legend>
                                 <p><input type="email" placeholder="Username or Email" required/></p>
                                 <p><input type="password" placeholder="Old Password" required/></p>
-                                <p><input type="password" placeholder="New Password" required/></p>
-                                <p><input type="password" placeholder="Confirm New Password" required/></p>
+                                <p><input type="password" name="password" id="password1" required="required" placeholder="New Password"  />
+                                </p>
+                                <p>
+                                <input type="password" name="matchingPassword" id="password2" required="required" placeholder="Confirm New Password"  onkeyup="passwordValidation(); return false;"/>
+                                </p>
+                                <p><span id="confirmMessage1" class="confirmMessage"></span></p>
                                 <input class="btn btn-success login-button" type="submit" value="Submit"/>
                             </form>
                         </div>
@@ -180,7 +184,6 @@
         </div>
 
         <div id="menu2" class="tab-pane fade">
-            <form action="test" method="get">
             <table border="2" class="table">
                         <caption><h2>Order History</h2></caption>
                         <tr>
@@ -201,25 +204,27 @@
             <div>
                 <input type="submit" onClick=confirmOrder() value="View Your Order History"/>
             </div>
-                </form>
         </div>
         <div id="menu3" class="tab-pane fade">
-            Wish List goes here
+            <form action="wishlist" method="get">
+                <table border="2" class="table">
+                    <caption><h2>Wish List</h2></caption>
             <tr class="shopBook">
-                <td class="books">
-                    <img src="<c:url value="images/book2.jpg"/>">
-                </td>
-                <td class="des">
-                    This is what a description will look like.
-                </td>
-                <td class="price">
-                    $19.99
-                </td>
+                <th>Title</th>
+                <th>Description</th>
+                </tr>
+                    <w:forEach var="book" items="${books}">
+                        <tr>
+                            <td><w:out value="${book.title}" /></td>
+                            <td><w:out value="${book.description}" /></td>
+                        </tr>
+                    </w:forEach>
+                </table>
                 <td class="option">
-                    <input type="submit" value="Remove" />
-                    <input type="submit" value="Add to Shopping Cart" />
+                    <button type="submit" class="btn  ">Remove</button>
+                    <a href="shoppingCart"><button type="button" class="btn btn-primary  ">Add to Cart</button></a>
                 </td>
-            </tr>
+            </form>
         </div>
 
     </div>
@@ -250,7 +255,7 @@
 <!-- Bootstrap Core JavaScript -->
 <script src="<c:url value="js/bootstrap.min.js"/>"></script>
 
-
+<script src="<c:url value="js/registerValidation.js"/>"></script>
 
 
 </html>

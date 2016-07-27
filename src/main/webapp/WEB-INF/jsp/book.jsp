@@ -1,7 +1,7 @@
 <%@ page import="Models.Book" %>
 
 <%@ page isELIgnored="false" %>
-<%@ taglib prefix="d" uri="http://www.springframework.org/tags" %>
+<%@ taglib prefix="c" uri="http://www.springframework.org/tags" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>

@@ -26,6 +26,7 @@ public class Book implements Serializable{
     public String format;
     public int numberOfPages;
     public String description;
+    public String image;
 
     public String getImage() {
         return image;
@@ -43,7 +44,7 @@ public class Book implements Serializable{
         this.author = author;
     }
 
-    public String image;
+
 
     public int getID() {
         return ID;

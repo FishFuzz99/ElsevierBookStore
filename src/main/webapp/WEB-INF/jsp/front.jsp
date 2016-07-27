@@ -48,9 +48,9 @@
 
 
                 <% if (session.getAttribute("user") != null) { %>
-                <li >
-                    <a href="account">Account</a>
-                </li>
+                    <li >
+                        <a href="account">Account</a>
+                    </li>
                 <% } %>
 
                 <li >
@@ -63,13 +63,24 @@
                         <a href="signOn">Login / Register</a>
                     </li>
                 <% } %>
+
                 <div class="search">
-                    <li>
-                        <form id="searchBox" action="search.php" method="post">
-                            <input id="searchBook"  type="text" placeholder="Find a Book" name="search">
-                            <input name="submitBook" class="btn btn-primary" type="submit" id="submit" formmethod="POST" value="Search">
-                        </form>
-                    </li>
+                    <form action="search" method="post">
+                        <li class="pull-right">
+                            <div id="searchBox">
+                                <input id="searchBook"  type="text" placeholder="Find a Book" name="query" required>
+                                <input name="submitBook" class="btn btn-primary" type="submit" id="submit" value="Search">
+                            </div>
+                        </li>
+                        <li class="pull-right">
+                            <select name="category" id="bookType">
+                                <option value="title">Title</option>
+                                <option value="author">Author</option>
+                                <option value="genre">Genre</option>
+                                <option value="isbn">ISBN</option>
+                            </select>
+                        </li>
+                    </form>
                 </div>
             </ul>
         </div>
