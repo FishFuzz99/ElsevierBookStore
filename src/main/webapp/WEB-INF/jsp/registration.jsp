@@ -69,14 +69,14 @@
 
             <input type="password" name="password" id="password1" required="required" placeholder="Password" style="font-size:12px" />
 
-            <input type="password" name="matchingPassword" id="password2" required="required" placeholder="Confirm Password" style="font-size:12px" />
-
+            <input type="password" name="matchingPassword" id="password2" required="required" placeholder="Confirm Password" style="font-size:12px" onkeyup="registerValidation(); return false;"/>
+            <span id="confirmMessage" class="confirmMessage"></span>
         </div>
         <div class="checkboxy">
             <input name="cecky" id="checky" value="1" type="checkbox" /><label class="terms">&nbsp;I accept the terms of use</label>
         </div>
         <p>
-            <input type="submit" onclick="registerValidation()" value="Create Account" class="btn btn-info glyphicon glyphicon-user navbar-links">
+            <input type="submit" value="Create Account" class="btn btn-info glyphicon glyphicon-user navbar-links">
         </p>
 
 
