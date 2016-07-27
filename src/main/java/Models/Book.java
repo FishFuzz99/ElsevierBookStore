@@ -2,7 +2,6 @@ package Models;
 
 import java.io.Serializable;
 import java.util.Date;
-import java.util.List;
 
 /**
  * Created by GRAY1 on 7/14/2016.
@@ -28,6 +27,7 @@ public class Book implements Serializable{
     public int numberOfPages;
     public String description;
     public String image;
+
 
     public String getImage() {
         return image;

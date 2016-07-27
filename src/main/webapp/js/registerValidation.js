@@ -2,7 +2,7 @@
  * Created by tuffb on 7/27/16.
  */
 
-function passwordValidation()
+function passwordValidationMatch()
 {
     //Store the password field objects into variables ...
     var pass1 = document.getElementById('password1');
@@ -28,6 +28,22 @@ function passwordValidation()
         pass2.style.backgroundColor = badColor;
         message.style.color = badColor;
         message.innerHTML = "Passwords Do Not Match!"
+    }
+}
+function passwordValidationLength(){
+    var pass1 = document.getElementById('password1');
+    //Store the Confirmation Message Object ...
+    var message = document.getElementById('confirmMessage3');
+    //Set the colors we will be using ...
+    var goodColor = "#66cc66";
+    var badColor = "#ff6666";
+    if (pass1.value.length < 8) {
+        pass1.style.backgroundColor = badColor;
+        message.style.color = badColor;
+        message.innerHTML = "Password too short"
+    } else {
+        pass1.style.backgroundColor = goodColor;
+        message.innerHTML = " "
     }
 }
 

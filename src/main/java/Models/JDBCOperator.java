@@ -21,7 +21,7 @@ public class JDBCOperator {
     {
         try {
             Class.forName(JDBC_DRIVER);
-            connection = DriverManager.getConnection(DB_URL, "root", "Madcata8");
+            connection = DriverManager.getConnection(DB_URL, "root", "password");
 
 
         } catch (ClassNotFoundException e) {
@@ -99,17 +99,90 @@ public class JDBCOperator {
     {
         Book book = new Book();
         try {
-            preparedStatement = connection.prepareStatement("SELECT * FROM booktest WHERE id = ?");
+            preparedStatement = connection.prepareStatement("SELECT * FROM books WHERE bookID = ?");
             preparedStatement.setString(1, String.valueOf(id));
             ResultSet rs = preparedStatement.executeQuery();
             if ((rs != null) && rs.next()) {
                 book.title = rs.getString("title");
                 book.author = rs.getString("author");
+                book.description = rs.getString("description");
+                book.price = rs.getFloat("price");
+                book.ISBN = rs.getString("ISBN");
+                book.publisher = rs.getString("publisher");
+                book.datePublished = rs.getDate("datePublished");
+                book.edition = rs.getString("edition");
+                book.numberOfPages = rs.getInt("numberOfPages");
+                book.genre = rs.getString("genre");
+                book.image = rs.getString("imageURL");
+                book.format = rs.getString("format");
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
+
         return book;
+    }
+
+
+
+    public Book insertBook(Book book) {
+
+        try {
+            preparedStatement = connection.prepareStatement("INSERT INTO books (title, author,description,price,IBSN,publisher,format,datePublished,edition,numberOfPages,genre, imageURL) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)");
+            preparedStatement.setString(1,book.getTitle());
+            preparedStatement.setString(2, book.getAuthor());
+            preparedStatement.setString(3, book.getDescription());
+            preparedStatement.setFloat(4, book.getPrice());
+            preparedStatement.setString(5, book.getISBN());
+            preparedStatement.setString(6, book.getPublisher());
+            preparedStatement.setString(7, book.getFormat());
+            java.sql.Date sqlDate = new java.sql.Date(book.getDatePublished().getTime());
+            preparedStatement.setDate(8, sqlDate);
+            preparedStatement.setString(9, book.getEdition());
+            preparedStatement.setInt(10, book.getNumberOfPages());
+            preparedStatement.setString(11, book.getGenre());
+            preparedStatement.setString(12, book.getImage());
+            preparedStatement.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return book;
+    }
+
+    public Book updateBook(Book book) {
+
+        try {
+            preparedStatement = connection.prepareStatement("UPDATE books SET title=?, author=?,description=?,price=?,IBSN=?,publisher=?,format=?,datePublished=?,edition=?,numberOfPages=?,genre=?, imageURL=? WHERE bookID =?");
+            preparedStatement.setString(1,book.getTitle());
+            preparedStatement.setString(2, book.getAuthor());
+            preparedStatement.setString(3, book.getDescription());
+            preparedStatement.setFloat(4, book.getPrice());
+            preparedStatement.setString(5, book.getISBN());
+            preparedStatement.setString(6, book.getPublisher());
+            preparedStatement.setString(7, book.getFormat());
+            java.sql.Date sqlDate = new java.sql.Date(book.getDatePublished().getTime());
+            preparedStatement.setDate(8, sqlDate);
+            preparedStatement.setString(9, book.getEdition());
+            preparedStatement.setInt(10, book.getNumberOfPages());
+            preparedStatement.setString(11, book.getGenre());
+            preparedStatement.setInt(12, book.getID());
+            preparedStatement.setString(13, book.getImage());
+            preparedStatement.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return book;
+    }
+
+    public void deleteBook(Book book){
+        try {
+            preparedStatement = connection.prepareStatement("DELETE FROM books WHERE bookID=?");
+            preparedStatement.setInt(1,book.getID());
+            preparedStatement.executeUpdate();
+
+        }catch (SQLException e) {
+        e.printStackTrace();
+        }
     }
 
     public User saveUser(User user)

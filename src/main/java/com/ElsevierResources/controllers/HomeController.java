@@ -13,11 +13,14 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.ModelAndView;
-import org.springframework.web.servlet.view.RedirectView;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -29,8 +32,11 @@ public class HomeController {
     JDBCOperator jdbcOperator = new JDBCOperator();
 
     @RequestMapping(value="account", method = RequestMethod.GET)
-    public ModelAndView getAccountData()
+    public ModelAndView getAccountData(HttpServletRequest request)
     {
+        HttpSession session = request.getSession();
+        User user = (User) session.getAttribute("user");
+        System.out.println("User "+user.getID());
         ModelAndView model = new ModelAndView("account");
         List<Order> orders=jdbcOperator.getOrderHistory();
         model.addObject("orders",orders);
@@ -225,7 +231,6 @@ public class HomeController {
         return mv;
         // rest of the implementation
     }
-
     private User createUserAccount(UserDto accountDto, BindingResult result) {
         User registered = null;
         UserService service = new UserService(jdbcOperator);
@@ -237,6 +242,75 @@ public class HomeController {
         return registered;
     }
 
+    public Book bookInfo(Book book, HttpServletRequest request) throws ParseException {
+
+        String id = request.getParameter("id");
+        String title = request.getParameter("bookTitle");
+        String author = request.getParameter("author");
+        String description = request.getParameter("message");
+        String price = request.getParameter("price");
+        String imageUrl = request.getParameter("imageUrl");
+        String ISBN = request.getParameter("isbn");
+        String publisher = request.getParameter("publisher");
+        String format = request.getParameter("format");
+        String datePublished = request.getParameter("publishDate");
+        String edition = request.getParameter("edition");
+        String numberOfPages = request.getParameter("pages");
+        //  String tableOfContents = request.getParameter("tableOfContents");
+        String genre = request.getParameter("genre");
+        book.setTitle(title);
+        book.setAuthor(author);
+        book.setDescription(description);
+        book.setPrice(Float.valueOf(price));
+        book.setImage(imageUrl);
+        book.setISBN(ISBN);
+        book.setPublisher(publisher);
+        book.setFormat(format);
+        DateFormat df = new SimpleDateFormat("mm/dd/yyyy");
+        Date dateDF = (Date) df.parse(datePublished);
+        book.setDatePublished(dateDF);
+        book.setEdition(edition);
+        book.setNumberOfPages(Integer.valueOf(numberOfPages));
+        book.setGenre(genre);
+        // book.setTableOfContents(tableOfContents);
+        return book;
+    }
+
+    @RequestMapping(value = "insert", method = RequestMethod.GET)
+        public void insertBookData(HttpServletRequest request) throws ParseException {
+                Book book = new Book();
+                book = bookInfo(book, request);
+                JDBCOperator db = new JDBCOperator();
+                db.insertBook(book);
+
+            }
+        @RequestMapping(value = "update", method = RequestMethod.GET)
+        public void updateBookData(HttpServletRequest request) throws ParseException {
+            Book book = new Book();
+            book.setID(4);
+            book = bookInfo(book, request);
+            JDBCOperator db = new JDBCOperator();
+            db.updateBook(book);
+
+            }
+
+    @RequestMapping(value = "delete", method = RequestMethod.GET)
+    public void deleteBookData(HttpServletRequest request) throws ParseException {
+        Book book = new Book();
+        book.setID(4);
+        JDBCOperator db = new JDBCOperator();
+        db.deleteBook(book);
+
+    }
+
+ /*   @RequestMapping(value = "shoppingCart", method = RequestMethod.GET)
+    public void insertShopBookData(HttpServletRequest request) throws ParseException {
+        Book book = new Book();
+        book = bookInfo(book, request);
+        JDBCOperator db = new JDBCOperator();
+        db.insertBook(book);
+
+    }*/
+    }
 
 
-}
