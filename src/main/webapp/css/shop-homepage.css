@@ -128,19 +128,16 @@ body {
 .book-buttons{
     width: 100%;
     margin-top: 5px;
-
 }
 
 .wish-list-button{
     background-color: tan;
-
 }
 
 .wish-list-button:hover{
     background-color: saddlebrown;
     color:white;
 }
-
 
 footer {
     margin: 50px 0;

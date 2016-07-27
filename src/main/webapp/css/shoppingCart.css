@@ -9,6 +9,10 @@ body{
 	width: 300px;
 	
 }
+
+.shopping-cart{
+	text-align: center;
+}
 .price{
 width: 100px;
 text-align:center;
@@ -27,15 +31,13 @@ text-align:right;
 
 
 .checkout{
-    box-shadow: 
-        0px 0px 0px 5px rgba( 255,255,255,0.4 ), 
-        0px 4px 20px rgba( 0,0,0,0.33 );
-	padding-left:10px;
+	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+	background-color:RGB(241, 233, 210);
 	width:30%;
 	float:right;
 	height:400px;
 	display:inline-block;
-	
+	padding:20px;
 }
 .cart{
 	display:inline-block;
@@ -57,7 +59,7 @@ tr.shopBook > td{
 
 .shopHeaders{
 	font-size:20px;
-	color: deepskyblue;
+	color: black;
 }
 .title{
 	padding-bottom:10px;
