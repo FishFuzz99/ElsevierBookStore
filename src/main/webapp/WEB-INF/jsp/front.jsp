@@ -1,6 +1,6 @@
 <%@ taglib prefix="c" uri="http://www.springframework.org/tags" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
-<%@taglib prefix="d" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="d" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ page isELIgnored="false" %>
 <!DOCTYPE html>
@@ -96,7 +96,9 @@
                             <div class="thumbnail">
                                 <img src="<c:url value="${value.image}"/>" alt="">
                                 <div class="caption">
-                                    <h4 class="book-title"><a href="book"><d:out value="${value.title}"/></a></h4>
+                                    <h4 class="book-title">
+                                        <a href= <d:out value="book?id=${value.ID}"/>><d:out value="${value.title}"/></a>
+                                    </h4>
                                     <h4><d:out value="${value.price}"/></h4>
                                     <p class="book-author"><d:out value="${value.author}"/></p>
                                     <p class="book-descrip"></p><d:out value="${value.description}"/>
