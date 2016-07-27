@@ -1,6 +1,6 @@
 <%@ taglib prefix="c" uri="http://www.springframework.org/tags" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
-<%@taglib prefix="d" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="d" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ page isELIgnored="false" %>
 <!DOCTYPE html>
@@ -48,9 +48,9 @@
 
 
                 <% if (session.getAttribute("user") != null) { %>
-                <li >
-                    <a href="account">Account</a>
-                </li>
+                    <li >
+                        <a href="account">Account</a>
+                    </li>
                 <% } %>
 
                 <li >
@@ -63,6 +63,22 @@
                         <a href="signOn">Login / Register</a>
                     </li>
                 <% } %>
+
+                <div class="search">
+                    <li class="pull-right">
+                        <form id="searchBox" action="search.php" method="post">
+                            <input id="searchBook"  type="text" placeholder="Find a Book" name="search" required>
+                            <input name="submitBook" class="btn btn-primary" type="submit" id="submit" formmethod="POST" value="Search">
+                        </form>
+                    </li>
+                    <li class="pull-right">
+                        <select name="bookType" id="bookType">
+                            <option value="QAJAVSC">Title</option>
+                            <option value="QAWEBUI">Author</option>
+                            <option value="QAWEBCSS">Genre</option>
+                        </select>
+                    </li>
+                </div>
             </ul>
         </div>
         <!-- /.navbar-collapse -->
@@ -96,7 +112,9 @@
                             <div class="thumbnail">
                                 <img src="<c:url value="${value.image}"/>" alt="">
                                 <div class="caption">
-                                    <h4 class="book-title"><a href="book"><d:out value="${value.title}"/></a></h4>
+                                    <h4 class="book-title">
+                                        <a href= <d:out value="book?id=${value.ID}"/>><d:out value="${value.title}"/></a>
+                                    </h4>
                                     <h4><d:out value="${value.price}"/></h4>
                                     <p class="book-author"><d:out value="${value.author}"/></p>
                                     <p class="book-descrip"></p><d:out value="${value.description}"/>

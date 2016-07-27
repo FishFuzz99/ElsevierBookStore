@@ -69,6 +69,34 @@ public class HomeController {
         return mav;
     }
 
+    @RequestMapping(value="search", method = RequestMethod.GET)
+    public ModelAndView search(HttpServletRequest request)
+    {
+        String category = request.getParameter("category");
+        String query = request.getParameter("query");
+
+
+
+        ModelAndView mv = new ModelAndView("front");
+
+        if (category.isEmpty()
+                || category.equals("")
+                || query.isEmpty()
+                || query.equals(""))
+        {
+            String error = "Please select a category and enter a search query.";
+            mv.addObject("error", error);
+            return mv;
+        }
+
+        int levenshteinDistance = (query.length() / 5) + 1;
+
+
+        List<Book> books = jdbcOperator.searchBooks(category, query, levenshteinDistance);
+        mv.addObject("list", books);
+        return mv;
+    }
+
 
 
 
@@ -109,7 +137,7 @@ public class HomeController {
 
 
         System.out.println(billFirstName);
-        return "checkout";
+        return "orderConfirmation";
     }
 
 
@@ -194,6 +222,7 @@ public class HomeController {
         return mv;
         // rest of the implementation
     }
+
     private User createUserAccount(UserDto accountDto, BindingResult result) {
         User registered = null;
         UserService service = new UserService(jdbcOperator);
@@ -204,6 +233,7 @@ public class HomeController {
         }
         return registered;
     }
+
 
 
 }

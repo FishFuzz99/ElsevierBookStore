@@ -194,7 +194,7 @@
                         </w:forEach>
             </table>
             <div>
-                <input type="submit" value="View Your Order History"/>
+                <input type="submit" onClick=confirmOrder() value="View Your Order History"/>
             </div>
                 </form>
         </div>
