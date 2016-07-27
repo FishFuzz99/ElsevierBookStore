@@ -89,7 +89,10 @@ public class HomeController {
 
 
 
+
         ModelAndView mv = new ModelAndView("front");
+        mv.addObject("category", category);
+        mv.addObject("query", query);
 
         if (category.isEmpty()
                 || category.equals("")
@@ -101,7 +104,7 @@ public class HomeController {
             return mv;
         }
 
-        int levenshteinDistance = (query.length() / 5) + 1;
+        int levenshteinDistance = (query.length() / 5) + 3;
 
 
         List<Book> books = jdbcOperator.searchBooks(category, query, levenshteinDistance);
