@@ -39,6 +39,14 @@ public class HomeController {
         model.addObject("books",books);
         return model;
     }
+    @RequestMapping(value="shoppingCart", method = RequestMethod.GET)
+    public ModelAndView getShoppingCart()
+    {
+        ModelAndView model = new ModelAndView("shoppingCart");
+        List<Book> shoppingList =jdbcOperator.getWishlist();
+        model.addObject("shoppingList",shoppingList);
+        return model;
+    }
 
     @RequestMapping(value="home", method = RequestMethod.GET)
     public String viewHome()
@@ -107,8 +115,6 @@ public class HomeController {
     @RequestMapping(value="signOn", method=RequestMethod.GET)
     public String viewSignOn () {return "signOn";}
 
-    @RequestMapping(value="shoppingCart", method=RequestMethod.GET)
-    public String viewShoppingCart () {return "shoppingCart";}
 
     @RequestMapping(value="checkout", method=RequestMethod.GET)
     public String viewCheckout () {return "checkout";}

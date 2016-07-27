@@ -83,7 +83,7 @@ public class JDBCOperator {
             while(books.next()){
                 Book book = new Book();
                 book.setTitle(books.getString("title"));
-                //book.setPrice(wishlist.get("price"));
+                //book.setPrice(wishlist.getInt("price"));
                 book.setDescription(books.getString("description"));
                 wishlist.add(book);
 

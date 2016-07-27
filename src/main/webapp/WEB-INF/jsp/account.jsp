@@ -197,7 +197,7 @@
                         </w:forEach>
             </table>
             <div>
-                <input type="submit" onClick=confirmOrder() value="View Your Order History"/>
+                <input type="submit" value="View Your Order History"/>
             </div>
         </div>
         <div id="menu3" class="tab-pane fade">
