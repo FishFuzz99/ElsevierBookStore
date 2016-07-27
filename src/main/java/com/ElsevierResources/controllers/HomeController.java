@@ -167,7 +167,7 @@ public class HomeController {
 
     @RequestMapping(value="test", method=RequestMethod.GET)
     public ModelAndView getOrderData(){
-        ModelAndView model = new ModelAndView();
+        ModelAndView model = new ModelAndView("account");
         List<Order> orders=jdbcOperator.getOrderHistory();
         model.addObject("orders",orders);
         System.out.println(orders);
