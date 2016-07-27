@@ -21,7 +21,7 @@ public class JDBCOperator {
     {
         try {
             Class.forName(JDBC_DRIVER);
-            connection = DriverManager.getConnection(DB_URL, "root", "74Challenger");
+            connection = DriverManager.getConnection(DB_URL, "root", "Madcata8");
 
 
         } catch (ClassNotFoundException e) {
@@ -73,6 +73,26 @@ public class JDBCOperator {
             e.printStackTrace();
         }
         return orderList;
+    }
+    public List<Book> getWishlist(){
+        List<Book> wishlist = new ArrayList<Book>();
+
+        try {
+            preparedStatement = connection.prepareStatement("SELECT * FROM books");
+            ResultSet books = preparedStatement.executeQuery();
+            while(books.next()){
+                Book book = new Book();
+                book.setTitle(books.getString("title"));
+                //book.setPrice(wishlist.get("price"));
+                book.setDescription(books.getString("description"));
+                wishlist.add(book);
+
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return wishlist;
     }
 
     public Book getBook(int id)

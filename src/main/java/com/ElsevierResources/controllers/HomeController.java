@@ -192,6 +192,16 @@ public class HomeController {
         return model;
     }
 
+    @RequestMapping(value="wishlist", method=RequestMethod.GET)
+    public ModelAndView getWishlist(){
+        ModelAndView model = new ModelAndView("account");
+        List<Book> books=jdbcOperator.getWishlist();
+        model.addObject("books",books);
+        System.out.println(books);
+
+        return model;
+    }
+
     @RequestMapping(value = "book", method = RequestMethod.GET, params = {"id"})
     public ModelAndView getBookData(@RequestParam("id") int id)
     {

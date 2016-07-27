@@ -199,22 +199,25 @@
                 </form>
         </div>
         <div id="menu3" class="tab-pane fade">
-            Wish List goes here
+            <form action="wishlist" method="get">
+                <table border="2" class="table">
+                    <caption><h2>Wish List</h2></caption>
             <tr class="shopBook">
-                <td class="books">
-                    <img src="<c:url value="images/book2.jpg"/>">
-                </td>
-                <td class="des">
-                    This is what a description will look like.
-                </td>
-                <td class="price">
-                    $19.99
-                </td>
+                <th>Title</th>
+                <th>Description</th>
+                </tr>
+                    <w:forEach var="book" items="${books}">
+                        <tr>
+                            <td><w:out value="${book.title}" /></td>
+                            <td><w:out value="${book.description}" /></td>
+                        </tr>
+                    </w:forEach>
+                </table>
                 <td class="option">
                     <button type="submit" class="btn  ">Remove</button>
                     <a href="shoppingCart"><button type="button" class="btn btn-primary  ">Add to Cart</button></a>
                 </td>
-            </tr>
+            </form>
         </div>
         <div id="menu4" class="tab-pane fade">
              <ul class="info" style="list-style-type:none">
