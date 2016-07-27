@@ -15,6 +15,7 @@
 <head>
     <!-- Bootstrap Core CSS -->
     <link href="<c:url value="css/bootstrap.min.css"/>" rel="stylesheet">
+    <link href="<c:url value="css/OrderConfirmation.css"/>" rel="stylesheet">
     <!-- Custom CSS -->
     <link href="<c:url value="css/Checkout.css"/>" rel="stylesheet">
     <!-- Custom CSS -->

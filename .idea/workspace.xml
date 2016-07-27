@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="864a8d9f-9ae7-4289-a16e-d5f325689642" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/css/OrderConfirmation.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Models/JDBCOperator.java" afterPath="$PROJECT_DIR$/src/main/java/Models/JDBCOperator.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/orderConfirmation.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/orderConfirmation.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/css/OrderConfirmation.css" afterPath="$PROJECT_DIR$/src/main/webapp/css/OrderConfirmation.css" />
     </list>
     <ignored path="ElsevierResources.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -58,7 +57,7 @@
       <file leaf-file-name="JDBCOperator.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Models/JDBCOperator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
+            <state relative-caret-position="-450">
               <caret line="22" column="39" selection-start-line="22" selection-start-column="39" selection-end-line="22" selection-end-column="39" />
               <folding>
                 <marker date="1469651544000" expanded="true" signature="989:1087" ph="INSERT INTO orders... " />
@@ -83,28 +82,8 @@
       <file leaf-file-name="orderConfirmation.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/orderConfirmation.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="335">
-              <caret line="64" column="23" selection-start-line="64" selection-start-column="23" selection-end-line="64" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="account.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/account.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="947">
-              <caret line="185" column="0" selection-start-line="185" selection-start-column="0" selection-end-line="185" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="account.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/css/account.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="42" column="2" selection-start-line="42" selection-start-column="2" selection-end-line="47" selection-end-column="25" />
+            <state relative-caret-position="-415">
+              <caret line="17" column="35" selection-start-line="17" selection-start-column="35" selection-end-line="17" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -113,8 +92,18 @@
       <file leaf-file-name="OrderConfirmation.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/css/OrderConfirmation.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+            <state relative-caret-position="105">
+              <caret line="7" column="20" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Checkout.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/css/Checkout.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-130">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -124,6 +113,16 @@
         <entry file="file://$PROJECT_DIR$/src/main/webapp/css/bootstrap.min.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sgnOnCSS.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/css/sgnOnCSS.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-2320">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
@@ -227,7 +226,7 @@
     <treeState />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="71" />
+    <option name="x" value="27" />
     <option name="y" value="23" />
     <option name="width" value="1394" />
     <option name="height" value="799" />
@@ -1118,7 +1117,7 @@
       <workItem from="1469554175130" duration="6432000" />
       <workItem from="1469560719858" duration="24332000" />
       <workItem from="1469650127268" duration="609000" />
-      <workItem from="1469651277800" duration="807000" />
+      <workItem from="1469651277800" duration="1636000" />
     </task>
     <task id="LOCAL-00002" summary="removed some stuff in web.xml that was breaking everything">
       <created>1469462061520</created>
@@ -1190,14 +1189,21 @@
       <option name="project" value="LOCAL" />
       <updated>1469649096149</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="order confirm page">
+      <created>1469652117687</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1469652117688</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59067000" />
+    <option name="totallyTimeSpent" value="59896000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="71" y="23" width="1394" height="799" extended-state="0" />
+    <frame x="27" y="23" width="1394" height="799" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1274,7 +1280,8 @@
     <MESSAGE value="Added dynamic login effects to the front's header" />
     <MESSAGE value="Added in a searching algorithm. Untested." />
     <MESSAGE value="Updated HTML for search bar" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated HTML for search bar" />
+    <MESSAGE value="order confirm page" />
+    <option name="LAST_COMMIT_MESSAGE" value="order confirm page" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1319,20 +1326,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/shoppingCart.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="103" column="48" selection-start-line="103" selection-start-column="48" selection-end-line="103" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/nav.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-264">
-          <caret line="7" column="19" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Agile.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="495">
@@ -1639,41 +1632,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Models/JDBCOperator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="22" column="39" selection-start-line="22" selection-start-column="39" selection-end-line="22" selection-end-column="39" />
-          <folding>
-            <marker date="1469651544000" expanded="true" signature="989:1087" ph="INSERT INTO orders... " />
-            <marker date="1469651544000" expanded="true" signature="1815:1852" ph="SELECT * FRO... orders" />
-            <marker date="1469651544000" expanded="true" signature="2621:2640" ph="SELECT * FRO... books" />
-            <marker date="1469651544000" expanded="true" signature="3273:3309" ph="SELECT * FRO... books" />
-            <marker date="1469651544000" expanded="true" signature="4401:4559" ph="INSERT INTO books... " />
-            <marker date="1469651544000" expanded="true" signature="5663:5825" ph="UPDATE books... " />
-            <marker date="1469651544000" expanded="true" signature="6983:7015" ph="DELETE FROM " />
-            <marker date="1469651544000" expanded="true" signature="7634:7750" ph="INSERT INTO users... " />
-            <marker date="1469651544000" expanded="true" signature="8126:8200" ph="INSERT INTO users... " />
-            <marker date="1469651544000" expanded="true" signature="8942:8994" ph="SELECT * FRO... books" />
-            <marker date="1469651544000" expanded="true" signature="9125:9178" ph="SELECT * FRO... books" />
-            <marker date="1469651544000" expanded="true" signature="9307:9358" ph="SELECT * FRO... books" />
-            <marker date="1469651544000" expanded="true" signature="9488:9540" ph="SELECT * FRO... books" />
-            <marker date="1469651544000" expanded="true" signature="12455:12493" ph="SELECT * FRO... users" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/account.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="947">
           <caret line="185" column="0" selection-start-line="185" selection-start-column="0" selection-end-line="185" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/bootstrap.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1702,18 +1664,65 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Models/JDBCOperator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-450">
+          <caret line="22" column="39" selection-start-line="22" selection-start-column="39" selection-end-line="22" selection-end-column="39" />
+          <folding>
+            <marker date="1469651544000" expanded="true" signature="989:1087" ph="INSERT INTO orders... " />
+            <marker date="1469651544000" expanded="true" signature="1815:1852" ph="SELECT * FRO... orders" />
+            <marker date="1469651544000" expanded="true" signature="2621:2640" ph="SELECT * FRO... books" />
+            <marker date="1469651544000" expanded="true" signature="3273:3309" ph="SELECT * FRO... books" />
+            <marker date="1469651544000" expanded="true" signature="4401:4559" ph="INSERT INTO books... " />
+            <marker date="1469651544000" expanded="true" signature="5663:5825" ph="UPDATE books... " />
+            <marker date="1469651544000" expanded="true" signature="6983:7015" ph="DELETE FROM " />
+            <marker date="1469651544000" expanded="true" signature="7634:7750" ph="INSERT INTO users... " />
+            <marker date="1469651544000" expanded="true" signature="8126:8200" ph="INSERT INTO users... " />
+            <marker date="1469651544000" expanded="true" signature="8942:8994" ph="SELECT * FRO... books" />
+            <marker date="1469651544000" expanded="true" signature="9125:9178" ph="SELECT * FRO... books" />
+            <marker date="1469651544000" expanded="true" signature="9307:9358" ph="SELECT * FRO... books" />
+            <marker date="1469651544000" expanded="true" signature="9488:9540" ph="SELECT * FRO... books" />
+            <marker date="1469651544000" expanded="true" signature="12455:12493" ph="SELECT * FRO... users" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/orderConfirmation.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="335">
-          <caret line="64" column="23" selection-start-line="64" selection-start-column="23" selection-end-line="64" selection-end-column="23" />
+        <state relative-caret-position="-415">
+          <caret line="17" column="35" selection-start-line="17" selection-start-column="35" selection-end-line="17" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/Checkout.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-130">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/bootstrap.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/sgnOnCSS.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2320">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/css/OrderConfirmation.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+        <state relative-caret-position="105">
+          <caret line="7" column="20" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
           <folding />
         </state>
       </provider>
