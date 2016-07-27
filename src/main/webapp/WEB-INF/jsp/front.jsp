@@ -63,12 +63,20 @@
                         <a href="signOn">Login / Register</a>
                     </li>
                 <% } %>
+
                 <div class="search">
-                    <li>
+                    <li class="pull-right">
                         <form id="searchBox" action="search.php" method="post">
-                            <input id="searchBook"  type="text" placeholder="Find a Book" name="search">
+                            <input id="searchBook"  type="text" placeholder="Find a Book" name="search" required>
                             <input name="submitBook" class="btn btn-primary" type="submit" id="submit" formmethod="POST" value="Search">
                         </form>
+                    </li>
+                    <li class="pull-right">
+                        <select name="bookType" id="bookType">
+                            <option value="QAJAVSC">Title</option>
+                            <option value="QAWEBUI">Author</option>
+                            <option value="QAWEBCSS">Genre</option>
+                        </select>
                     </li>
                 </div>
             </ul>
