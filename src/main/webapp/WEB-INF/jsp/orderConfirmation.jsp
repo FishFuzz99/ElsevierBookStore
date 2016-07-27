@@ -58,7 +58,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Order Confrimation</title>
+    <title>Order Confirmation</title>
 </head>
 <body>
 <p>Thank you for your order!</p>
