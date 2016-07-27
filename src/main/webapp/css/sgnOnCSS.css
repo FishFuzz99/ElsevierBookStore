@@ -174,5 +174,8 @@ body {
   font: 13px/20px "Lucida Grande", Tahoma, Verdana, sans-serif;
   background: white;
 }
+.error{
+    text-align: center;
+}
 
 

@@ -67,23 +67,26 @@
 <div class="container-login">
     <div class="login">
         <h1>Login Form</h1>
+        <d:if test="${!empty error}">
+            <div class="has-error">${error}</div>
+        </d:if>
         <form action="login" method="post">
             <p><input name="email" type="email" placeholder="Username or Email" required/></p>
             <p><input name="password" type="password" placeholder="Password" required/></p>
             <p class="remember">
+                
                 <label><label>
                     <input type="checkbox" name="remember" id="remember"/>
                     Remember me on this computer?
                 </label>
                 </label>
-                <d:if test="${!empty error}">
-                    <div class="has-error">${error}</div>
-                </d:if>
-            </p>
+                </p>
+
             <button class="btn btn-success login-submit-button" type="submit" value="Login">Submit</button>
         </form>
         <br>
         <button class="btn btn-primary register-submit-button" type="submit" value="forgot" onClick="location='registration'">Sign Up!</button>
+
     </div>
 </div>
 </body>

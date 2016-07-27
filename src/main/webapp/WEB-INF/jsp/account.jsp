@@ -1,4 +1,6 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core"  prefix="w" %>
 <%@ taglib prefix="c" uri="http://www.springframework.org/tags" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/sql" prefix="sql" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
@@ -76,7 +78,7 @@
                                 <p><input type="password" placeholder="Old Password" required/></p>
                                 <p><input type="password" placeholder="New Password" required/></p>
                                 <p><input type="password" placeholder="Confirm New Password" required/></p>
-                                <button class="btn btn-success login-button" type="submit" value="Login">Submit</button>
+                                <input class="btn btn-success login-button" type="submit" value="Submit"/>
                             </form>
                         </div>
                     </li>
@@ -103,7 +105,7 @@
                                         <input type="text" id="expdate" name="expdate">
                                     </li>
                                     <li class="buttonBill">
-                                        <button class="btn btn-success login-button" type="submit" value="Login">Submit</button>
+                                        <input class="btn btn-success login-button" type="submit" value="Submit"/>
                                     </li>
                                 </ul>
                             </form>
@@ -147,6 +149,11 @@
                                         </li>
 
                                         <li>
+                                            <label for="ZipCode">Zip Code:</label>
+                                            <input type="text" id="ZipCode" name="ZipCode">
+                                        </li>
+
+                                        <li>
                                             <label for="email">Email:</label>
                                             <input type="email" id="email" name="email" placeholder="you@domain.com" required>
                                         </li>
@@ -155,7 +162,7 @@
                                             <input type="tel" id="phone" name="phone" placeholder="(555)555-5555" required>
                                         </li>
                                         <li class="buttonShip">
-                                            <button class="btn btn-success login-button" type="submit" value="Login">Submit</button>
+                                            <input class="btn btn-success login-button" type="submit" value="Submit"/><a href="account.jsp#menu4"></a>
                                         </li>
                                     </ul>
                                 </fieldset>
@@ -167,30 +174,28 @@
         </div>
 
         <div id="menu2" class="tab-pane fade">
+            <form  action="account.jsp#menu2" method="get">
             <table border="2" class="table">
-                <thead>
-                <tr>
-                    <th>Book</th>
-                    <th>Price</th>
-                    <th>Order ID</th>
-                    <th>Order Date</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <td>HTML For Dummies</td>
-                    <td>$130</td>
-                    <td>10010101</td>
-                    <td>Today</td>
-                </tr>
-                <tr>
-                    <td>Dummy</td>
-                    <td>Dummy</td>
-                    <td>Dummy</td>
-                    <td>Dummy</td>
-                </tr>
-                <tbody>
+                        <caption><h2>Order History</h2></caption>
+                        <tr>
+                            <th>Book</th>
+                            <th>Price</th>
+                            <th>Order ID</th>
+                            <th>Order Date</th>
+                        </tr>
+                        <w:forEach var="order" items="${orders}">
+                            <tr>
+                                <td><w:out value="${order.title}" /></td>
+                                <td><w:out value="${order.price}" /></td>
+                                <td><w:out value="${order.orderID}" /></td>
+                                <td><w:out value="${order.orderDate}" /></td>
+                            </tr>
+                        </w:forEach>
             </table>
+            <div>
+                <input type="Submit" value="View Your Order History"/>
+            </div>
+                </form>
         </div>
         <div id="menu3" class="tab-pane fade">
             Wish List goes here

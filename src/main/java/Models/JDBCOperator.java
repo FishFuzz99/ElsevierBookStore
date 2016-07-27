@@ -11,6 +11,7 @@ public class JDBCOperator {
     public PreparedStatement preparedStatement;
 
 
+
     static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
     static final String DB_URL = "jdbc:mysql://localhost/test_database";
 
@@ -50,6 +51,28 @@ public class JDBCOperator {
 
     }
 
+    public List<Order> getOrderHistory(){
+        List<Order> orderList = new ArrayList<Order>();
+
+        try {
+            preparedStatement = connection.prepareStatement("SELECT * FROM orders");
+            ResultSet orders = preparedStatement.executeQuery();
+            while(orders.next()){
+                Order order = new Order();
+                order.setOrderID(orders.getInt("orderID"));
+                order.setOrderDate(orders.getString("orderDate"));
+                order.setPrice(orders.getString("total"));
+                order.setTitle(orders.getString("state"));
+                orderList.add(order);
+
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return orderList;
+    }
+
     public Book getBook(int id)
     {
         Book book = new Book();
@@ -57,9 +80,7 @@ public class JDBCOperator {
             preparedStatement = connection.prepareStatement("SELECT * FROM booktest WHERE id = ?");
             preparedStatement.setString(1, String.valueOf(id));
             ResultSet rs = preparedStatement.executeQuery();
-            if (rs != null)
-            {
-                rs.next();
+            if ((rs != null) && rs.next()) {
                 book.title = rs.getString("title");
                 book.author = rs.getString("author");
             }

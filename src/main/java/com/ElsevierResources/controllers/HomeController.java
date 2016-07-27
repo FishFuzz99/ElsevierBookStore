@@ -1,9 +1,6 @@
 package com.ElsevierResources.controllers;
 
-import Models.Book;
-import Models.JDBCOperator;
-import Models.User;
-import Models.UserDto;
+import Models.*;
 import com.ElsevierResources.services.UserService;
 import com.ElsevierResources.validation.EmailExistsException;
 import org.springframework.stereotype.Controller;
@@ -16,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.view.RedirectView;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -23,6 +21,8 @@ import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by GRAY1 on 7/18/2016.
@@ -36,7 +36,6 @@ public class HomeController {
     public ModelAndView getAccountData()
     {
         ModelAndView mv = new ModelAndView("account");
-
 
         return mv;
     }
@@ -62,29 +61,26 @@ public class HomeController {
     }
 
 
-   /* @RequestMapping(value="front", method = RequestMethod.GET)
-    public String viewFront(WebRequest request)
+    @RequestMapping(value="front", method = RequestMethod.GET)
+    public ModelAndView viewFront(HttpServletRequest request)
     {
         Book book = new Book();
 
-        book.setImage("../../images/book2.jpg");
+        book.setImage("/images/harry-potter1.jpg");
         book.setTitle("Book Test Title");
         book.setAuthor("Testing Author");
         book.setPrice(25.54f);
         book.setDescription("This is a test description");
 
-        Map<String, Object> map = new HashMap<>();
-        map.put("book1", book);
-        ModelAndView mav = new ModelAndView("someView", map);
-        mav.addAllObjects(map);
+        List<Book> booksList = new ArrayList<Book>();
+        booksList.add(book);
+        ModelAndView mav = new ModelAndView();
+        mav.setViewName("front");
+        mav.addObject("list", booksList);
 
-        request.setAttribute("bookMap", map);
+        return mav;
+    }
 
-        return "front";
-    }*/
-
-   @RequestMapping(value="front", method=RequestMethod.GET)
-   public String viewFront () {return "front";}
 
 
 
@@ -169,6 +165,16 @@ public class HomeController {
         return "registration";
     }
 
+    @RequestMapping(value="account/menu2", method=RequestMethod.GET)
+    public ModelAndView getOrderData(){
+        ModelAndView model = new ModelAndView();
+        List<Order> orders=jdbcOperator.getOrderHistory();
+        model.addObject("orders",orders);
+        System.out.println(orders);
+
+        return model;
+    }
+
     @RequestMapping(value = "book", method = RequestMethod.GET, params = {"id"})
     public ModelAndView getBookData(@RequestParam("id") int id)
     {
@@ -243,33 +249,3 @@ public class HomeController {
         // book.setTableOfContents(tableOfContents);
         return book;
     }
-
-    @RequestMapping(value = "insert", method = RequestMethod.GET)
-        public void insertBookData(HttpServletRequest request) throws ParseException {
-                Book book = new Book();
-                book = bookInfo(book, request);
-                JDBCOperator db = new JDBCOperator();
-                db.insertBook(book);
-
-            }
-        @RequestMapping(value = "update", method = RequestMethod.GET)
-        public void updateBookData(HttpServletRequest request) throws ParseException {
-            Book book = new Book();
-            book.setID(4);
-            book = bookInfo(book, request);
-            JDBCOperator db = new JDBCOperator();
-            db.updateBook(book);
-
-            }
-
-    @RequestMapping(value = "delete", method = RequestMethod.GET)
-    public void deleteBookData(HttpServletRequest request) throws ParseException {
-        Book book = new Book();
-        book.setID(4);
-        JDBCOperator db = new JDBCOperator();
-        db.deleteBook(book);
-
-    }
-    }
-
-
