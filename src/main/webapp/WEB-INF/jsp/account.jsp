@@ -82,8 +82,9 @@
                                 <legend>Update Password</legend>
                                 <p><input type="email" placeholder="Username or Email" required/></p>
                                 <p><input type="password" placeholder="Old Password" required/></p>
-                                <p><input type="password" name="password" id="password1" required="required" placeholder="New Password"  />
+                                <p><input type="password" name="password" id="password1" required="required" placeholder="New Password"  onkeyup="passwordValidationLength(); return false;"/>
                                 </p>
+                                <p><span id="confirmMessage3" class="confirmMessage"></span></p>
                                 <p>
                                 <input type="password" name="matchingPassword" id="password2" required="required" placeholder="Confirm New Password"  onkeyup="passwordValidationMatch(); return false;"/>
                                 </p>
