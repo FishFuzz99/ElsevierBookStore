@@ -183,7 +183,7 @@
     <div class="click">
         <fieldset>
             <legend>Place Order</legend>
-            <input type="submit" value="Submit" class="btn btn-info"/>
+            <input type="submit" value="Submit" class="btn btn-info" onsubmit="confirmOrder()"/>
         </fieldset>
     </div>
 </form>
@@ -209,5 +209,6 @@
 <!-- Bootstrap Core JavaScript -->
 <script src="<c:url value="js/bootstrap.min.js"/>"></script>
 <script src="<c:url value="js/infoFlood.js"/>"></script>
+<script src="<c:url value="js/orderConfirm.js"/>"></script>
 </body>
 </html>

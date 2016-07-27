@@ -109,7 +109,7 @@ public class HomeController {
 
 
         System.out.println(billFirstName);
-        return "checkout";
+        return "orderConfirmation";
     }
 
 
