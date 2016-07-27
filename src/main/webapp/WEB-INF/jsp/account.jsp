@@ -223,7 +223,7 @@
                 </table>
                 <td class="option">
                     <button type="submit" class="btn  ">Remove</button>
-                    <a href="shoppingCart"><button type="button" class="btn btn-primary  ">Add to Cart</button></a>
+                    <a href="shoppingCart"><button type="button" class="btn btn-primary">Add to Cart</button></a>
                 </td>
             </form>
         </div>

@@ -47,7 +47,7 @@
 
             <form class="navbar-form navbar-left" action="search" method="post">
                 <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Search">
+                    <input name="query" type="text" class="form-control" placeholder="Search">
                     <button type="submit" class="btn btn-default">Submit</button>
                     <select name="category" class="form-control" id="bookType">
                         <option <%if(request.getAttribute("category") == "title"){%> selected <%}%> value="title">Title</option>
