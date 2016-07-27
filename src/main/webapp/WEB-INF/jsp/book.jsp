@@ -1,7 +1,7 @@
 <%@ page import="Models.Book" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page isELIgnored="false" %>
-<%@ taglib prefix="c" uri="http://www.springframework.org/tags" %>
+<%@ taglib prefix="d" uri="http://www.springframework.org/tags" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -41,9 +41,11 @@
                     <li >
                         <a href="shoppingCart">Book Bag</a>
                     </li>
+                    <% if (session.getAttribute("user") == null) { %>
                     <li class="login-button pull-right">
                         <a href="signOn">Login / Register</a>
                     </li>
+                    <% } %>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->

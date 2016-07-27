@@ -56,13 +56,13 @@
                 <li >
                     <a href="shoppingCart">Book Bag</a>
                 </li>
-
-
                 <% if (session.getAttribute("user") == null) { %>
                     <li class="login-button pull-right">
                         <a href="signOn">Login / Register</a>
                     </li>
                 <% } %>
+
+
             </ul>
         </div>
         <!-- /.navbar-collapse -->

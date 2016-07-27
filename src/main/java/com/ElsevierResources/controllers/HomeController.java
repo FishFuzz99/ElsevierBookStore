@@ -13,15 +13,14 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.ModelAndView;
-import org.springframework.web.servlet.view.RedirectView;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -32,38 +31,34 @@ public class HomeController {
 
     JDBCOperator jdbcOperator = new JDBCOperator();
 
-    @RequestMapping(value="account", method = RequestMethod.GET)
-    public ModelAndView getAccountData()
-    {
+    @RequestMapping(value = "account", method = RequestMethod.GET)
+    public ModelAndView getAccountData() {
         ModelAndView mv = new ModelAndView("account");
 
         return mv;
     }
-    @RequestMapping(value="admin", method = RequestMethod.GET)
-    public ModelAndView getAdminDat()
-    {
+
+    @RequestMapping(value = "admin", method = RequestMethod.GET)
+    public ModelAndView getAdminDat() {
         ModelAndView mv = new ModelAndView("admin");
 
 
         return mv;
     }
 
-    @RequestMapping(value="home", method = RequestMethod.GET)
-    public String viewHome()
-    {
+    @RequestMapping(value = "home", method = RequestMethod.GET)
+    public String viewHome() {
         return "home";
     }
 
-    @RequestMapping(value="registration", method = RequestMethod.GET)
-    public String viewRegistration()
-    {
+    @RequestMapping(value = "registration", method = RequestMethod.GET)
+    public String viewRegistration() {
         return "registration";
     }
 
 
-    @RequestMapping(value="front", method = RequestMethod.GET)
-    public ModelAndView viewFront(HttpServletRequest request)
-    {
+    @RequestMapping(value = "front", method = RequestMethod.GET)
+    public ModelAndView viewFront(HttpServletRequest request) {
         Book book = new Book();
 
         book.setImage("/images/harry-potter1.jpg");
@@ -82,19 +77,23 @@ public class HomeController {
     }
 
 
+    @RequestMapping(value = "signOn", method = RequestMethod.GET)
+    public String viewSignOn() {
+        return "signOn";
+    }
 
+    @RequestMapping(value = "shoppingCart", method = RequestMethod.GET)
+    public String viewShoppingCart() {
+        return "shoppingCart";
+    }
 
-    @RequestMapping(value="signOn", method=RequestMethod.GET)
-    public String viewSignOn () {return "signOn";}
+    @RequestMapping(value = "checkout", method = RequestMethod.GET)
+    public String viewCheckout() {
+        return "checkout";
+    }
 
-    @RequestMapping(value="shoppingCart", method=RequestMethod.GET)
-    public String viewShoppingCart () {return "shoppingCart";}
-
-    @RequestMapping(value="checkout", method=RequestMethod.GET)
-    public String viewCheckout () {return "checkout";}
-
-    @RequestMapping(value="checkout", method=RequestMethod.POST)
-    public String checkTest(HttpServletRequest request){
+    @RequestMapping(value = "checkout", method = RequestMethod.POST)
+    public String checkTest(HttpServletRequest request) {
         String billFirstName = request.getParameter("firstName1");
         String billSurname = request.getParameter("surname1");
         String billStreetAddress = request.getParameter("StBillAddress");
@@ -115,9 +114,7 @@ public class HomeController {
         String cardNumber = request.getParameter("number");
         String expDate = request.getParameter("expdate");
         String zipcode = request.getParameter("ZipCodeShipAddress");
-
-        jdbcOperator.placeOrder("2016-07-29","100.75",null,shipStreetAddress,shipCityAddress,zipcode,shipStateAddress);
-
+        jdbcOperator.placeOrder("2016-07-29", "100.75", null, shipStreetAddress, shipCityAddress, zipcode, shipStateAddress);
 
 
         System.out.println(billFirstName);
@@ -125,17 +122,15 @@ public class HomeController {
     }
 
 
-    @RequestMapping(value="login", method=RequestMethod.POST)
-    public ModelAndView login(HttpServletRequest request)
-    {
+    @RequestMapping(value = "login", method = RequestMethod.POST)
+    public ModelAndView login(HttpServletRequest request) {
         HttpSession session = request.getSession();
         ModelAndView mv = new ModelAndView();
         mv.setViewName("front");
         String email = request.getParameter("email");
         String password = request.getParameter("password");
         String remember = request.getParameter("remember");
-        if (!(email.isEmpty() || email.equals("")))
-        {
+        if (!(email.isEmpty() || email.equals(""))) {
             User user = jdbcOperator.findUserByEmail(email);
             if (user == null
                     || user.getFirstName() == null
@@ -144,14 +139,11 @@ public class HomeController {
                     || user.getEmail().equals("")
                     || user.getEmail().isEmpty()
                     || user.getFirstName().isEmpty()
-                    || !user.getPassword().equals(password))
-            {
+                    || !user.getPassword().equals(password)) {
                 mv.setViewName("signOn");
                 String error = "No user with that email and password exists.";
                 mv.addObject("error", error);
-            }
-            else
-            {
+            } else {
                 user.setPassword("");
                 session.setAttribute("user", user);
             }
@@ -166,31 +158,29 @@ public class HomeController {
         return "registration";
     }
 
-    @RequestMapping(value="test", method=RequestMethod.GET)
-    public ModelAndView getOrderData(){
+    @RequestMapping(value = "test", method = RequestMethod.GET)
+    public ModelAndView getOrderData() {
         ModelAndView model = new ModelAndView("account");
-        List<Order> orders=jdbcOperator.getOrderHistory();
-        model.addObject("orders",orders);
+        List<Order> orders = jdbcOperator.getOrderHistory();
+        model.addObject("orders", orders);
         System.out.println(orders);
 
         return model;
     }
 
     @RequestMapping(value = "book", method = RequestMethod.GET, params = {"id"})
-    public ModelAndView getBookData(@RequestParam("id") int id)
-    {
+    public ModelAndView getBookData(@RequestParam("id") int id) {
         Book book = jdbcOperator.getBook(id); // replace this with database query that gets the information
         ModelAndView mv = new ModelAndView("book");
         mv.addObject("book", book);
         return mv;
 
 
-
     }
 
     @RequestMapping(value = "registerUserAccount", method = RequestMethod.POST)
     public ModelAndView registerUserAccount(@ModelAttribute("user") UserDto accountDto,
-             BindingResult result, HttpServletRequest request, Errors errors) {
+                                            BindingResult result, HttpServletRequest request, Errors errors) {
         User registered = new User();
         if (!result.hasErrors()) {
             registered = createUserAccount(accountDto, result);
@@ -206,6 +196,7 @@ public class HomeController {
         return mv;
         // rest of the implementation
     }
+
     private User createUserAccount(UserDto accountDto, BindingResult result) {
         User registered = null;
         UserService service = new UserService(jdbcOperator);
@@ -242,7 +233,7 @@ public class HomeController {
         book.setPublisher(publisher);
         book.setFormat(format);
         DateFormat df = new SimpleDateFormat("mm/dd/yyyy");
-        Date dateDF = (Date)df.parse(datePublished);
+        Date dateDF = (Date) df.parse(datePublished);
         book.setDatePublished(dateDF);
         book.setEdition(edition);
         book.setNumberOfPages(Integer.valueOf(numberOfPages));
@@ -250,3 +241,4 @@ public class HomeController {
         // book.setTableOfContents(tableOfContents);
         return book;
     }
+}
