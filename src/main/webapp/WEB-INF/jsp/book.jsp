@@ -53,7 +53,7 @@
         <div class="row">
             <div class="col-lg-4 col-md-4">
                 <div class="images">
-                    <img src= <%= bookybook.image%> alt="" style="display:block; margin:auto;">
+                    <img src= <%= bookybook.image%> alt="" style="display:block; margin:auto;" name="image">
                 </div>
                 <div style="padding: 0% 20%">
                     <button type="button" class="btn btn-primary book-buttons cart-button">Add to Cart</button>
@@ -63,11 +63,11 @@
             <div class="col-lg-8 col-md-8">
                 <!-- this is where the book information such as title, author, date, publisher, short summary will go -->
                 <div style="margin-left:12px">
-                    <h1 style="text-align:left"><%= bookybook.title%></h1>
-                    <h3 style="text-align:left"><%= bookybook.author%></h3>
-                    <p>Publication Date: <%= bookybook.datePublished%></p>
-                    <p>ISBN: <%= bookybook.getISBN()%></p>
-                    <p class="book-descrip" style="text-align:left"><%= bookybook.getDescription()%></p>
+                    <h1 style="text-align:left" name="title"><%= bookybook.title%></h1>
+                    <h3 style="text-align:left" name="author"><%= bookybook.author%></h3>
+                    <p name="datePublished">Publication Date: <%= bookybook.datePublished%></p>
+                    <p name="ISBN">ISBN: <%= bookybook.getISBN()%></p>
+                    <p class="book-descrip" style="text-align:left" name="description"><%= bookybook.getDescription()%></p>
                 </div>
             </div>
         </div>
