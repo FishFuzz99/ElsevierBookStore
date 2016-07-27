@@ -174,7 +174,7 @@
         </div>
 
         <div id="menu2" class="tab-pane fade">
-            <form  action="account.jsp#menu2" method="get">
+            <form action="test" method="get">
             <table border="2" class="table">
                         <caption><h2>Order History</h2></caption>
                         <tr>
@@ -193,7 +193,7 @@
                         </w:forEach>
             </table>
             <div>
-                <input type="Submit" value="View Your Order History"/>
+                <input type="submit" value="View Your Order History"/>
             </div>
                 </form>
         </div>

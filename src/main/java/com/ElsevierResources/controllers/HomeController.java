@@ -153,7 +153,7 @@ public class HomeController {
         return "registration";
     }
 
-    @RequestMapping(value="account/menu2", method=RequestMethod.GET)
+    @RequestMapping(value="test", method=RequestMethod.GET)
     public ModelAndView getOrderData(){
         ModelAndView model = new ModelAndView();
         List<Order> orders=jdbcOperator.getOrderHistory();
