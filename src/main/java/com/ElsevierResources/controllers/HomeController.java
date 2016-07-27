@@ -31,7 +31,7 @@ public class HomeController {
 
     JDBCOperator jdbcOperator = new JDBCOperator();
 
-    @RequestMapping(value="account/#menu4", method=RequestMethod.GET)
+    @RequestMapping(value="admin", method=RequestMethod.GET)
     public String viewAdmin(){
         return "admin";
     }
@@ -59,11 +59,6 @@ public class HomeController {
         return model;
     }
 
-    @RequestMapping(value="admin", method = RequestMethod.GET)
-    public String viewAdmin()
-    {
-        return "admin";
-    }
 
     
     @RequestMapping(value="home", method = RequestMethod.GET)
