@@ -3,6 +3,7 @@
 <%@ page isELIgnored="false" %>
 <%@ taglib prefix="c" uri="http://www.springframework.org/tags" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="d" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
@@ -51,7 +52,7 @@
         <div class="row">
             <div class="col-lg-4 col-md-4">
                 <div class="images">
-                    <img src= "<c:url value="${bookybook.image}"/>"  style="display:block; margin:auto;" name="image">
+                    <img src= "<c:url value="${book.image}"/>"  style="display:block; margin:auto;" name="image">
                 </div>
                 <div style="padding: 0% 20%">
                     <button type="button" class="btn btn-primary book-buttons cart-button">Add to Cart</button>
@@ -61,11 +62,11 @@
             <div class="col-lg-8 col-md-8">
                 <!-- this is where the book information such as title, author, date, publisher, short summary will go -->
                 <div style="margin-left:12px">
-                    <h1 style="text-align:left" name="title"><%= bookybook.title%></h1>
-                    <h3 style="text-align:left" name="author"><%= bookybook.author%></h3>
-                    <p name="datePublished">Publication Date: <%= bookybook.datePublished%></p>
-                    <p name="ISBN">ISBN: <%= bookybook.getISBN()%></p>
-                    <p class="book-descrip" style="text-align:left" name="description"><%= bookybook.getDescription()%></p>
+                    <h1 style="text-align:left" name="title"><d:out value="${book.title}"/></h1>
+                    <h3 style="text-align:left" name="author"><d:out value="${book.author}"/></h3>
+                    <p name="datePublished">Publication Date: <d:out value="${book.datePublished}"/></p>
+                    <p name="ISBN">ISBN: <d:out value="${book.ISBN}"/></p>
+                    <p class="book-descrip" style="text-align:left" name="description"><d:out value="${book.description}"/></p>
                 </div>
             </div>
         </div>
