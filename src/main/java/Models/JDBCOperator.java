@@ -434,6 +434,7 @@ public class JDBCOperator {
                 user.setLastName(rs.getString("lastName"));
                 user.setEmail(rs.getString("email"));
                 user.setPassword(rs.getString("password"));
+                user.setAdmin(rs.getBoolean("isAdmin"));
 
                 String city = rs.getString("city");
                 String street = rs.getString("street");
