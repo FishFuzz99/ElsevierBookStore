@@ -204,9 +204,9 @@
                     <caption><h2>Wish List</h2></caption>
                     <div class="addBookSuccess" style='display:none'>Book added successfully.</div>
             <tr class="shopBook">
-                <th>Title</th>
-                <th>Description</th>
-                <th>Options</th>
+                <th class="text-center">Title</th>
+                <th class="text-center">Description</th>
+                <th class="text-center">Options</th>
                 </tr>
                     <w:forEach var="book" items="${books}">
                         <tr>
