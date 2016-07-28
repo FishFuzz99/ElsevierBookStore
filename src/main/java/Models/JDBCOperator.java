@@ -33,7 +33,7 @@ public class JDBCOperator {
 
     public void placeOrder(String orderDate, String total, String shipmentDate, String street, String city, String zipcode, String state, int userId) {
         try {
-            preparedStatement = connection.prepareStatement("INSERT INTO orders(orderDate,total,shipmentDate,street,city,zipcode,state) VALUES(?,?,?,?,?,?,?,?)");
+            preparedStatement = connection.prepareStatement("INSERT INTO orders(orderDate,total,shipmentDate,street,city,zipcode,state,userId) VALUES(?,?,?,?,?,?,?,?)");
             preparedStatement.setString(1, orderDate);
             preparedStatement.setString(2, total);
             preparedStatement.setString(3, shipmentDate);

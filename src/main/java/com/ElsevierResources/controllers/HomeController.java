@@ -173,7 +173,8 @@ public class HomeController {
 
 
     @RequestMapping(value="checkout", method=RequestMethod.GET)
-    public String viewCheckout () {return "checkout";}
+    public String viewCheckout () {
+        return "checkout";}
 
     @RequestMapping(value="checkout", method=RequestMethod.POST)
     public String checkTest(HttpServletRequest request){
