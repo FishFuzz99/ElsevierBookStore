@@ -17,7 +17,6 @@ import org.springframework.web.servlet.ModelAndView;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import java.io.IOException;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -378,11 +377,12 @@ public class HomeController {
     }
 
     @RequestMapping(value = "insert", method = RequestMethod.GET)
-        public void insertBookData(HttpServletRequest request) throws ParseException {
+        public String insertBookData(HttpServletRequest request) throws ParseException {
                 Book book = new Book();
                 book = bookInfo(book, request);
                 JDBCOperator db = new JDBCOperator();
                 db.insertBook(book);
+                return "admin";
 
             }
 
