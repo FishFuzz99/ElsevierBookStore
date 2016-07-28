@@ -228,7 +228,7 @@ public class JDBCOperator {
         List<Book> books = new ArrayList<>();
 
         try {
-            preparedStatement = connection.prepareStatement("SELECT * FROM books WHERE id < 10");
+            preparedStatement = connection.prepareStatement("SELECT * FROM books WHERE bookID < 10");
 
 
             ResultSet rs = preparedStatement.executeQuery();
