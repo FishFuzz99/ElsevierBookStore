@@ -76,7 +76,8 @@
                 <ul class="info" style="list-style-type:none">
                     <li>
                         <div class="login">
-                            <form action="test2" method="get">
+                            <form action="updatePassword" method="get">
+                                <legend>Update Password</legend>
                                 <p><input type="email" placeholder="Username or Email" required/></p>
                                 <p><input type="password" placeholder="Old Password" required/></p>
                                 <p><input type="password" name="password" id="password1" required="required" placeholder="New Password"  onkeyup="passwordValidationLength(); return false;"/>
@@ -92,21 +93,16 @@
                     </li>
                     <li>
                         <div class="payment">
-                            <form>
+                            <form action="updatePay" method="get">
                                 <legend>Update Payment Information</legend>
                                 <ul class="pay">
                                     <li>
-                                        <label for="card">Credit Card Type:</label>
-                                        <select name="card" id="card">
-                                            <option value="QAJAVSC">Visa</option>
-                                            <option value="QAWEBUI">Mastercard</option>
-                                            <option value="QAWEBCSS">American Express</option>
-                                            <option value="QAJQUERY">Discover</option>
-                                        </select>
-                                    </li>
-                                    <li>
                                         <label for="Number">Credit Card Number:</label>
                                         <input type="text" id="number" name="number">
+                                    </li>
+                                    <li>
+                                        <label for="Number">Credit Card CVC:</label>
+                                        <input type="text" id="cvc" name="cvc">
                                     </li>
                                     <li>
                                         <label for="expdate">Expiration Date:</label>
@@ -121,7 +117,7 @@
                     </li>
                     <li>
                         <div class="shipping">
-                            <form>
+                            <form action="updateShipping" method="get">
                                 <fieldset>
                                     <legend>Update Shipping Information</legend>
                                     <ul class="ship">

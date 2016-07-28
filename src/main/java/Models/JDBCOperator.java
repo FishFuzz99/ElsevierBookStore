@@ -132,6 +132,34 @@ public class JDBCOperator {
             e.printStackTrace();
         }
     }
+    public void updatePayment(int userId,String cardNumber,String cardCVC){
+        try {
+            preparedStatement = connection.prepareStatement("UPDATE users SET cardNumber =?,CVC = ?  WHERE userID=?");
+            preparedStatement.setString(1,cardNumber);
+            preparedStatement.setString(2,cardCVC);
+            preparedStatement.setInt(3,userId);
+            preparedStatement.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void updateShipping(int userId,String firstName,String lastName,String email,String street,String city,String state,String zipCode){
+        try {
+            preparedStatement = connection.prepareStatement("UPDATE users SET firstName =?,lastName = ?,email = ?, street = ?, city = ?, state = ? , zipCode = ?  WHERE userID=?");
+            preparedStatement.setString(1,firstName);
+            preparedStatement.setString(2,lastName);
+            preparedStatement.setString(3,email);
+            preparedStatement.setString(4,street);
+            preparedStatement.setString(5,city);
+            preparedStatement.setString(6,state);
+            preparedStatement.setString(7,zipCode);
+            preparedStatement.setInt(8,userId);
+            preparedStatement.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 
 
     public Book insertBook(Book book) {

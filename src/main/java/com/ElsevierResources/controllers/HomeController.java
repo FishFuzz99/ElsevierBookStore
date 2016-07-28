@@ -35,9 +35,8 @@ public class HomeController {
         return "admin";
     }
 
-    @RequestMapping(value="test2", method=RequestMethod.GET)
+    @RequestMapping(value="updatePassword", method=RequestMethod.GET)
     public  String updatePassword(HttpServletRequest request){
-        System.out.println("Hello");
         HttpSession session = request.getSession();
         User user = (User) session.getAttribute("user");
         int userId = user.getID();
@@ -46,6 +45,38 @@ public class HomeController {
         System.out.println(password);
         jdbcOperator.updatePassword(userId,password);
         System.out.println("Password Updated!!!!!");
+        return "account";
+    }
+
+    @RequestMapping(value="updatePay", method=RequestMethod.GET)
+    public  String updatePay(HttpServletRequest request){
+        HttpSession session = request.getSession();
+        User user = (User) session.getAttribute("user");
+        int userId = user.getID();
+        System.out.println(userId);
+        String cardNumber = request.getParameter("number");
+        String cardCVC = request.getParameter("cvc");
+        jdbcOperator.updatePayment(userId,cardNumber,cardCVC);
+        System.out.println("Payment Updated");
+        return "account";
+    }
+
+    @RequestMapping(value="updateShipping", method=RequestMethod.GET)
+    public  String updateShipping(HttpServletRequest request){
+        HttpSession session = request.getSession();
+        User user = (User) session.getAttribute("user");
+        int userId = user.getID();
+        System.out.println(userId);
+        String firstName = request.getParameter("firstName");
+        String lastName = request.getParameter("surname");
+        String email = request.getParameter("email");
+        String street = request.getParameter("StShipAddress");
+        String city = request.getParameter("CityShipAddress");
+        String state = request.getParameter("StateShipAddress");
+        String zipCode = request.getParameter("ZipCode");
+
+        jdbcOperator.updateShipping(userId,firstName,lastName,email,street,city,state,zipCode);
+        System.out.println("Information Updated");
         return "account";
     }
 
