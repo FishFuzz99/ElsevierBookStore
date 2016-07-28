@@ -19,7 +19,7 @@ public class JDBCOperator {
     public JDBCOperator() {
         try {
             Class.forName(JDBC_DRIVER);
-            connection = DriverManager.getConnection(DB_URL, "root", "sudo /usr/local/mysql/bin/mysqld_safe --skip-grant-tables");
+            connection = DriverManager.getConnection(DB_URL, "root", "Madcata8");
 
 
         } catch (ClassNotFoundException e) {
@@ -122,6 +122,17 @@ public class JDBCOperator {
         return book;
     }
 
+    public void updatePassword(int userId,String password){
+        try {
+            preparedStatement = connection.prepareStatement("UPDATE users SET password =? WHERE userID=?");
+            preparedStatement.setString(1,password);
+            preparedStatement.setInt(2,userId);
+            preparedStatement.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
 
     public Book insertBook(Book book) {
 
@@ -140,7 +151,7 @@ public class JDBCOperator {
             preparedStatement.setInt(10, book.getNumberOfPages());
             preparedStatement.setString(11, book.getGenre());
             preparedStatement.setString(12, book.getImage());
-            preparedStatement.executeUpdate();
+            preparedStatement.execute();
         } catch (SQLException e) {
             e.printStackTrace();
         }
