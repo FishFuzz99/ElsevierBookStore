@@ -17,7 +17,6 @@ import org.springframework.web.servlet.ModelAndView;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import java.io.IOException;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -33,9 +32,13 @@ public class HomeController {
     JDBCOperator jdbcOperator = new JDBCOperator();
 
     @RequestMapping(value="admin", method=RequestMethod.GET)
-    public String viewAdmin(){
-        return "admin";
+    public ModelAndView viewAdmin(){
+        ModelAndView mv = new ModelAndView("admin");
+        List<Book> books = jdbcOperator.homeBooks();
+        mv.addObject("list", books);
+        return mv;
     }
+
 
     @RequestMapping(value="updatePassword", method=RequestMethod.GET)
     public  String updatePassword(HttpServletRequest request){
@@ -62,6 +65,7 @@ public class HomeController {
         System.out.println("Payment Updated");
         return "account";
     }
+
 
     @RequestMapping(value="updateShipping", method=RequestMethod.GET)
     public  String updateShipping(HttpServletRequest request){
@@ -97,10 +101,13 @@ public class HomeController {
         return model;
     }
     @RequestMapping(value="shoppingCart", method = RequestMethod.GET)
-    public ModelAndView getShoppingCart()
+    public ModelAndView getShoppingCart(HttpServletRequest request)
     {
+        HttpSession session = request.getSession();
+        ShoppingCart cart = (ShoppingCart) session.getAttribute("cart");
         ModelAndView model = new ModelAndView("shoppingCart");
-        List<Book> shoppingList =jdbcOperator.getWishlist();
+        List<Book> shoppingList = cart.getCartItems();
+
         model.addObject("shoppingList",shoppingList);
         return model;
     }
@@ -258,7 +265,7 @@ public class HomeController {
     @RequestMapping(value = "book", method = RequestMethod.GET, params = {"id"})
     public ModelAndView getBookData(@RequestParam("id") int id)
     {
-        Book book = jdbcOperator.getBook(id); // replace this with database query that gets the information
+        Book book = jdbcOperator.getBook(id);
         ModelAndView mv = new ModelAndView("book");
         mv.addObject("book", book);
         return mv;
@@ -287,7 +294,7 @@ public class HomeController {
         cart.addToCart(jdbcOperator.getBook(id));
     }
 
-    @RequestMapping(value="addToWishList", method = RequestMethod.POST)
+    @RequestMapping(value="addToWishlist", method = RequestMethod.POST)
     public void addToWishlist(HttpServletRequest request, HttpServletResponse response)
     {
         int id = Integer.valueOf(request.getParameter("id"));
@@ -378,29 +385,34 @@ public class HomeController {
     }
 
     @RequestMapping(value = "insert", method = RequestMethod.GET)
-        public void insertBookData(HttpServletRequest request) throws ParseException {
+        public String insertBookData(HttpServletRequest request) throws ParseException {
                 Book book = new Book();
                 book = bookInfo(book, request);
                 JDBCOperator db = new JDBCOperator();
                 db.insertBook(book);
+                return "admin";
 
             }
 
         @RequestMapping(value = "update", method = RequestMethod.GET)
-        public void updateBookData(HttpServletRequest request) throws ParseException {
+        public ModelAndView updateBookData(HttpServletRequest request) throws ParseException {
             Book book = new Book();
             book = bookInfo(book, request);
             JDBCOperator db = new JDBCOperator();
             db.updateBook(book);
-
+            ModelAndView mv = new ModelAndView("admin");
+            List<Book> books = jdbcOperator.homeBooks();
+            mv.addObject("books", books);
+            return mv;
             }
 
     @RequestMapping(value = "delete", method = RequestMethod.GET)
-    public void deleteBookData(HttpServletRequest request) throws ParseException {
+    public String deleteBookData(HttpServletRequest request) throws ParseException {
         Book book = new Book();
-        book.setID(4);
+        book.setID(5);
         JDBCOperator db = new JDBCOperator();
         db.deleteBook(book);
+        return "admin";
 
     }
 

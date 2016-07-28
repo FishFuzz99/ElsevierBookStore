@@ -19,7 +19,7 @@ public class JDBCOperator {
     public JDBCOperator() {
         try {
             Class.forName(JDBC_DRIVER);
-            connection = DriverManager.getConnection(DB_URL, "root", "74Challenger");
+            connection = DriverManager.getConnection(DB_URL, "root", "Madcata8");
 
 
         } catch (ClassNotFoundException e) {
@@ -78,12 +78,12 @@ public class JDBCOperator {
         List<Book> wishlist = new ArrayList<Book>();
 
         try {
-            preparedStatement = connection.prepareStatement("SELECT * FROM books");
+            preparedStatement = connection.prepareStatement("SELECT * FROM wishlistbooks w INNER JOIN books b ON w.bookId =b.bookId");
             ResultSet books = preparedStatement.executeQuery();
             while (books.next()) {
                 Book book = new Book();
                 book.setTitle(books.getString("title"));
-                //book.setPrice(wishlist.getInt("price"));
+                book.setPrice(books.getInt("price"));
                 book.setDescription(books.getString("description"));
                 wishlist.add(book);
 

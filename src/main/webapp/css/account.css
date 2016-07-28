@@ -105,6 +105,9 @@ form ul li {
 tr.shopBook > td{
 	padding-bottom:20px;
 }
+.shopBook > th{
+    text-align:center;
+}
 .formDesc * {
     vertical-align: top;
 }

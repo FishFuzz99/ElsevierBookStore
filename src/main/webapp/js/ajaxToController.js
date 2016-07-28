@@ -32,7 +32,7 @@ function addToCart(id)
         url: 'addToCart',
         type: 'post',
         data: {
-            ids: id.toString()
+            id: id.toString()
         },
         dataType: 'json',
         success: function (data) {
@@ -50,7 +50,7 @@ function addToWishlist(id)
         url: 'addToWishlist',
         type: 'post',
         data: {
-            ids: id.toString()
+            id: id.toString()
         },
         dataType: 'json',
         success: function (data) {
