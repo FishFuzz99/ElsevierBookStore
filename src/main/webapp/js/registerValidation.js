@@ -76,28 +76,7 @@ function emailValidation()
     }
 }
 
-function addToCart( )
-{
-    var ids = $('.hiddenIDs').map(function(){
-        return $(this).text();
-    }).get();
 
-
-    $.ajax({
-        url: 'addToCart',
-        type: 'post',
-        data: {
-            ids: ids.toString()
-        },
-        dataType: 'json',
-        success: function (data) {
-            alert('It worked!');
-            $('.addBookSuccess').fadeIn(400).delay(3000).fadeOut(400);
-        }
-    });
-
-    $('.addBookSuccess').fadeIn(400).delay(3000).fadeOut(400);
-}
 
 
 
