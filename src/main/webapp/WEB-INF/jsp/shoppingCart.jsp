@@ -9,6 +9,7 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core"  prefix="w" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ page isELIgnored="false" %>
 
 
@@ -26,33 +27,52 @@
 <body>
 <!-----------------------PUT ON EVERY PAGE START---------------------------------------------------------------->
 <!-- Navigation -->
-<nav class="navbar navbar navbar-fixed-top" role="navigation">
-    <div class="container">
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a href="front"><img class="logo" src="<c:url value="images/Logo.png"/>" alt=""></a>
-            <a class="navbar-brand " href="front">Cover to Cover</a>
+            <a class="navbar-brand" href="#">Cover to Cover</a>
         </div>
+
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-                <li >
-                    <a href="account">Account</a>
-                </li>
-                <li >
-                    <a href="shoppingCart">Book Bag</a>
-                </li>
+
+            <form class="navbar-form navbar-left" action="search" method="post">
+                <div class="form-group">
+                    <input name="query" type="text" class="form-control" placeholder="Search">
+                    <button type="submit" class="btn btn-default">Submit</button>
+                    <select name="category" class="form-control" id="bookType">
+                        <option <%if(request.getAttribute("category") == "title"){%> selected <%}%> value="title">Title</option>
+                        <option <%if(request.getAttribute("category") == "author"){%> selected <%}%> value="author">Author</option>
+                        <option <%if(request.getAttribute("category") == "genre"){%> selected <%}%> value="genre">Genre</option>
+                        <option <%if(request.getAttribute("category") == "isbn"){%> selected <%}%> value="isbn">ISBN</option>
+                    </select>
+                </div>
+
+            </form>
+            <ul class="nav navbar-nav navbar-right">
+                <li><% if (session.getAttribute("user") != null) { %>
+                    <% if (session.getAttribute("isAdmin") != null) { %>
+                    <a class="nav-item nav-link login-button pull-right " href="admin">Admin</a>
+                    <% } %>
+                    <% } %></li>
+                <li> <% if (session.getAttribute("user") != null) { %>
+                    <a class="nav-item nav-link" href="account">Account</a>
+                    <% } %></li>
+                <li><% if (session.getAttribute("user") == null) { %>
+                    <a class="nav-item nav-link login-button pull-right " href="signOn">Login / Register</a>
+                    <% } %></li>
+                <li> <a class="nav-item nav-link" href="shoppingCart">Book Bag</a></li>
+
             </ul>
-        </div>
-        <!-- /.navbar-collapse -->
-    </div>
-    <!-- /.container -->
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
 </nav>
 <!-----------------------PUT ON EVERY PAGE END---------------------------------------------------------------->
 
@@ -65,18 +85,22 @@
 
             <table border ="2" class="table">
                 <tr>
-                    <th>Book</th>
-                    <th>Description</th>
+                    <th>Title</th>
+                    <th>Price</th>
+                    <th>Format</th>
                     <th style="text-align:center">Options</th>
 
                 </tr>
                 <w:forEach var="book" items="${shoppingList}">
                     <tr>
                         <td>
-                            <img src="<c:url value="images/book2.jpg"/>">
+                            <w:out value="${book.title}"/>
                         </td>
                         <td>
-                            <w:out value="${book.description}"/>
+                            <w:out value="${book.price}"/>
+                        </td>
+                        <td>
+                            <w:out value="${book.format}"/>
                         </td>
                         <td class="option">
                             <button type="button" class="btn book-buttons ">Remove</button>
@@ -97,12 +121,12 @@
                 <tr>
                     <td class="defMoney">Items:</td>
                 </tr>
+                <w:set var="total" value="${0}"/>
                 <w:forEach var="book" items="${shoppingList}">
                 <tr>
-
                         <td class="item"><w:out value="${book.title}"/></td>
                         <td><w:out value="${book.price}"/></td>
-
+                        <w:set var="total" value="${total + book.price}"/>
                 </tr>
                 </w:forEach>
 
@@ -113,7 +137,7 @@
             <table >
                 <tr>
                     <td class="defMoney">Total:</td>
-                    <td class="money">$0.00</td>
+                    <td class="money">$<fmt:formatNumber  type="number" minFractionDigits="2" maxFractionDigits="2" value="${total}"/></td>
                 </tr>
             </table>
             </div>

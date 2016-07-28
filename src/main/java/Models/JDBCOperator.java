@@ -19,7 +19,7 @@ public class JDBCOperator {
     public JDBCOperator() {
         try {
             Class.forName(JDBC_DRIVER);
-            connection = DriverManager.getConnection(DB_URL, "root", "password");
+            connection = DriverManager.getConnection(DB_URL, "root", "Madcata8");
 
 
         } catch (ClassNotFoundException e) {
@@ -33,7 +33,7 @@ public class JDBCOperator {
 
     public void placeOrder(String orderDate, String total, String shipmentDate, String street, String city, String zipcode, String state, int userId) {
         try {
-            preparedStatement = connection.prepareStatement("INSERT INTO orders(orderDate,total,shipmentDate,street,city,zipcode,state) VALUES(?,?,?,?,?,?,?,?)");
+            preparedStatement = connection.prepareStatement("INSERT INTO orders(orderDate,total,shipmentDate,street,city,zipcode,state,userId) VALUES(?,?,?,?,?,?,?,?)");
             preparedStatement.setString(1, orderDate);
             preparedStatement.setString(2, total);
             preparedStatement.setString(3, shipmentDate);
@@ -83,7 +83,7 @@ public class JDBCOperator {
             while (books.next()) {
                 Book book = new Book();
                 book.setTitle(books.getString("title"));
-                //book.setPrice(wishlist.getInt("price"));
+                book.setPrice(books.getInt("price"));
                 book.setDescription(books.getString("description"));
                 wishlist.add(book);
 
@@ -268,7 +268,7 @@ public class JDBCOperator {
         List<Book> books = new ArrayList<>();
 
         try {
-            preparedStatement = connection.prepareStatement("SELECT * FROM books ORDER BY RAND() LIMIT 10");
+            preparedStatement = connection.prepareStatement("SELECT * FROM books ORDER BY RAND() LIMIT 12");
 
 
             ResultSet rs = preparedStatement.executeQuery();
