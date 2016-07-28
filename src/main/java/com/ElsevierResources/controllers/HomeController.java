@@ -14,17 +14,13 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.ModelAndView;
 
-import javax.servlet.ServletOutputStream;
-import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.*;
 import java.util.Date;
 import java.util.List;
 
@@ -108,8 +104,6 @@ public class HomeController {
         model.addObject("shoppingList",shoppingList);
         return model;
     }
-
-
 
     @RequestMapping(value="home", method = RequestMethod.GET)
     public String viewHome()
