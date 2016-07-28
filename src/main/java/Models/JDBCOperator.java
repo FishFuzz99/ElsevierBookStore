@@ -19,7 +19,7 @@ public class JDBCOperator {
     public JDBCOperator() {
         try {
             Class.forName(JDBC_DRIVER);
-            connection = DriverManager.getConnection(DB_URL, "root", "Madcata8");
+            connection = DriverManager.getConnection(DB_URL, "root", "sudo /usr/local/mysql/bin/mysqld_safe --skip-grant-tables");
 
 
         } catch (ClassNotFoundException e) {
