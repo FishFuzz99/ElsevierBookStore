@@ -256,7 +256,7 @@ public class JDBCOperator {
         List<Book> books = new ArrayList<>();
 
         try {
-            preparedStatement = connection.prepareStatement("SELECT * FROM books ORDER BY RAND() LIMIT 10");
+            preparedStatement = connection.prepareStatement("SELECT * FROM books ORDER BY RAND() LIMIT 12");
 
 
             ResultSet rs = preparedStatement.executeQuery();
