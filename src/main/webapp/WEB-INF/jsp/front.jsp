@@ -60,9 +60,9 @@
             </form>
             <ul class="nav navbar-nav navbar-right">
                 <li><% if (session.getAttribute("user") != null) { %>
-                    <d:if test="${true = true}">
+
                             <a class="nav-item nav-link login-button pull-right " href="admin">Admin</a>
-                    </d:if>
+
                     <% } %></li>
                 <li> <% if (session.getAttribute("user") != null) { %>
                     <a class="nav-item nav-link" href="account">Account</a>

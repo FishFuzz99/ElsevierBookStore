@@ -99,3 +99,5 @@ function addToCart( )
     $('.addBookSuccess').fadeIn(400).delay(3000).fadeOut(400);
 }
 
+
+

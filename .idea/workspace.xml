@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="864a8d9f-9ae7-4289-a16e-d5f325689642" name="Default" comment="Adding base stuff for shopping cart">
+    <list default="true" id="864a8d9f-9ae7-4289-a16e-d5f325689642" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/ElsevierResources/controllers/HomeController.java" afterPath="$PROJECT_DIR$/src/main/java/com/ElsevierResources/controllers/HomeController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/front.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/front.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/js/registerValidation.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/registerValidation.js" />
     </list>
     <ignored path="ElsevierResources.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -41,20 +42,20 @@
       <file leaf-file-name="registerValidation.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/js/registerValidation.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="78" column="9" selection-start-line="78" selection-start-column="9" selection-end-line="78" selection-end-column="9" />
+            <state relative-caret-position="429">
+              <caret line="101" column="0" selection-start-line="101" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="front.jsp" pinned="false" current-in-tab="false">
+      <file leaf-file-name="front.jsp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/front.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="56" column="29" selection-start-line="56" selection-start-column="29" selection-end-line="56" selection-end-column="29" />
+            <state relative-caret-position="165">
+              <caret line="60" column="41" selection-start-line="60" selection-start-column="41" selection-end-line="60" selection-end-column="41" />
               <folding>
-                <marker date="1469719021361" expanded="false" signature="6083:6089" ph="©" />
+                <marker date="1469719439970" expanded="false" signature="6008:6014" ph="©" />
               </folding>
             </state>
           </provider>
@@ -88,11 +89,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HomeController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="HomeController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/ElsevierResources/controllers/HomeController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="329">
-              <caret line="248" column="17" selection-start-line="248" selection-start-column="17" selection-end-line="248" selection-end-column="17" />
+            <state relative-caret-position="725">
+              <caret line="269" column="18" selection-start-line="269" selection-start-column="18" selection-end-line="269" selection-end-column="18" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1378#1379#0" expanded="true" />
@@ -193,11 +194,11 @@
         <option value="$PROJECT_DIR$/src/main/java/Models/Book.java" />
         <option value="$PROJECT_DIR$/src/main/java/Models/ShoppingCart.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/css/shop-homepage.css" />
-        <option value="$PROJECT_DIR$/src/main/webapp/js/registerValidation.js" />
         <option value="$PROJECT_DIR$/src/main/java/Models/JDBCOperator.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/account.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/front.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/ElsevierResources/controllers/HomeController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/js/registerValidation.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/front.jsp" />
       </list>
     </option>
   </component>
@@ -1254,7 +1255,7 @@
       <workItem from="1469477554521" duration="2786000" />
       <workItem from="1469547010151" duration="371000" />
       <workItem from="1469554175130" duration="6432000" />
-      <workItem from="1469560719858" duration="35750000" />
+      <workItem from="1469560719858" duration="35912000" />
     </task>
     <task id="LOCAL-00002" summary="removed some stuff in web.xml that was breaking everything">
       <created>1469462061520</created>
@@ -1340,11 +1341,18 @@
       <option name="project" value="LOCAL" />
       <updated>1469719037360</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="added isAdmin session object">
+      <created>1469719299379</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1469719299379</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="69069000" />
+    <option name="totallyTimeSpent" value="69231000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-13" y="-13" width="2586" height="1386" extended-state="6" />
@@ -1425,7 +1433,8 @@
     <MESSAGE value="Added in a searching algorithm. Untested." />
     <MESSAGE value="Updated HTML for search bar" />
     <MESSAGE value="Adding base stuff for shopping cart" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding base stuff for shopping cart" />
+    <MESSAGE value="added isAdmin session object" />
+    <option name="LAST_COMMIT_MESSAGE" value="added isAdmin session object" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1799,14 +1808,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/registerValidation.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="78" column="9" selection-start-line="78" selection-start-column="9" selection-end-line="78" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/book.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="363">
@@ -1833,20 +1834,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/front.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/registerValidation.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="56" column="29" selection-start-line="56" selection-start-column="29" selection-end-line="56" selection-end-column="29" />
-          <folding>
-            <marker date="1469719021361" expanded="false" signature="6083:6089" ph="©" />
-          </folding>
+        <state relative-caret-position="429">
+          <caret line="101" column="0" selection-start-line="101" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/ElsevierResources/controllers/HomeController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="248" column="17" selection-start-line="248" selection-start-column="17" selection-end-line="248" selection-end-column="17" />
+        <state relative-caret-position="725">
+          <caret line="269" column="18" selection-start-line="269" selection-start-column="18" selection-end-line="269" selection-end-column="18" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1378#1379#0" expanded="true" />
@@ -1855,6 +1854,16 @@
             <element signature="e#4516#4517#0" expanded="true" />
             <element signature="e#4630#4631#0" expanded="true" />
             <element signature="e#4667#4668#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/front.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="60" column="41" selection-start-line="60" selection-start-column="41" selection-end-line="60" selection-end-column="41" />
+          <folding>
+            <marker date="1469719439970" expanded="false" signature="6008:6014" ph="©" />
           </folding>
         </state>
       </provider>
