@@ -63,41 +63,29 @@
         <h1 class="title">Book Bag</h1>
         <div class="cart">
 
-            <table>
-                <thead>
-                <tr class="shopHeaders">
+            <table border ="2" class="table">
+                <tr>
                     <th>Book</th>
                     <th>Description</th>
-                    <th style="text-align:center">Price</th>
                     <th style="text-align:center">Options</th>
 
                 </tr>
-                </thead>
-                <tbody table frame="box">
-                <tr>
-                    <td colspan="4"> <hr /> </td>
-                </tr>
-                <!----------------First Book------------->
-                <tr class="shopBook">
-                    <td class="books">
-                        <img src="<c:url value="images/book2.jpg"/>">
-                    </td>
-                    <td class="des">
-                        This is what a description will look like.
-                    </td>
-                    <td class="price">
-                        $19.99
-                    </td>
-                    <td class="option">
-                        <button type="button" class="btn book-buttons ">Remove</button>
-                        <p></p>
-                        <p></p>
-                        <button type="button" class="btn book-buttons wish-list-button">Add to Wish List</button>
-                    </td>
-                </tr>
-
-
-                </tbody>
+                <w:forEach var="book" items="${shoppingList}">
+                    <tr>
+                        <td>
+                            <img src="<c:url value="images/book2.jpg"/>">
+                        </td>
+                        <td>
+                            <w:out value="${book.description}"/>
+                        </td>
+                        <td class="option">
+                            <button type="button" class="btn book-buttons ">Remove</button>
+                            <p></p>
+                            <p></p>
+                            <button type="button" class="btn book-buttons wish-list-button">Add to Wish List</button>
+                        </td>
+                    </tr>
+                </w:forEach>
             </table>
         </div>
         <!----------------Checkout------------->
