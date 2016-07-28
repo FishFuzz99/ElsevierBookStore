@@ -256,7 +256,7 @@ public class JDBCOperator {
         List<Book> books = new ArrayList<>();
 
         try {
-            preparedStatement = connection.prepareStatement("SELECT * FROM books WHERE bookID < 10");
+            preparedStatement = connection.prepareStatement("SELECT * FROM books ORDER BY RAND() LIMIT 10");
 
 
             ResultSet rs = preparedStatement.executeQuery();
@@ -465,4 +465,19 @@ public class JDBCOperator {
         return user;
     }
 
+    public void addToWishlist(int bookID, int userID) {
+
+        try {
+            preparedStatement = connection.prepareStatement("INSERT INTO wishlistbooks(bookID, userID) VALUES(?, ?)");
+
+            preparedStatement.setInt(1, bookID);
+            preparedStatement.setInt(2, userID);
+
+            preparedStatement.execute();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+    }
 }

@@ -270,13 +270,39 @@ public class HomeController {
     @RequestMapping(value="addToCart", method = RequestMethod.POST)
     public void addToCart(HttpServletRequest request, HttpServletResponse response)
     {
-        String ID = request.getParameter("ids");
+        int id = Integer.valueOf(request.getParameter("id"));
 
-        try {
-            response.getWriter().print("{success: true}");
-        } catch (IOException e) {
-            e.printStackTrace();
+        HttpSession session = request.getSession();
+
+        ShoppingCart cart = (ShoppingCart) session.getAttribute("cart");
+
+
+
+        if (cart == null)
+        {
+            cart = new ShoppingCart();
+            session.setAttribute("cart", cart);
         }
+
+        cart.addToCart(jdbcOperator.getBook(id));
+    }
+
+    @RequestMapping(value="addToWishList", method = RequestMethod.POST)
+    public void addToWishlist(HttpServletRequest request, HttpServletResponse response)
+    {
+        int id = Integer.valueOf(request.getParameter("id"));
+
+        HttpSession session = request.getSession();
+        User user = (User) session.getAttribute("user");
+
+        if (session.getAttribute("user") == null)
+        {
+            viewSignOn();
+            return;
+        }
+
+        jdbcOperator.addToWishlist(id, user.getID());
+
     }
 
 
