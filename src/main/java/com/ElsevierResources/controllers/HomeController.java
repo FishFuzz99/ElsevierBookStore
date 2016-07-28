@@ -258,7 +258,7 @@ public class HomeController {
     @RequestMapping(value = "book", method = RequestMethod.GET, params = {"id"})
     public ModelAndView getBookData(@RequestParam("id") int id)
     {
-        Book book = jdbcOperator.getBook(id); // replace this with database query that gets the information
+        Book book = jdbcOperator.getBook(id);
         ModelAndView mv = new ModelAndView("book");
         mv.addObject("book", book);
         return mv;
