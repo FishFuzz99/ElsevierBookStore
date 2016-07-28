@@ -64,6 +64,7 @@
                 <div style="margin-left:12px">
                     <h1 style="text-align:left" name="title"><d:out value="${book.title}"/></h1>
                     <h3 style="text-align:left" name="author"><d:out value="${book.author}"/></h3>
+                    <p name="format">Format: <d:out value="${book.format}"/></p>
                     <p name="datePublished">Publication Date: <d:out value="${book.datePublished}"/></p>
                     <p name="ISBN">ISBN: <d:out value="${book.ISBN}"/></p>
                     <p class="book-descrip" style="text-align:left" name="description"><d:out value="${book.description}"/></p>
