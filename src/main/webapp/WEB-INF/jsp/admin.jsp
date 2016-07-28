@@ -156,17 +156,23 @@
                         <legend>Delete Book</legend>
                         <ul class="ship">
                             <li>
-                                <select name="delete" id="delete">
+
+                                <select name="selection" id="delete">
                                     <d:forEach items= "${list}" var="book" >
-                                    <option><d:out value="${book.title}"/></option>
+                                        <option ><d:out value="${book.title}"/></option>
                                     </d:forEach>
                                 </select>
+
+
+
+
                                 <p></p>
                             </li>
-                            <li class="buttonShip">
-                                <button class="btn btn-success login-button" type="submit" value="Login">Delete</button>
-                            </li>
                         </ul>
+
+                        <li class="buttonShip">
+                            <button class="btn btn-success login-button" type="submit" value="Login">Delete</button>
+                        <!--</ul>-->
                     </fieldset>
                 </form>
             </div>
@@ -177,7 +183,13 @@
                     <fieldset>
                         <legend>Edit Book Info</legend>
                         <ul class="ship" >
-
+                            <select name="edit_selection" id="edit" >
+                                <d:forEach items= "${list}" var="book" >
+                                    <option ><d:out value="${book.title}"/></option>
+                                </d:forEach>
+                            </select>
+                            <p></p>
+                            <p></p>
                                 <label for="bookTitle">Title:</label>
                                 <input type="text" id="bookTitle" name="bookTitle">
                             </li>

@@ -17,6 +17,7 @@ import org.springframework.web.servlet.ModelAndView;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import java.sql.SQLException;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -406,12 +407,15 @@ public class HomeController {
             }
 
     @RequestMapping(value = "delete", method = RequestMethod.GET)
-    public String deleteBookData(HttpServletRequest request) throws ParseException {
+    public String deleteBookData(HttpServletRequest request) throws ParseException, SQLException {
         Book book = new Book();
-        book.setID(5);
         JDBCOperator db = new JDBCOperator();
+        String selection = request.getParameter("selection");
+        book.setID(db.getBookByName(selection));
         db.deleteBook(book);
         return "admin";
+
+
 
     }
 

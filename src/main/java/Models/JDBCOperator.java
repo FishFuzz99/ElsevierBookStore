@@ -210,6 +210,18 @@ public class JDBCOperator {
         }
         return book;
     }
+    public int getBookByName(String name) throws SQLException {
+        preparedStatement = connection.prepareStatement("SELECT bookID FROM books WHERE title LIKE ?");
+        preparedStatement.setString(1,name);
+        ResultSet rs = preparedStatement.executeQuery();
+        Book book = new Book();
+        if ((rs != null) && rs.next()) {
+
+            book.setID(rs.getInt("bookID"));
+        }
+        return book.getID();
+
+    }
 
     public void deleteBook(Book book) {
         try {

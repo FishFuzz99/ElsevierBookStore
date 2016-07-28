@@ -118,3 +118,33 @@ tr.shopBook > td{
     width: 180px;
 }
 
+
+.dropdown-menu.double
+{
+    width: 400px;
+}
+.dropdown-menu .twopart
+{
+    float: left;
+    list-style-type: none;
+    margin: 0;
+}
+
+.dropdown-menu > .twopart > li > a
+{
+    display: block;
+    padding: 3px 20px;
+    clear: both;
+    font-weight: normal;
+    line-height: 20px;
+    color: #333333;
+    white-space: nowrap;
+}
+.dropdown-menu > .twopart > li > a:hover, .dropdown-menu > .twopart > li > a:focus
+{
+    color: #ffffff;
+    text-decoration: none;
+    background-color: #0081c2;
+    background-repeat: repeat-x;
+    background-image: linear-gradient(to bottom, #0088cc, #0077b3);
+}
