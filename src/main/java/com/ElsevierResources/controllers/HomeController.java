@@ -287,7 +287,7 @@ public class HomeController {
         cart.addToCart(jdbcOperator.getBook(id));
     }
 
-    @RequestMapping(value="addToWishList", method = RequestMethod.POST)
+    @RequestMapping(value="addToWishlist", method = RequestMethod.POST)
     public void addToWishlist(HttpServletRequest request, HttpServletResponse response)
     {
         int id = Integer.valueOf(request.getParameter("id"));
