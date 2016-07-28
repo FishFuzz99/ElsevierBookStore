@@ -59,8 +59,10 @@
 
             </form>
             <ul class="nav navbar-nav navbar-right">
-                <li><% if (session.getAttribute("user") == null) { %>
-                    <a class="nav-item nav-link login-button pull-right " href="admin">Admin</a>
+                <li><% if (session.getAttribute("user") != null) { %>
+                        <% if (session.getAttribute("user.isAdmin") != null) { %>
+                            <a class="nav-item nav-link login-button pull-right " href="admin">Admin</a>
+                        <% } %>
                     <% } %></li>
                 <li> <% if (session.getAttribute("user") != null) { %>
                     <a class="nav-item nav-link" href="account">Account</a>
