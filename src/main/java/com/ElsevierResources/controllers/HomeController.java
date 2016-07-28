@@ -98,11 +98,12 @@ public class HomeController {
         return model;
     }
     @RequestMapping(value="shoppingCart", method = RequestMethod.GET)
-    public ModelAndView getShoppingCart()
+    public ModelAndView getShoppingCart(HttpServletRequest request)
     {
-        System.out.println("Shoppin");
+        HttpSession session = request.getSession();
+        ShoppingCart cart = (ShoppingCart) session.getAttribute("cart");
         ModelAndView model = new ModelAndView("shoppingCart");
-        List<Book> shoppingList =jdbcOperator.getWishlist();
+        List<Book> shoppingList =cart.getCartItems();
         model.addObject("shoppingList",shoppingList);
         return model;
     }
