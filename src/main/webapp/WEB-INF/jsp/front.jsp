@@ -110,8 +110,8 @@
                                     <p class="book-author"><d:out value="${value.author}"/></p>
                                     <p class="book-descrip"></p><d:out value="${value.description}"/>
                                 </div>
-                                <a href="shoppingCart"><button type="button" class="btn btn-primary book-buttons cart-button ">Add to Cart</button></a>
-                                <button type="button" class="btn book-buttons wish-list-button">Add to Wish List</button>
+                                <a href="shoppingCart"><button type="button" class="btn btn-primary book-buttons cart-button" onclick="addToCart(<d:out value="${value.ID}"/>)">Add to Cart</button></a>
+                                <button type="button" class="btn book-buttons wish-list-button" onclick="addToWishList(<d:out value="${value.ID}"/>)">Add to Wish List</button>
                             </div>
                         </div>
                     </d:forEach>
