@@ -88,10 +88,6 @@
                 <div class=" col-md-12 col-lg-12 filters">
 
                     <p class="lead">Cover to Cover Library</p>
-                    <div class="list-group">
-                        <button class="btn btn-primary">eBooks</button>
-                        <button class="btn btn-primary">Print Books</button>
-                    </div>
                 </div>
             </div>
 
