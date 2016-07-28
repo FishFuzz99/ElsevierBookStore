@@ -120,7 +120,7 @@
 
                                     <li>
                                         <label for="publishDate">Date Published:</label>
-                                        <input type="text" id="publishDate" name="publishDate">
+                                        <input type="text" id="publishDate" name="publishDate" placeholder="mm/dd/yyy">
                                     </li>
 
                                     <li>
@@ -200,14 +200,15 @@
                 <form action="update" method="get">
                     <fieldset>
                         <legend>Edit Book Info</legend>
-                        <ul class="ship" >
-                            <select name="edit_selection" id="edit" >
+
+                            <select name="edit_selection" id="edit">
                                 <d:forEach items= "${list}" var="book" >
                                     <option ><d:out value="${book.title}"/></option>
                                 </d:forEach>
                             </select>
                             <p></p>
                             <p></p>
+                            <ul class="ship" >
                                 <label for="bookTitle">Title:</label>
                                 <input type="text" id="bookTitle" name="bookTitle">
                             </li>
@@ -238,7 +239,7 @@
 
                             <li>
                                 <label for="publishDate2">Date Published:</label>
-                                <input type="text" id="publishDate2" name="publishDate">
+                                <input type="text" id="publishDate2" name="publishDate" placeholder="mm/dd/yyy">
                             </li>
 
                             <li>

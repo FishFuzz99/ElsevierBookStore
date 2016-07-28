@@ -397,15 +397,15 @@ public class HomeController {
             }
 
         @RequestMapping(value = "update", method = RequestMethod.GET)
-        public ModelAndView updateBookData(HttpServletRequest request) throws ParseException {
+        public String updateBookData(HttpServletRequest request) throws ParseException, SQLException {
             Book book = new Book();
             book = bookInfo(book, request);
             JDBCOperator db = new JDBCOperator();
+            String edit_selection = request.getParameter("edit_selection");
+            book.setID(db.getBookByName(edit_selection));
             db.updateBook(book);
-            ModelAndView mv = new ModelAndView("admin");
-            List<Book> books = jdbcOperator.homeBooks();
-            mv.addObject("books", books);
-            return mv;
+
+            return "admin";
             }
 
     @RequestMapping(value = "delete", method = RequestMethod.GET)

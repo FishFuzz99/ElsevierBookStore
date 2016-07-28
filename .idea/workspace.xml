@@ -29,13 +29,17 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="600">
-      <file leaf-file-name="HomeController.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="HomeController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/ElsevierResources/controllers/HomeController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="115">
-              <caret line="413" column="0" selection-start-line="413" selection-start-column="0" selection-end-line="413" selection-end-column="0" />
+            <state relative-caret-position="1768">
+              <caret line="398" column="28" selection-start-line="398" selection-start-column="28" selection-end-line="398" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#4655#4656#0" expanded="true" />
+                <element signature="e#4684#4685#0" expanded="true" />
+                <element signature="e#4798#4799#0" expanded="true" />
+                <element signature="e#4835#4836#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -54,50 +58,41 @@
       <file leaf-file-name="JDBCOperator.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Models/JDBCOperator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="163">
-              <caret line="220" column="0" selection-start-line="220" selection-start-column="0" selection-end-line="220" selection-end-column="0" />
+            <state relative-caret-position="754">
+              <caret line="207" column="40" selection-start-line="207" selection-start-column="40" selection-end-line="207" selection-end-column="40" />
               <folding>
-                <marker date="1469738867744" expanded="true" signature="932:1030" ph="INSERT INTO orders... " />
-                <marker date="1469738867744" expanded="true" signature="1767:1804" ph="SELECT * FRO... orders" />
-                <marker date="1469738867744" expanded="true" signature="2578:2648" ph="SELECT * FRO... wishlistbooks" />
-                <marker date="1469738867744" expanded="true" signature="3279:3315" ph="SELECT * FRO... books" />
-                <marker date="1469738867744" expanded="true" signature="4424:4467" ph="UPDATE users... " />
-                <marker date="1469738867744" expanded="true" signature="4854:4908" ph="UPDATE users... " />
-                <marker date="1469738867744" expanded="true" signature="5418:5533" ph="UPDATE users... " />
-                <marker date="1469738867744" expanded="true" signature="6193:6351" ph="INSERT INTO books... " />
-                <marker date="1469738867744" expanded="true" signature="6247:6351" ph="INSERT INTO books... " />
-                <marker date="1469738867744" expanded="true" signature="7450:7612" ph="UPDATE books... " />
-                <marker date="1469738867744" expanded="true" signature="8777:8820" ph="SELECT bookI... books" />
-                <marker date="1469738867744" expanded="true" signature="9207:9239" ph="DELETE FROM " />
-                <marker date="1469738867744" expanded="true" signature="9840:9956" ph="INSERT INTO users... " />
-                <marker date="1469738867744" expanded="true" signature="10308:10382" ph="INSERT INTO users... " />
-                <marker date="1469738867744" expanded="true" signature="10959:11003" ph="SELECT * FRO... books" />
-                <marker date="1469738867744" expanded="true" signature="13713:13765" ph="SELECT * FRO... books" />
-                <marker date="1469738867744" expanded="true" signature="13896:13949" ph="SELECT * FRO... books" />
-                <marker date="1469738867744" expanded="true" signature="14078:14129" ph="SELECT * FRO... books" />
-                <marker date="1469738867744" expanded="true" signature="14259:14311" ph="SELECT * FRO... books" />
-                <marker date="1469738867744" expanded="true" signature="17043:17081" ph="SELECT * FRO... users" />
-                <marker date="1469738867744" expanded="true" signature="18544:18598" ph="INSERT INTO wishlistbooks... " />
+                <element signature="e#1687#1694#0" expanded="true" />
+                <element signature="e#2499#2505#0" expanded="true" />
+                <marker date="1469743312552" expanded="true" signature="932:1037" ph="INSERT INTO orders... " />
+                <marker date="1469743312552" expanded="true" signature="1774:1811" ph="SELECT * FRO... orders" />
+                <marker date="1469743312552" expanded="true" signature="2585:2655" ph="SELECT * FRO... wishlistbooks" />
+                <marker date="1469743312552" expanded="true" signature="3281:3317" ph="SELECT * FRO... books" />
+                <marker date="1469743312552" expanded="true" signature="4426:4469" ph="UPDATE users... " />
+                <marker date="1469743312552" expanded="true" signature="4856:4910" ph="UPDATE users... " />
+                <marker date="1469743312552" expanded="true" signature="5420:5535" ph="UPDATE users... " />
+                <marker date="1469743312552" expanded="true" signature="6195:6353" ph="INSERT INTO books... " />
+                <marker date="1469743312552" expanded="true" signature="7452:7614" ph="UPDATE books... " />
+                <marker date="1469743312552" expanded="true" signature="8780:8823" ph="SELECT bookI... books" />
+                <marker date="1469743312552" expanded="true" signature="9210:9242" ph="DELETE FROM " />
+                <marker date="1469743312552" expanded="true" signature="9843:9959" ph="INSERT INTO users... " />
+                <marker date="1469743312552" expanded="true" signature="10311:10385" ph="INSERT INTO users... " />
+                <marker date="1469743312552" expanded="true" signature="10962:11006" ph="SELECT * FRO... books" />
+                <marker date="1469743312552" expanded="true" signature="13716:13768" ph="SELECT * FRO... books" />
+                <marker date="1469743312552" expanded="true" signature="13899:13952" ph="SELECT * FRO... books" />
+                <marker date="1469743312552" expanded="true" signature="14081:14132" ph="SELECT * FRO... books" />
+                <marker date="1469743312552" expanded="true" signature="14262:14314" ph="SELECT * FRO... books" />
+                <marker date="1469743312552" expanded="true" signature="17046:17084" ph="SELECT * FRO... users" />
+                <marker date="1469743312552" expanded="true" signature="18547:18601" ph="INSERT INTO wishlistbooks... " />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="front.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/front.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1520">
-              <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="31" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="admin.jsp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="admin.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/admin.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="161" column="79" selection-start-line="161" selection-start-column="79" selection-end-line="161" selection-end-column="79" />
+            <state relative-caret-position="177">
+              <caret line="203" column="28" selection-start-line="203" selection-start-column="28" selection-end-line="203" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -106,7 +101,7 @@
       <file leaf-file-name="account.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/css/account.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="92">
+            <state relative-caret-position="347">
               <caret line="120" column="0" selection-start-line="120" selection-start-column="0" selection-end-line="120" selection-end-column="0" />
               <folding />
             </state>
@@ -165,10 +160,10 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/book.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/account.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/shoppingCart.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/css/account.css" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/admin.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/ElsevierResources/controllers/HomeController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/admin.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/Models/JDBCOperator.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/css/account.css" />
       </list>
     </option>
   </component>
@@ -490,7 +485,17 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="false" />
           <option name="myId" value="UPDATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/Models/JDBCOperator.java</PATH>
           <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/com/ElsevierResources/controllers/HomeController.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/account.jsp</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/admin.jsp</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/book.jsp</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/checkout.jsp</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/front.jsp</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/orderConfirmation.jsp</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/registration.jsp</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/shoppingCart.jsp</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/signOn.jsp</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Created" />
@@ -1174,7 +1179,7 @@
       <workItem from="1469560719858" duration="24332000" />
       <workItem from="1469650127268" duration="4000000" />
       <workItem from="1469715659557" duration="7280000" />
-      <workItem from="1469724805219" duration="14379000" />
+      <workItem from="1469724805219" duration="17002000" />
     </task>
     <task id="LOCAL-00002" summary="removed some stuff in web.xml that was breaking everything">
       <created>1469462061520</created>
@@ -1372,11 +1377,18 @@
       <option name="project" value="LOCAL" />
       <updated>1469731856566</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="delete drop down now deletes on click&#10;">
+      <created>1469741266208</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1469741266208</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="83310000" />
+    <option name="totallyTimeSpent" value="85933000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1318" height="721" extended-state="6" />
@@ -1399,8 +1411,8 @@
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.08510638" sideWeight="0.4953125" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20458265" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.13747954" sideWeight="0.4953125" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1767594" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22503841" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1501,7 +1513,8 @@
     <MESSAGE value="my password&#10;" />
     <MESSAGE value="checkout box takes title and price" />
     <MESSAGE value="delete drop down" />
-    <option name="LAST_COMMIT_MESSAGE" value="delete drop down" />
+    <MESSAGE value="delete drop down now deletes on click&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="delete drop down now deletes on click&#10;" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.8038194" />
   </component>
   <component name="XDebuggerManager">
@@ -1533,27 +1546,15 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/shoppingCart.jsp</url>
-          <line>96</line>
+          <line>120</line>
           <properties />
           <option name="timeStamp" value="23" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/ElsevierResources/controllers/HomeController.java</url>
-          <line>414</line>
-          <properties />
-          <option name="timeStamp" value="41" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/ElsevierResources/controllers/HomeController.java</url>
-          <line>412</line>
-          <properties />
-          <option name="timeStamp" value="42" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="46" />
+      <option name="time" value="47" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1562,20 +1563,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Agile.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="43" column="28" selection-start-line="43" selection-start-column="28" selection-end-line="43" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="13" column="25" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1866,14 +1853,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/account.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="120" column="0" selection-start-line="120" selection-start-column="0" selection-end-line="120" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/admin.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-580">
@@ -1882,10 +1861,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.1.1.RELEASE/spring-web-4.1.1.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="140" column="0" selection-start-line="140" selection-start-column="0" selection-end-line="140" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/front.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1520">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="31" />
+        <state relative-caret-position="-483">
+          <caret line="0" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="31" />
           <folding />
         </state>
       </provider>
@@ -1898,59 +1885,80 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ElsevierResources/controllers/HomeController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Models/JDBCOperator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="413" column="0" selection-start-line="413" selection-start-column="0" selection-end-line="413" selection-end-column="0" />
+        <state relative-caret-position="754">
+          <caret line="207" column="40" selection-start-line="207" selection-start-column="40" selection-end-line="207" selection-end-column="40" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#1687#1694#0" expanded="true" />
+            <element signature="e#2499#2505#0" expanded="true" />
+            <marker date="1469743312552" expanded="true" signature="932:1037" ph="INSERT INTO orders... " />
+            <marker date="1469743312552" expanded="true" signature="1774:1811" ph="SELECT * FRO... orders" />
+            <marker date="1469743312552" expanded="true" signature="2585:2655" ph="SELECT * FRO... wishlistbooks" />
+            <marker date="1469743312552" expanded="true" signature="3281:3317" ph="SELECT * FRO... books" />
+            <marker date="1469743312552" expanded="true" signature="4426:4469" ph="UPDATE users... " />
+            <marker date="1469743312552" expanded="true" signature="4856:4910" ph="UPDATE users... " />
+            <marker date="1469743312552" expanded="true" signature="5420:5535" ph="UPDATE users... " />
+            <marker date="1469743312552" expanded="true" signature="6195:6353" ph="INSERT INTO books... " />
+            <marker date="1469743312552" expanded="true" signature="7452:7614" ph="UPDATE books... " />
+            <marker date="1469743312552" expanded="true" signature="8780:8823" ph="SELECT bookI... books" />
+            <marker date="1469743312552" expanded="true" signature="9210:9242" ph="DELETE FROM " />
+            <marker date="1469743312552" expanded="true" signature="9843:9959" ph="INSERT INTO users... " />
+            <marker date="1469743312552" expanded="true" signature="10311:10385" ph="INSERT INTO users... " />
+            <marker date="1469743312552" expanded="true" signature="10962:11006" ph="SELECT * FRO... books" />
+            <marker date="1469743312552" expanded="true" signature="13716:13768" ph="SELECT * FRO... books" />
+            <marker date="1469743312552" expanded="true" signature="13899:13952" ph="SELECT * FRO... books" />
+            <marker date="1469743312552" expanded="true" signature="14081:14132" ph="SELECT * FRO... books" />
+            <marker date="1469743312552" expanded="true" signature="14262:14314" ph="SELECT * FRO... books" />
+            <marker date="1469743312552" expanded="true" signature="17046:17084" ph="SELECT * FRO... users" />
+            <marker date="1469743312552" expanded="true" signature="18547:18601" ph="INSERT INTO wishlistbooks... " />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.1.1.RELEASE/spring-web-4.1.1.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/delete.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="140" column="0" selection-start-line="140" selection-start-column="0" selection-end-line="140" selection-end-column="0" />
+        <state relative-caret-position="238">
+          <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Models/JDBCOperator.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/update.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="220" column="0" selection-start-line="220" selection-start-column="0" selection-end-line="220" selection-end-column="0" />
-          <folding>
-            <marker date="1469738867744" expanded="true" signature="932:1030" ph="INSERT INTO orders... " />
-            <marker date="1469738867744" expanded="true" signature="1767:1804" ph="SELECT * FRO... orders" />
-            <marker date="1469738867744" expanded="true" signature="2578:2648" ph="SELECT * FRO... wishlistbooks" />
-            <marker date="1469738867744" expanded="true" signature="3279:3315" ph="SELECT * FRO... books" />
-            <marker date="1469738867744" expanded="true" signature="4424:4467" ph="UPDATE users... " />
-            <marker date="1469738867744" expanded="true" signature="4854:4908" ph="UPDATE users... " />
-            <marker date="1469738867744" expanded="true" signature="5418:5533" ph="UPDATE users... " />
-            <marker date="1469738867744" expanded="true" signature="6193:6351" ph="INSERT INTO books... " />
-            <marker date="1469738867744" expanded="true" signature="6247:6351" ph="INSERT INTO books... " />
-            <marker date="1469738867744" expanded="true" signature="7450:7612" ph="UPDATE books... " />
-            <marker date="1469738867744" expanded="true" signature="8777:8820" ph="SELECT bookI... books" />
-            <marker date="1469738867744" expanded="true" signature="9207:9239" ph="DELETE FROM " />
-            <marker date="1469738867744" expanded="true" signature="9840:9956" ph="INSERT INTO users... " />
-            <marker date="1469738867744" expanded="true" signature="10308:10382" ph="INSERT INTO users... " />
-            <marker date="1469738867744" expanded="true" signature="10959:11003" ph="SELECT * FRO... books" />
-            <marker date="1469738867744" expanded="true" signature="13713:13765" ph="SELECT * FRO... books" />
-            <marker date="1469738867744" expanded="true" signature="13896:13949" ph="SELECT * FRO... books" />
-            <marker date="1469738867744" expanded="true" signature="14078:14129" ph="SELECT * FRO... books" />
-            <marker date="1469738867744" expanded="true" signature="14259:14311" ph="SELECT * FRO... books" />
-            <marker date="1469738867744" expanded="true" signature="17043:17081" ph="SELECT * FRO... users" />
-            <marker date="1469738867744" expanded="true" signature="18544:18598" ph="INSERT INTO wishlistbooks... " />
-          </folding>
+        <state relative-caret-position="-163">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/account.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="347">
+          <caret line="120" column="0" selection-start-line="120" selection-start-column="0" selection-end-line="120" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/admin.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="161" column="79" selection-start-line="161" selection-start-column="79" selection-end-line="161" selection-end-column="79" />
+        <state relative-caret-position="177">
+          <caret line="203" column="28" selection-start-line="203" selection-start-column="28" selection-end-line="203" selection-end-column="28" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ElsevierResources/controllers/HomeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1768">
+          <caret line="398" column="28" selection-start-line="398" selection-start-column="28" selection-end-line="398" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#4655#4656#0" expanded="true" />
+            <element signature="e#4684#4685#0" expanded="true" />
+            <element signature="e#4798#4799#0" expanded="true" />
+            <element signature="e#4835#4836#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

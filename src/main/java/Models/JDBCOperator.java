@@ -19,7 +19,7 @@ public class JDBCOperator {
     public JDBCOperator() {
         try {
             Class.forName(JDBC_DRIVER);
-            connection = DriverManager.getConnection(DB_URL, "root", "Madcata8");
+            connection = DriverManager.getConnection(DB_URL, "root", "password");
 
 
         } catch (ClassNotFoundException e) {
@@ -165,7 +165,7 @@ public class JDBCOperator {
     public Book insertBook(Book book) {
 
         try {
-            preparedStatement = connection.prepareStatement("INSERT INTO books (title, author,description,price,IBSN,publisher,format,datePublished,edition,numberOfPages,genre, imageURL) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)");
+            preparedStatement = connection.prepareStatement("INSERT INTO books (title, author,description,price,ISBN,publisher,format,datePublished,edition,numberOfPages,genre, imageURL) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)");
             preparedStatement.setString(1, book.getTitle());
             preparedStatement.setString(2, book.getAuthor());
             preparedStatement.setString(3, book.getDescription());
@@ -189,7 +189,7 @@ public class JDBCOperator {
     public Book updateBook(Book book) {
 
         try {
-            preparedStatement = connection.prepareStatement("UPDATE books SET title=?, author=?,description=?,price=?,IBSN=?,publisher=?,format=?,datePublished=?,edition=?,numberOfPages=?,genre=?, imageURL=? WHERE bookID =?");
+            preparedStatement = connection.prepareStatement("UPDATE books SET title=?, author=?,description=?,price=?,ISBN=?,publisher=?,format=?,datePublished=?,edition=?,numberOfPages=?,genre=?, imageURL=? WHERE bookID =?");
             preparedStatement.setString(1, book.getTitle());
             preparedStatement.setString(2, book.getAuthor());
             preparedStatement.setString(3, book.getDescription());
@@ -202,8 +202,9 @@ public class JDBCOperator {
             preparedStatement.setString(9, book.getEdition());
             preparedStatement.setInt(10, book.getNumberOfPages());
             preparedStatement.setString(11, book.getGenre());
-            preparedStatement.setInt(12, book.getID());
-            preparedStatement.setString(13, book.getImage());
+
+            preparedStatement.setString(12, book.getImage());
+            preparedStatement.setInt(13, book.getID());
             preparedStatement.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
