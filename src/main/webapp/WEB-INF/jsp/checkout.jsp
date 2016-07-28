@@ -17,40 +17,52 @@
 <body>
 <!-----------------------PUT ON EVERY PAGE START---------------------------------------------------------------->
 <!-- Navigation -->
-<nav class="navbar navbar navbar-fixed-top" role="navigation">
-
-    <div class="container">
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
-
-            <button type="button" class="navbar-toggle navbar-default" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a href="front"><img class="logo1" src="<c:url value="images/Logo.png"/>" alt=""></a>
-            <a class="navbar-brand " href="front">Cover to Cover</a>
+            <a class="navbar-brand" href="#">Cover to Cover</a>
         </div>
+
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-                <li >
-                    <a href="account">Account</a>
-                </li>
-                <li >
-                    <a href="shoppingCart">Book Bag</a>
-                </li>
-                <% if (session.getAttribute("user") == null) { %>
-                <li class="login-button pull-right">
-                    <a href="signOn">Login / Register</a>
-                </li>
-                <% } %>
+
+            <form class="navbar-form navbar-left" action="search" method="post">
+                <div class="form-group">
+                    <input name="query" type="text" class="form-control" placeholder="Search">
+                    <button type="submit" class="btn btn-default">Submit</button>
+                    <select name="category" class="form-control" id="bookType">
+                        <option <%if(request.getAttribute("category") == "title"){%> selected <%}%> value="title">Title</option>
+                        <option <%if(request.getAttribute("category") == "author"){%> selected <%}%> value="author">Author</option>
+                        <option <%if(request.getAttribute("category") == "genre"){%> selected <%}%> value="genre">Genre</option>
+                        <option <%if(request.getAttribute("category") == "isbn"){%> selected <%}%> value="isbn">ISBN</option>
+                    </select>
+                </div>
+
+            </form>
+            <ul class="nav navbar-nav navbar-right">
+                <li><% if (session.getAttribute("user") != null) { %>
+                    <% if (session.getAttribute("isAdmin") != null) { %>
+                    <a class="nav-item nav-link login-button pull-right " href="admin">Admin</a>
+                    <% } %>
+                    <% } %></li>
+                <li> <% if (session.getAttribute("user") != null) { %>
+                    <a class="nav-item nav-link" href="account">Account</a>
+                    <% } %></li>
+                <li><% if (session.getAttribute("user") == null) { %>
+                    <a class="nav-item nav-link login-button pull-right " href="signOn">Login / Register</a>
+                    <% } %></li>
+                <li> <a class="nav-item nav-link" href="shoppingCart">Book Bag</a></li>
+
             </ul>
-        </div>
-        <!-- /.navbar-collapse -->
-    </div>
-    <!-- /.container -->
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
 </nav>
 <!-----------------------PUT ON EVERY PAGE END---------------------------------------------------------------->
 <form action="checkout" method="post">
