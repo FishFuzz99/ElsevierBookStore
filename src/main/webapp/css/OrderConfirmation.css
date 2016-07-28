@@ -5,4 +5,11 @@ padding-left:10px;
 width:35%;
 height:400px;
 display:inline-block;
-text-align: center;}
+text-align: center;
+    margin:0 auto;}
+
+.logo2{
+    margin:0 auto;
+    height:50%;
+    width: 50%;
+}

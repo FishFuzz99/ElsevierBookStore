@@ -61,11 +61,12 @@
 <head>
     <title>Order Confirmation</title>
 </head>
-<body>
+<body class="confirm">
 <div class="thanks">
 <h1>Order Confirmation</h1>
 <h2>Thank you for your order!</h2>
 <p>We hope you enjoy your new book(s)! Thank you for shopping with Cover to Cover!</p>
+    <a href="front"><img class="logo2" src="<c:url value="images/Logo.png"/>" alt=""></a>
 </div>
 </body>
 </html>
