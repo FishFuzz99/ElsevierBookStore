@@ -36,6 +36,7 @@ public class HomeController {
         return "admin";
     }
 
+
     @RequestMapping(value="updatePassword", method=RequestMethod.GET)
     public  String updatePassword(HttpServletRequest request){
         HttpSession session = request.getSession();
@@ -61,6 +62,7 @@ public class HomeController {
         System.out.println("Payment Updated");
         return "account";
     }
+
 
     @RequestMapping(value="updateShipping", method=RequestMethod.GET)
     public  String updateShipping(HttpServletRequest request){
@@ -98,6 +100,7 @@ public class HomeController {
     @RequestMapping(value="shoppingCart", method = RequestMethod.GET)
     public ModelAndView getShoppingCart()
     {
+        System.out.println("Shoppin");
         ModelAndView model = new ModelAndView("shoppingCart");
         List<Book> shoppingList =jdbcOperator.getWishlist();
         model.addObject("shoppingList",shoppingList);
