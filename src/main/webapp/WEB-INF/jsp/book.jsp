@@ -51,7 +51,7 @@
         <div class="row">
             <div class="col-lg-4 col-md-4">
                 <div class="images">
-                    <img src= "<%= bookybook.image%>"  style="display:block; margin:auto;" name="image">
+                    <img src= "<c:url value="${bookybook.image}"/>"  style="display:block; margin:auto;" name="image">
                 </div>
                 <div style="padding: 0% 20%">
                     <button type="button" class="btn btn-primary book-buttons cart-button">Add to Cart</button>
