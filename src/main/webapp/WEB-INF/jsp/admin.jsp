@@ -14,7 +14,6 @@
     <!-- Custom CSS -->
     <link href="<c:url value="css/account.css"/>" rel="stylesheet">
 
-    <link href="<c:url value="css/shop-homepage.css"/>" rel="stylesheet">
 
 </head>
 <body>

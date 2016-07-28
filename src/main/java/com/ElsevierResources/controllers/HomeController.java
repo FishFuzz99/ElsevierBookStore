@@ -19,7 +19,6 @@ import javax.servlet.http.HttpSession;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -77,21 +76,12 @@ public class HomeController {
     @RequestMapping(value="front", method = RequestMethod.GET)
     public ModelAndView viewFront(HttpServletRequest request)
     {
-        Book book = new Book();
 
-        book.setImage("/images/harry-potter1.jpg");
-        book.setTitle("Book Test Title");
-        book.setAuthor("Testing Author");
-        book.setPrice(25.54f);
-        book.setDescription("This is a test description");
+        ModelAndView mv = new ModelAndView("front");
 
-        List<Book> booksList = new ArrayList<Book>();
-        booksList.add(book);
-        ModelAndView mav = new ModelAndView();
-        mav.setViewName("front");
-        mav.addObject("list", booksList);
-
-        return mav;
+        List<Book> books = jdbcOperator.homeBooks();
+        mv.addObject("list", books);
+        return mv;
     }
 
     @RequestMapping(value="search", method = RequestMethod.POST)
