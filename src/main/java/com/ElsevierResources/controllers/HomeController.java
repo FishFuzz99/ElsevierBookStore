@@ -91,8 +91,6 @@ public class HomeController {
         String query = request.getParameter("query");
 
 
-
-
         ModelAndView mv = new ModelAndView("front");
         mv.addObject("category", category);
         mv.addObject("query", query);
