@@ -202,12 +202,14 @@
             <form action="wishlist" method="get">
                 <table border="2" class="table">
                     <caption><h2>Wish List</h2></caption>
+                    <div class="addBookSuccess" style='display:none'>Book added successfully.</div>
             <tr class="shopBook">
                 <th>Title</th>
                 <th>Description</th>
                 </tr>
                     <w:forEach var="book" items="${books}">
                         <tr>
+                            <td class="hiddenIDs" style="display:none;"><w:out value="${book.ID}"/></td>
                             <td><w:out value="${book.title}" /></td>
                             <td><w:out value="${book.description}" /></td>
                         </tr>
@@ -215,7 +217,7 @@
                 </table>
                 <td class="option">
                     <button type="submit" class="btn  ">Remove</button>
-                    <a href="shoppingCart"><button type="button" class="btn btn-primary">Add to Cart</button></a>
+                    <button type="button" class="btn btn-primary">Add to Cart</button>
                 </td>
             </form>
         </div>

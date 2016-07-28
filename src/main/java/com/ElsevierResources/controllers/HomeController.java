@@ -14,11 +14,17 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.servlet.ServletOutputStream;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.*;
 import java.util.Date;
 import java.util.List;
 
@@ -104,7 +110,7 @@ public class HomeController {
     }
 
 
-    
+
     @RequestMapping(value="home", method = RequestMethod.GET)
     public String viewHome()
     {
@@ -209,6 +215,12 @@ public class HomeController {
         HttpSession session = request.getSession();
         ModelAndView mv = new ModelAndView();
         mv.setViewName("front");
+
+        if (session.getAttribute("user") != null)
+        {
+            return mv;
+        }
+
         String email = request.getParameter("email");
         String password = request.getParameter("password");
         String remember = request.getParameter("remember");
@@ -257,21 +269,43 @@ public class HomeController {
 
     }
 
+    @RequestMapping(value="addToCart", method = RequestMethod.POST)
+    public void addToCart(HttpServletRequest request, HttpServletResponse response)
+    {
+        String ID = request.getParameter("ids");
+
+        try {
+            response.getWriter().print("{success: true}");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+
     @RequestMapping(value = "registerUserAccount", method = RequestMethod.POST)
     public ModelAndView registerUserAccount(@ModelAttribute("user") UserDto accountDto,
              BindingResult result, HttpServletRequest request, Errors errors) {
         User registered = new User();
+
+        HttpSession session = request.getSession();
+        ModelAndView mv = new ModelAndView("front");
+
+        if (session.getAttribute("user") != null)
+        {
+            return mv;
+        }
+
         if (!result.hasErrors()) {
             registered = createUserAccount(accountDto, result);
         }
         if (registered == null) {
             result.rejectValue("email", "message.regError");
         }
-        HttpSession session = request.getSession();
+
         registered.setPassword("");
         session.setAttribute("user", registered);
 
-        ModelAndView mv = new ModelAndView("front");
+
         return mv;
         // rest of the implementation
     }
@@ -288,7 +322,6 @@ public class HomeController {
 
     public Book bookInfo(Book book, HttpServletRequest request) throws ParseException {
 
-        String id = request.getParameter("id");
         String title = request.getParameter("bookTitle");
         String author = request.getParameter("author");
         String description = request.getParameter("message");
@@ -328,10 +361,10 @@ public class HomeController {
                 db.insertBook(book);
 
             }
+
         @RequestMapping(value = "update", method = RequestMethod.GET)
         public void updateBookData(HttpServletRequest request) throws ParseException {
             Book book = new Book();
-            book.setID(4);
             book = bookInfo(book, request);
             JDBCOperator db = new JDBCOperator();
             db.updateBook(book);

@@ -19,7 +19,7 @@ public class JDBCOperator {
     public JDBCOperator() {
         try {
             Class.forName(JDBC_DRIVER);
-            connection = DriverManager.getConnection(DB_URL, "root", "Madcata8");
+            connection = DriverManager.getConnection(DB_URL, "root", "74Challenger");
 
 
         } catch (ClassNotFoundException e) {
@@ -434,17 +434,27 @@ public class JDBCOperator {
                 user.setLastName(rs.getString("lastName"));
                 user.setEmail(rs.getString("email"));
                 user.setPassword(rs.getString("password"));
-                if (!(rs.getString("city")).isEmpty()) {
-                    user.setCity("city");
+
+                String city = rs.getString("city");
+                String street = rs.getString("street");
+                String zipCode = rs.getString("zipCode");
+                String state = rs.getString("state");
+
+                if (city != null)
+                {
+                    user.setCity(city);
                 }
-                if (!(rs.getString("state")).isEmpty()) {
-                    user.setCity("state");
+                if (state != null)
+                {
+                    user.setCity(state);
                 }
-                if (!(rs.getString("zipCode")).isEmpty()) {
-                    user.setCity("zipCode");
+                if (zipCode != null)
+                {
+                    user.setCity(zipCode);
                 }
-                if (!(rs.getString("street")).isEmpty()) {
-                    user.setCity("street");
+                if (street != null)
+                {
+                    user.setStreet(street);
                 }
             }
         } catch (Exception e) {
