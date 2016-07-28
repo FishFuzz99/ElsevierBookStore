@@ -111,7 +111,10 @@
                                     <p class="book-descrip"></p><d:out value="${value.description}"/>
                                 </div>
                                 <a href="shoppingCart"><button type="button" class="btn btn-primary book-buttons cart-button" onclick="addToCart(<d:out value="${value.ID}"/>)">Add to Cart</button></a>
-                                <button type="button" class="btn book-buttons wish-list-button" onclick="addToWishlist(<d:out value="${value.ID}"/>)">Add to Wish List</button>
+
+                                <% if (session.getAttribute("user") != null) { %>
+                                    <button type="button" class="btn book-buttons wish-list-button" onclick="addToWishlist(<d:out value="${value.ID}"/>)">Add to Wish List</button>
+                                <% } %>
                             </div>
                         </div>
                     </d:forEach>

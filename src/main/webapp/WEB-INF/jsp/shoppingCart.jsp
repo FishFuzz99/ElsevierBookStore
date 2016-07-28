@@ -82,7 +82,7 @@
                             <button type="button" class="btn book-buttons ">Remove</button>
                             <p></p>
                             <p></p>
-                            <button type="button" class="btn book-buttons wish-list-button">Add to Wish List</button>
+                            <button type="button" class="btn book-buttons wish-list-button" onclick="addToWishlist(<w:out value="${value.ID}"/>)">Add to Wish List</button>
                         </td>
                     </tr>
                 </w:forEach>
