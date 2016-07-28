@@ -245,6 +245,10 @@ public class HomeController {
             {
                 user.setPassword("");
                 session.setAttribute("user", user);
+                if (user.isAdmin())
+                {
+                    session.setAttribute("isAdmin", "true");
+                }
             }
         }
         return mv;
