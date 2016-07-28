@@ -9,6 +9,7 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core"  prefix="w" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ page isELIgnored="false" %>
 
 
@@ -65,18 +66,22 @@
 
             <table border ="2" class="table">
                 <tr>
-                    <th>Book</th>
-                    <th>Description</th>
+                    <th>Title</th>
+                    <th>Price</th>
+                    <th>Format</th>
                     <th style="text-align:center">Options</th>
 
                 </tr>
                 <w:forEach var="book" items="${shoppingList}">
                     <tr>
                         <td>
-                            <img src="<c:url value="images/book2.jpg"/>">
+                            <w:out value="${book.title}"/>
                         </td>
                         <td>
-                            <w:out value="${book.description}"/>
+                            <w:out value="${book.price}"/>
+                        </td>
+                        <td>
+                            <w:out value="${book.format}"/>
                         </td>
                         <td class="option">
                             <button type="button" class="btn book-buttons ">Remove</button>
@@ -97,12 +102,12 @@
                 <tr>
                     <td class="defMoney">Items:</td>
                 </tr>
+                <w:set var="total" value="${0}"/>
                 <w:forEach var="book" items="${shoppingList}">
                 <tr>
-
                         <td class="item"><w:out value="${book.title}"/></td>
                         <td><w:out value="${book.price}"/></td>
-
+                        <w:set var="total" value="${total + book.price}"/>
                 </tr>
                 </w:forEach>
 
@@ -113,7 +118,7 @@
             <table >
                 <tr>
                     <td class="defMoney">Total:</td>
-                    <td class="money">$0.00</td>
+                    <td class="money">$<fmt:formatNumber type="number" minFractionDigits="2" maxFractionDigits="2" value="${total}"/></td>
                 </tr>
             </table>
             </div>
