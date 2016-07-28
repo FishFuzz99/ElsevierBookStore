@@ -63,14 +63,14 @@
     <div class="tab-content">
         <div id="menu1" class="tab-pane fade in active ">
  <!---this--->
-            <ul class="info" style="align-content: center">
+            <ul class="edit" style="align-content: center">
                 <li>
                     <div class="addBook">
                         <form action="insert" method="get">
 
                             <fieldset>
                                 <legend>Add Book</legend>
-                                <ul class="edit">
+                                <ul class="ship">
                                     <li>
                                         <label for="bookTitle">Title:</label>
                                         <input type="text" id="bookTitle1" name="bookTitle">
@@ -152,7 +152,7 @@
                 <form action="delete" method="get">
                     <fieldset>
                         <legend>Delete Book</legend>
-                        <ul class="edit">
+                        <ul class="ship">
                             <li>
                                 <select name="delete" id="delete">
                                     <option value="QAJAVSC">Catching Fire</option>
@@ -175,10 +175,10 @@
         </div>
         <div id="menu3" class="tab-pane fade">
             <div class="editBook">
-                <form action="insert" method="get">
+                <form action="update" method="get">
                     <fieldset>
                         <legend>Edit Book Info</legend>
-                        <ul class="edit" >
+                        <ul class="ship" >
 
                                 <label for="bookTitle">Title:</label>
                                 <input type="text" id="bookTitle" name="bookTitle">
