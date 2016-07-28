@@ -32,8 +32,11 @@ public class HomeController {
     JDBCOperator jdbcOperator = new JDBCOperator();
 
     @RequestMapping(value="admin", method=RequestMethod.GET)
-    public String viewAdmin(){
-        return "admin";
+    public ModelAndView viewAdmin(){
+        ModelAndView mv = new ModelAndView("admin");
+        List<Book> books = jdbcOperator.homeBooks();
+        mv.addObject("list", books);
+        return mv;
     }
 
 
@@ -391,20 +394,24 @@ public class HomeController {
             }
 
         @RequestMapping(value = "update", method = RequestMethod.GET)
-        public void updateBookData(HttpServletRequest request) throws ParseException {
+        public ModelAndView updateBookData(HttpServletRequest request) throws ParseException {
             Book book = new Book();
             book = bookInfo(book, request);
             JDBCOperator db = new JDBCOperator();
             db.updateBook(book);
-
+            ModelAndView mv = new ModelAndView("admin");
+            List<Book> books = jdbcOperator.homeBooks();
+            mv.addObject("books", books);
+            return mv;
             }
 
     @RequestMapping(value = "delete", method = RequestMethod.GET)
-    public void deleteBookData(HttpServletRequest request) throws ParseException {
+    public String deleteBookData(HttpServletRequest request) throws ParseException {
         Book book = new Book();
-        book.setID(4);
+        book.setID(5);
         JDBCOperator db = new JDBCOperator();
         db.deleteBook(book);
+        return "admin";
 
     }
 

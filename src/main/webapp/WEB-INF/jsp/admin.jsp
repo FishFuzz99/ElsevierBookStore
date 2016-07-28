@@ -1,6 +1,8 @@
 <%@ taglib prefix="c" uri="http://www.springframework.org/tags" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="d" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page isELIgnored="false" %>
 <!DOCTYPE html>
 <html ng-app="app">
 
@@ -155,15 +157,11 @@
                         <ul class="ship">
                             <li>
                                 <select name="delete" id="delete">
-                                    <option value="QAJAVSC">Catching Fire</option>
-                                    <option value="QAWEBUI">Divergent</option>
-                                    <option value="QAWEBCSS">The Rainbow Fish</option>
-                                    <option value="QAJQUERY">The Lord of the Rings</option>
-                                    <option value="QAJAVSC">Water for Elephants</option>
-                                    <option value="QAWEBUI">Harry Potter and the Sorceror's Stone</option>
-                                    <option value="QAWEBCSS">Harry Potter and the Prisoner of Azkaban</option>
-                                    <option value="QAJQUERY">Harry Potter and the Half Blood Prince</option>
+                                    <d:forEach items= "${list}" var="book" >
+                                    <option><d:out value="${book.title}"/></option>
+                                    </d:forEach>
                                 </select>
+                                <p></p>
                             </li>
                             <li class="buttonShip">
                                 <button class="btn btn-success login-button" type="submit" value="Login">Delete</button>
