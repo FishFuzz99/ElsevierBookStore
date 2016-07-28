@@ -97,20 +97,26 @@
                 <tr>
                     <td class="defMoney">Items:</td>
                 </tr>
+                <w:forEach var="book" items="${shoppingList}">
                 <tr>
-                    <td class="item">book 1</td>
-                    <td>$0.00</td>
+
+                        <td class="item"><w:out value="${book.title}"/></td>
+                        <td><w:out value="${book.price}"/></td>
+
                 </tr>
+                </w:forEach>
 
             </table>
 
             <hr />
+            <div>
             <table >
                 <tr>
                     <td class="defMoney">Total:</td>
                     <td class="money">$0.00</td>
                 </tr>
             </table>
+            </div>
             <p></p>
 
             <input type="button" value="Checkout" class=" btn btn-primary book-buttons cart-button" onClick="location='checkout'" >
