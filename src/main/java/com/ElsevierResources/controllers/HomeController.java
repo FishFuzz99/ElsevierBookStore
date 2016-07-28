@@ -35,6 +35,20 @@ public class HomeController {
         return "admin";
     }
 
+    @RequestMapping(value="test2", method=RequestMethod.GET)
+    public  String updatePassword(HttpServletRequest request){
+        System.out.println("Hello");
+        HttpSession session = request.getSession();
+        User user = (User) session.getAttribute("user");
+        int userId = user.getID();
+        System.out.println(userId);
+        String password = request.getParameter("password");
+        System.out.println(password);
+        jdbcOperator.updatePassword(userId,password);
+        System.out.println("Password Updated!!!!!");
+        return "account";
+    }
+
     @RequestMapping(value="account", method = RequestMethod.GET)
     public ModelAndView getAccountData(HttpServletRequest request)
     {

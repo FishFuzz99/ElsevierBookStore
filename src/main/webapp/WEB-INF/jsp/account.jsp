@@ -73,12 +73,10 @@
 
     <div class="tab-content">
         <div id="menu1" class="tab-pane fade in active ">
-            <form>
                 <ul class="info" style="list-style-type:none">
                     <li>
                         <div class="login">
-                            <form>
-                                <legend>Update Password</legend>
+                            <form action="test2" method="get">
                                 <p><input type="email" placeholder="Username or Email" required/></p>
                                 <p><input type="password" placeholder="Old Password" required/></p>
                                 <p><input type="password" name="password" id="password1" required="required" placeholder="New Password"  onkeyup="passwordValidationLength(); return false;"/>
@@ -180,7 +178,6 @@
                         </div>
                     </li>
                 </ul>
-            </form>
         </div>
 
         <div id="menu2" class="tab-pane fade">
