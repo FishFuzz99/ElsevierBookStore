@@ -214,15 +214,15 @@
                             <td><w:out value="${book.title}" /></td>
                             <td><w:out value="${book.description}" /></td>
                             <td class="option">
-                                <button type="submit" class="btn  ">Remove</button>
-                                <button type="button" class="btn btn-primary">Add to Cart</button>
+                                <button type="submit" class="btn ">Remove</button>
+                                <button type="button" class="btn btn-primary" onclick="addToCart(<d:out value="${value.ID}"/>)">Add to Cart</button>
                             </td>
                         </tr>
                     </w:forEach>
                 </table>
                 <td class="option">
                     <button type="submit" class="btn  ">Remove</button>
-                    <button type="button" class="btn btn-primary">Add to Cart</button>
+                    <button type="button" class="btn btn-primary" onclick="addToCart(<d:out value="${value.ID}"/>)">Add to Cart</button>
                 </td>
             </form>
         </div>
