@@ -33,10 +33,7 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
-            <form class="navbar-form navbar-left" action="search" method="post">
-                
-
-            </form>
+      
             <ul class="nav navbar-nav navbar-right">
                 <li><% if (session.getAttribute("user") != null) { %>
                     <% if (session.getAttribute("isAdmin") != null) { %>

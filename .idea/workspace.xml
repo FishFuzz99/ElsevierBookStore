@@ -69,8 +69,8 @@
       <file leaf-file-name="checkout.jsp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/checkout.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="36" column="16" selection-start-line="36" selection-start-column="16" selection-end-line="36" selection-end-column="16" />
+            <state relative-caret-position="175">
+              <caret line="35" column="6" selection-start-line="35" selection-start-column="6" selection-end-line="35" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -1094,7 +1094,7 @@
       <workItem from="1469650127268" duration="4000000" />
       <workItem from="1469715659557" duration="7280000" />
       <workItem from="1469723525061" duration="4896000" />
-      <workItem from="1469797523592" duration="1428000" />
+      <workItem from="1469797523592" duration="1455000" />
     </task>
     <task id="LOCAL-00002" summary="removed some stuff in web.xml that was breaking everything">
       <created>1469462061520</created>
@@ -1271,11 +1271,18 @@
       <option name="project" value="LOCAL" />
       <updated>1469798244486</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="removed search on checkout">
+      <created>1469800317946</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1469800317946</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="75255000" />
+    <option name="totallyTimeSpent" value="75282000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="0" width="1378" height="744" extended-state="0" />
@@ -1398,7 +1405,8 @@
     <MESSAGE value="removed filter buttons on home page" />
     <MESSAGE value="added new nav bar to all jsps" />
     <MESSAGE value="fix nav bar" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix nav bar" />
+    <MESSAGE value="removed search on checkout" />
+    <option name="LAST_COMMIT_MESSAGE" value="removed search on checkout" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.8038194" />
   </component>
   <component name="XDebuggerManager">
@@ -1800,8 +1808,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/checkout.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="36" column="16" selection-start-line="36" selection-start-column="16" selection-end-line="36" selection-end-column="16" />
+        <state relative-caret-position="175">
+          <caret line="35" column="6" selection-start-line="35" selection-start-column="6" selection-end-line="35" selection-end-column="6" />
           <folding />
         </state>
       </provider>
