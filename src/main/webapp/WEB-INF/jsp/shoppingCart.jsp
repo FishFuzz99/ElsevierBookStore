@@ -137,7 +137,7 @@
             <table >
                 <tr>
                     <td class="defMoney">Total:</td>
-                    <td class="money">$<fmt:formatNumber type="number" minFractionDigits="2" maxFractionDigits="2" value="${total}"/></td>
+                    <td class="money">$<fmt:formatNumber  type="number" minFractionDigits="2" maxFractionDigits="2" value="${total}"/></td>
                 </tr>
             </table>
             </div>

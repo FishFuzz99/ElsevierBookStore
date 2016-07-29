@@ -17,6 +17,7 @@ import org.springframework.web.servlet.ModelAndView;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import java.sql.SQLException;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -173,7 +174,8 @@ public class HomeController {
 
 
     @RequestMapping(value="checkout", method=RequestMethod.GET)
-    public String viewCheckout () {return "checkout";}
+    public String viewCheckout () {
+        return "checkout";}
 
     @RequestMapping(value="checkout", method=RequestMethod.POST)
     public String checkTest(HttpServletRequest request){
@@ -390,29 +392,35 @@ public class HomeController {
                 book = bookInfo(book, request);
                 JDBCOperator db = new JDBCOperator();
                 db.insertBook(book);
+
                 return "admin";
 
             }
 
         @RequestMapping(value = "update", method = RequestMethod.GET)
-        public ModelAndView updateBookData(HttpServletRequest request) throws ParseException {
+        public String updateBookData(HttpServletRequest request) throws ParseException, SQLException {
             Book book = new Book();
             book = bookInfo(book, request);
             JDBCOperator db = new JDBCOperator();
+            String edit_selection = request.getParameter("edit_selection");
+            book.setID(db.getBookByName(edit_selection));
             db.updateBook(book);
-            ModelAndView mv = new ModelAndView("admin");
-            List<Book> books = jdbcOperator.homeBooks();
-            mv.addObject("books", books);
-            return mv;
+
+
+            return "admin";
             }
 
     @RequestMapping(value = "delete", method = RequestMethod.GET)
-    public String deleteBookData(HttpServletRequest request) throws ParseException {
+    public String deleteBookData(HttpServletRequest request) throws ParseException, SQLException {
         Book book = new Book();
-        book.setID(5);
         JDBCOperator db = new JDBCOperator();
+        String selection = request.getParameter("selection");
+        book.setID(db.getBookByName(selection));
         db.deleteBook(book);
+
         return "admin";
+
+
 
     }
 
