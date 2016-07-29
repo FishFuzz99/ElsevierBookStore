@@ -34,16 +34,7 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
             <form class="navbar-form navbar-left" action="search" method="post">
-                <div class="form-group">
-                    <input name="query" type="text" class="form-control" placeholder="Search">
-                    <button type="submit" class="btn btn-default">Submit</button>
-                    <select name="category" class="form-control" id="bookType">
-                        <option <%if(request.getAttribute("category") == "title"){%> selected <%}%> value="title">Title</option>
-                        <option <%if(request.getAttribute("category") == "author"){%> selected <%}%> value="author">Author</option>
-                        <option <%if(request.getAttribute("category") == "genre"){%> selected <%}%> value="genre">Genre</option>
-                        <option <%if(request.getAttribute("category") == "isbn"){%> selected <%}%> value="isbn">ISBN</option>
-                    </select>
-                </div>
+                
 
             </form>
             <ul class="nav navbar-nav navbar-right">

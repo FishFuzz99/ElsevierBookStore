@@ -3,14 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="864a8d9f-9ae7-4289-a16e-d5f325689642" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/account.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/account.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/admin.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/admin.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/book.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/book.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/checkout.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/checkout.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/orderConfirmation.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/orderConfirmation.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/registration.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/registration.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/shoppingCart.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/shoppingCart.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/signOn.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/signOn.jsp" />
     </list>
     <ignored path="ElsevierResources.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -73,11 +66,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="checkout.jsp" pinned="false" current-in-tab="false">
+      <file leaf-file-name="checkout.jsp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/checkout.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="256">
-              <caret line="29" column="48" selection-start-line="29" selection-start-column="48" selection-end-line="29" selection-end-column="48" />
+            <state relative-caret-position="192">
+              <caret line="36" column="16" selection-start-line="36" selection-start-column="16" selection-end-line="36" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -113,7 +106,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="book.jsp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="book.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/book.jsp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="287">
@@ -177,11 +170,11 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/account.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/shoppingCart.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/admin.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/checkout.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/orderConfirmation.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/signOn.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/registration.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/book.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/checkout.jsp" />
       </list>
     </option>
   </component>
@@ -417,8 +410,6 @@
           <option name="myId" value="UPDATED" />
           <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/Models/JDBCOperator.java</PATH>
           <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/com/ElsevierResources/controllers/HomeController.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/admin.jsp</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/shoppingCart.jsp</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Created" />
@@ -1103,7 +1094,7 @@
       <workItem from="1469650127268" duration="4000000" />
       <workItem from="1469715659557" duration="7280000" />
       <workItem from="1469723525061" duration="4896000" />
-      <workItem from="1469797523592" duration="704000" />
+      <workItem from="1469797523592" duration="1428000" />
     </task>
     <task id="LOCAL-00002" summary="removed some stuff in web.xml that was breaking everything">
       <created>1469462061520</created>
@@ -1273,15 +1264,22 @@
       <option name="project" value="LOCAL" />
       <updated>1469797762012</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="fix nav bar">
+      <created>1469798244486</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1469798244486</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="74531000" />
+    <option name="totallyTimeSpent" value="75255000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="0" width="1378" height="744" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293617" sideWeight="0.5046875" order="7" side_tool="true" content_ui="tabs" />
@@ -1304,7 +1302,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.94043887" sideWeight="0.4953125" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2246696" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2246696" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -1485,6 +1483,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="200" selection-end-column="7" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1702,27 +1701,27 @@
         <state relative-caret-position="68">
           <caret line="258" column="105" selection-start-line="258" selection-start-column="105" selection-end-line="258" selection-end-column="105" />
           <folding>
-            <element signature="e#1687#1694#0" expanded="false" />
-            <element signature="e#2499#2505#0" expanded="false" />
-            <marker date="1469797782065" expanded="true" signature="932:1030" ph="INSERT INTO orders... " />
-            <marker date="1469797782065" expanded="true" signature="1767:1804" ph="SELECT * FRO... orders" />
-            <marker date="1469797782065" expanded="true" signature="2578:2648" ph="SELECT * FRO... wishlistbooks" />
-            <marker date="1469797782065" expanded="true" signature="3274:3310" ph="SELECT * FRO... books" />
-            <marker date="1469797782065" expanded="true" signature="4419:4462" ph="UPDATE users... " />
-            <marker date="1469797782065" expanded="true" signature="4849:4903" ph="UPDATE users... " />
-            <marker date="1469797782065" expanded="true" signature="5413:5528" ph="UPDATE users... " />
-            <marker date="1469797782065" expanded="true" signature="6188:6346" ph="INSERT INTO books... " />
-            <marker date="1469797782065" expanded="true" signature="7445:7607" ph="UPDATE books... " />
-            <marker date="1469797782065" expanded="true" signature="9210:9242" ph="DELETE FROM " />
-            <marker date="1469797782065" expanded="true" signature="9843:9959" ph="INSERT INTO users... " />
-            <marker date="1469797782065" expanded="true" signature="10311:10385" ph="INSERT INTO users... " />
-            <marker date="1469797782065" expanded="true" signature="10962:11006" ph="SELECT * FRO... books" />
-            <marker date="1469797782065" expanded="true" signature="13716:13768" ph="SELECT * FRO... books" />
-            <marker date="1469797782065" expanded="true" signature="13899:13952" ph="SELECT * FRO... books" />
-            <marker date="1469797782065" expanded="true" signature="14081:14132" ph="SELECT * FRO... books" />
-            <marker date="1469797782065" expanded="true" signature="14262:14314" ph="SELECT * FRO... books" />
-            <marker date="1469797782065" expanded="true" signature="17046:17084" ph="SELECT * FRO... users" />
-            <marker date="1469797782065" expanded="true" signature="18547:18601" ph="INSERT INTO wishlistbooks... " />
+            <element signature="e#1691#1698#0" expanded="false" />
+            <element signature="e#2503#2509#0" expanded="false" />
+            <marker date="1469798255225" expanded="true" signature="932:1030" ph="INSERT INTO orders... " />
+            <marker date="1469798255225" expanded="true" signature="1767:1804" ph="SELECT * FRO... orders" />
+            <marker date="1469798255225" expanded="true" signature="2578:2648" ph="SELECT * FRO... wishlistbooks" />
+            <marker date="1469798255225" expanded="true" signature="3274:3310" ph="SELECT * FRO... books" />
+            <marker date="1469798255225" expanded="true" signature="4419:4462" ph="UPDATE users... " />
+            <marker date="1469798255225" expanded="true" signature="4849:4903" ph="UPDATE users... " />
+            <marker date="1469798255225" expanded="true" signature="5413:5528" ph="UPDATE users... " />
+            <marker date="1469798255225" expanded="true" signature="6188:6346" ph="INSERT INTO books... " />
+            <marker date="1469798255225" expanded="true" signature="7445:7607" ph="UPDATE books... " />
+            <marker date="1469798255225" expanded="true" signature="9214:9246" ph="DELETE FROM " />
+            <marker date="1469798255225" expanded="true" signature="9847:9963" ph="INSERT INTO users... " />
+            <marker date="1469798255225" expanded="true" signature="10315:10389" ph="INSERT INTO users... " />
+            <marker date="1469798255225" expanded="true" signature="10966:11010" ph="SELECT * FRO... books" />
+            <marker date="1469798255225" expanded="true" signature="13720:13772" ph="SELECT * FRO... books" />
+            <marker date="1469798255225" expanded="true" signature="13903:13956" ph="SELECT * FRO... books" />
+            <marker date="1469798255225" expanded="true" signature="14085:14136" ph="SELECT * FRO... books" />
+            <marker date="1469798255225" expanded="true" signature="14266:14318" ph="SELECT * FRO... books" />
+            <marker date="1469798255225" expanded="true" signature="17050:17088" ph="SELECT * FRO... users" />
+            <marker date="1469798255225" expanded="true" signature="18551:18605" ph="INSERT INTO wishlistbooks... " />
           </folding>
         </state>
       </provider>
@@ -1767,14 +1766,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/checkout.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="29" column="48" selection-start-line="29" selection-start-column="48" selection-end-line="29" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/orderConfirmation.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="218">
@@ -1803,6 +1794,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="287">
           <caret line="31" column="48" selection-start-line="31" selection-start-column="48" selection-end-line="31" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/checkout.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="36" column="16" selection-start-line="36" selection-start-column="16" selection-end-line="36" selection-end-column="16" />
           <folding />
         </state>
       </provider>
