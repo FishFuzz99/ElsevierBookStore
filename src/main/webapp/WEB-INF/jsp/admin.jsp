@@ -174,21 +174,17 @@
                         <legend>Delete Book</legend>
                         <ul class="ship">
                             <li>
-
                                 <select name="selection" id="delete">
                                     <d:forEach items= "${list}" var="book" >
                                         <option ><d:out value="${book.title}"/></option>
                                     </d:forEach>
                                 </select>
 
-
-
-
                                 <p></p>
                             </li>
                         </ul>
 
-                        <li class="buttonShip">
+                        <li class="ship">
                             <button class="btn btn-success login-button" type="submit" value="Login">Delete</button>
                         <!--</ul>-->
                     </fieldset>

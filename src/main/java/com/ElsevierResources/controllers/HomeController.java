@@ -392,6 +392,7 @@ public class HomeController {
                 book = bookInfo(book, request);
                 JDBCOperator db = new JDBCOperator();
                 db.insertBook(book);
+
                 return "admin";
 
             }
@@ -405,6 +406,7 @@ public class HomeController {
             book.setID(db.getBookByName(edit_selection));
             db.updateBook(book);
 
+
             return "admin";
             }
 
@@ -415,6 +417,7 @@ public class HomeController {
         String selection = request.getParameter("selection");
         book.setID(db.getBookByName(selection));
         db.deleteBook(book);
+
         return "admin";
 
 
