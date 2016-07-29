@@ -218,6 +218,7 @@ public class HomeController {
         HttpSession session = request.getSession();
         ModelAndView mv = new ModelAndView();
         mv.setViewName("front");
+        mv = viewFront(request);
 
         if (session.getAttribute("user") != null)
         {
@@ -248,6 +249,7 @@ public class HomeController {
             {
                 user.setPassword("");
                 session.setAttribute("user", user);
+
                 if (user.isAdmin())
                 {
                     session.setAttribute("isAdmin", "true");
@@ -322,6 +324,7 @@ public class HomeController {
 
         HttpSession session = request.getSession();
         ModelAndView mv = new ModelAndView("front");
+        mv = viewFront(request);
 
         if (session.getAttribute("user") != null)
         {
@@ -377,6 +380,7 @@ public class HomeController {
         book.setPublisher(publisher);
         book.setFormat(format);
         DateFormat df = new SimpleDateFormat("mm/dd/yyyy");
+        datePublished.replace("-", "/");
         Date dateDF = (Date) df.parse(datePublished);
         book.setDatePublished(dateDF);
         book.setEdition(edition);
