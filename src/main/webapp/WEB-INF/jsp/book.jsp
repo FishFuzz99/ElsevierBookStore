@@ -29,7 +29,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">Cover to Cover</a>
+            <a class="navbar-brand" href="front">Cover to Cover</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
