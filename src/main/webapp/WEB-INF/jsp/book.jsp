@@ -73,8 +73,8 @@
                     <img src= "<c:url value="${book.image}"/>"  style="display:block; margin:auto;" name="image">
                 </div>
                 <div style="padding: 0% 20%">
-                    <button type="button" class="btn btn-primary book-buttons cart-button" onclick="addToCart(<d:out value="${value.ID}"/>)">Add to Cart</button>
-                    <button type="button" class="btn book-buttons wish-list-button" onclick="addToWishlist(<d:out value="${value.ID}"/>)">Add to Wish List</button>
+                    <button type="button" class="btn btn-primary book-buttons cart-button" onclick="addToCart(<d:out value="${book.ID}"/>)">Add to Cart</button>
+                    <button type="button" class="btn book-buttons wish-list-button" onclick="addToWishlist(<d:out value="${book.ID}"/>)">Add to Wish List</button>
                 </div>
             </div>
             <div class="col-lg-8 col-md-8">
@@ -96,6 +96,8 @@
 
 <!-- Bootstrap Core JavaScript -->
 <script src="<c:url value="js/bootstrap.min.js"/>"></script>
+
+<script src="<c:url value="js/ajaxToController.js"/>"></script>
 
 
 </body>

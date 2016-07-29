@@ -114,6 +114,7 @@ public class JDBCOperator {
                 book.genre = rs.getString("genre");
                 book.image = rs.getString("imageURL");
                 book.format = rs.getString("format");
+                book.setID(id);
             }
         } catch (SQLException e) {
             e.printStackTrace();
