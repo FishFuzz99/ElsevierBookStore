@@ -23,6 +23,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
+import java.util.UUID;
 
 /**
  * Created by GRAY1 on 7/18/2016.
@@ -92,7 +93,7 @@ public class HomeController {
     {
         HttpSession session = request.getSession();
         User user = (User) session.getAttribute("user");
-        System.out.println("User "+user.getID());
+        System.out.println("User "+user.());
         ModelAndView model = new ModelAndView("account");
         List<Order> orders=jdbcOperator.getOrderHistory(user.getID());
         model.addObject("orders",orders);
@@ -201,7 +202,7 @@ public class HomeController {
         String cardNumber = request.getParameter("number");
         String expDate = request.getParameter("expdate");
         String zipcode = request.getParameter("ZipCodeShipAddress");
-        int userId = user.getID();
+        UUID userId = user.getUserId();
 
         jdbcOperator.placeOrder("2016-07-29","100.75",null,shipStreetAddress,shipCityAddress,zipcode,shipStateAddress,userId);
 
@@ -391,18 +392,20 @@ public class HomeController {
     }
 
     @RequestMapping(value = "insert", method = RequestMethod.GET)
-        public String insertBookData(HttpServletRequest request) throws ParseException {
+        public ModelAndView insertBookData(HttpServletRequest request) throws ParseException {
                 Book book = new Book();
                 book = bookInfo(book, request);
                 JDBCOperator db = new JDBCOperator();
                 db.insertBook(book);
 
-                return "admin";
+                ModelAndView mv = viewAdmin();
+
+                return mv;
 
             }
 
         @RequestMapping(value = "update", method = RequestMethod.GET)
-        public String updateBookData(HttpServletRequest request) throws ParseException, SQLException {
+        public ModelAndView updateBookData(HttpServletRequest request) throws ParseException, SQLException {
             Book book = new Book();
             book = bookInfo(book, request);
             JDBCOperator db = new JDBCOperator();
@@ -410,8 +413,9 @@ public class HomeController {
             book.setID(db.getBookByName(edit_selection));
             db.updateBook(book);
 
+            ModelAndView mv = viewAdmin();
 
-            return "admin";
+            return mv;
             }
 
     @RequestMapping(value = "delete", method = RequestMethod.GET)

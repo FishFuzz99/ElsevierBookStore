@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright (C) Elsevier
+  ~ All Rights Reserved.
+  -->
+
+<Context reloadable="true">
+
+    <WatchedResource>WEB-INF/web.xml</WatchedResource>
+
+    <!-- ============================================================
+    = Properties
+    ============================================================= -->
+
+    <Environment
+            type="java.lang.String"
+            name="property/com.amirsys.ws.webAppKey"
+            value="ElsevierResources"/>
+    <Environment
+            type="java.lang.String"
+            name="property/com.amirsys.ws.traceStartup"
+            value="true"/>
+    <Environment
+            type="java.lang.String"
+            name="property/com.amirsys.ws.allowAnonymousLogins"
+            value="true"/>
+    <Environment
+            type="java.lang.String"
+            name="property/com.amirsys.ws.allowGetLogins"
+            value="true"/>
+    <Environment
+            type="java.lang.String"
+            name="property/com.amirsys.ws.monitoredDatabases"
+            value="jdbc/postgres/transient;jdbc/postgres/primary"/>
+
+    <!-- ============================================================
+    = Databases
+    ============================================================= -->
+
+    <Resource
+            name="jdbc/postgres/primary"
+            auth="Container"
+            type="javax.sql.DataSource"
+            factory="com.amirsys.ws.EncryptedDataSourceFactory"
+            testWhileIdle="true"
+            jmxEnabled="false"
+            jdbcInterceptors="ConnectionState;StatementFinalizer"
+            driverClassName="org.postgresql.Driver"
+            url="jdbc:postgresql://localhost/elsevierresources"
+            username="postgres"
+            encryptedPassword="{wBj7w89ylVoHveNrgEcSTZZ3EQyXF1yeRFudhwBmZ9g=}"
+            initialSize="5"
+            maxActive="20"
+            maxIdle="10"
+            maxWait="-1"
+            removeAbandoned="true"
+            removeAbandonedTimeout="6000"
+            logAbandoned="true"
+    />
+
+    <!--url="jdbc:postgresql://tdb.dl.amirsys.local/acres"-->
+
+    <Resource
+            name="jdbc/postgres/transient"
+            auth="Container"
+            type="javax.sql.DataSource"
+            factory="com.amirsys.ws.EncryptedDataSourceFactory"
+            testWhileIdle="true"
+            jmxEnabled="false"
+            jdbcInterceptors="ConnectionState;StatementFinalizer"
+            driverClassName="org.postgresql.Driver"
+            url="jdbc:postgresql://tdb.dl.amirsys.local/elsevierresources_transient"
+            username="postgres"
+            encryptedPassword="{wBj7w89ylVoHveNrgEcSTZZ3EQyXF1yeRFudhwBmZ9g=}"
+            initialSize="5"
+            maxActive="20"
+            maxIdle="10"
+            maxWait="-1"
+            removeAbandoned="true"
+            removeAbandonedTimeout="6000"
+            logAbandoned="true"
+    />
+
+</Context>

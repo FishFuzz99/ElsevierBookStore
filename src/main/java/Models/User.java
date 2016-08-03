@@ -1,23 +1,65 @@
 package Models;
 
+import net.jextra.fauxjo.FauxjoField;
+import net.jextra.fauxjo.FauxjoImpl;
+import net.jextra.fauxjo.FauxjoPrimaryKey;
+
+import java.util.UUID;
+
 /**
  * Created by GRAY1 on 7/22/2016.
  */
 
-public class User {
+public class User extends FauxjoImpl {
+
+
+    @FauxjoPrimaryKey
+    @FauxjoField("userid")
+    private UUID userId;
+
+    @FauxjoField("lastname")
+    private String lastName;
+
+    @FauxjoField("firstname")
     private String firstName;
 
-
-
-    private int ID;
-    private String lastName;
+    @FauxjoField("email")
     private String email;
+
+    @FauxjoField("password")
     private String password;
+
+    @FauxjoField("street")
     private String street;
+
+    @FauxjoField("city")
     private String city;
+
+    @FauxjoField("state")
     private String state;
+
+    @FauxjoField("zipcode")
     private String zipCode;
+
+    @FauxjoField("isadmin")
     private boolean isAdmin;
+
+    public User()
+    {
+        this.userId = UUID.randomUUID();
+    }
+
+    public void setID(UUID ID) {
+        this.userId = ID;
+    }
+
+    public UUID getUserId() {
+        return userId;
+    }
+
+    public void setUserId(UUID userId) {
+        this.userId = userId;
+    }
 
     public String getFirstName() {
         return firstName;
@@ -83,13 +125,6 @@ public class User {
         this.zipCode = zipCode;
     }
 
-    public int getID() {
-        return ID;
-    }
-
-    public void setID(int ID) {
-        this.ID = ID;
-    }
 
     public boolean isAdmin() {
         return isAdmin;
@@ -98,4 +133,11 @@ public class User {
     public void setAdmin(boolean admin) {
         isAdmin = admin;
     }
+
+    @Override
+    public String toString()
+    {
+        return String.format("%s userId[%s] firstName[%s] lastName[%s] email[%s] city[%s] street[%s] state[%s] zipCode[%s]", getClass().getSimpleName(), userId, firstName, lastName, email, city, street, state, zipCode);
+    }
+
 }

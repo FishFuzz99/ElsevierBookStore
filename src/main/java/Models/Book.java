@@ -1,40 +1,83 @@
 package Models;
 
+import net.jextra.fauxjo.FauxjoField;
+import net.jextra.fauxjo.FauxjoImpl;
+import net.jextra.fauxjo.FauxjoPrimaryKey;
+
 import java.io.Serializable;
 import java.util.Date;
+import java.util.UUID;
 
 /**
  * Created by GRAY1 on 7/14/2016.
  */
 //@Entity
-public class Book implements Serializable{
+public class Book extends FauxjoImpl {
     //@Id @GeneratedValue
-    public int ID;
+
+    @FauxjoPrimaryKey
+    @FauxjoField("bookId")
+    private UUID bookId;
+
+    @FauxjoField("title")
     public String title;
 
 
 
     //@OneToMany
+    @FauxjoField("author")
     public String author;
     //@OneToMany
+    @FauxjoField("genre")
     public String genre;
+
+    @FauxjoField("publisher")
     public String publisher;
+
+    @FauxjoField("datePublished")
     public Date datePublished;
+
+    @FauxjoField("price")
     public float price;
+
+    @FauxjoField("ISBN")
     public String ISBN;
+
+    @FauxjoField("edition")
     public String edition;
+
+    @FauxjoField("format")
     public String format;
+
+    @FauxjoField("numberOfPages")
     public int numberOfPages;
+
+    @FauxjoField("description")
     public String description;
-    public String image;
 
+    @FauxjoField("imageURL")
+    public String imageURL;
 
-    public String getImage() {
-        return image;
+    public Book()
+    {
+        bookId = UUID.randomUUID();
     }
 
-    public void setImage(String image) {
-        this.image = image;
+
+    public UUID getBookId() {
+        return bookId;
+    }
+
+    public void setBookId(UUID bookId) {
+        this.bookId = bookId;
+    }
+
+    public String getImageURL() {
+        return imageURL;
+    }
+
+    public void setImageURL(String imageURL) {
+        this.imageURL = imageURL;
     }
 
     public String getAuthor() {
@@ -47,13 +90,6 @@ public class Book implements Serializable{
 
 
 
-    public int getID() {
-        return ID;
-    }
-
-    public void setID(int ID) {
-        this.ID = ID;
-    }
 
     public void setTitle(String title) {
         this.title = title;
@@ -131,10 +167,6 @@ public class Book implements Serializable{
         this.description = description;
     }
 
-    public Book()
-    {
-
-    }
 
     public String getTitle()
     {
